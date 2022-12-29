@@ -1,0 +1,171 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/variables";
+
+$font-family-base: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$h1-font-size:                $font-size-base * 7;
+$h2-font-size:                $font-size-base * 3;
+$h3-font-size:                $font-size-base * 2.5;
+$h4-font-size:                $font-size-base * 2.0;
+$h5-font-size:                $font-size-base * 1.5;
+$h6-font-size: $font-size-base ;
+$h7-font-size: $font-size-base * 0.8;
+$h8-font-size: $font-size-base * 0.6;
+$h9-font-size: $font-size-base * 0.4;
+$h10-font-size: $font-size-base * 0.2;
+
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size
+);
+
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+
+
+
+$utilities: (
+
+  "color": (property: color,
+    class: text,
+    local-vars: ("text-opacity": 1),
+    values: map-merge($utilities-text-colors,
+      ("lila": #D0D6F9)))
+);
+
+
+@import "../node_modules/bootstrap/scss/utilities";
+
+
+
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+
+@media (min-height: 500px) {
+  .altura-minima {
+    height: 667px;
+  }
+}
+
+.letra-bellefair {
+  font-family: "Bellefair", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.tamanio-titulo {
+  font-size: 85px;
+}
+
+.offcanvas-vidrio-esmerilado {
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+
+.barlow-condensed {
+  font-family: "Barlow Condensed", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  letter-spacing: 0.2rem;
+}
+
+
+// @import "../node_modules/bootstrap/scss/functions";
+
+// $font-family-sans-serif: 'Barlow', sans-serif;
+// $font-family-base:  'Barlow', sans-serif;
+// $font-family-bellefair: 'Bellefair', sans-serif;
+
+// @import "../node_modules/bootstrap/scss/variables";
+
+
+
+// @import "../node_modules/bootstrap/scss/maps";
+// @import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/root";
+
+
+// body {
+//   margin: 0;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   height: 100%;
+// }
+
+// .padding-parte-arriba-main {
+//   padding-top: 90px;
+// }
+
+// .letra-bellefair {
+//   font-family: "Bellefair", serif;
+// }
+
+
+
+// .home {
+//   height: 100vh;
+// }
+
+// .circulo-portada {
+//   height: 170px;
+//   width: 170px;
+//   border-radius: 50%;
+// }
+
+// .letra-gris-oscura {
+//   color: #ffffff;
+//   opacity: 0.5;
+// }
+
+
+
+// .fondo {
+//   background-color: black;
+//   height: 705px;
+// }
+
+// .fondos_de_las_paginas {
+//   height: 100%;
+// }
+
+
+
+// .tamanio_titulos_destinos {
+//   font-size: calc(3.1rem + 1.5vw) !important;
+// }
+
+
+// .color_letra_gris_clara {
+//   color: #D0D6F9;
+// }
+
+// .color_borde_destinos {
+//   border-color: #383B4B !important;
+// }
+
+
+
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
