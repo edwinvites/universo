@@ -1,15 +1,23 @@
 import React from "react";
-import titan from "./titan.svg"
+// import titan from "./titan.svg"
 import Planetas_listado_html from "../Planetas_listado_html";
 
 
 function Titan() {
 
+    const style_imagen = {
+        height: '230px',
+        width: '230px'
+    }
+
+
     return (
         
         <section>
+            <div style={style_imagen} className="mx-auto d-flex justify-content-center">
 
-            <img className="mt-4 mb-4 " src={titan}></img>
+            <img className="mt-4 mb-4 " src={"/imagenes/titan.svg"}></img>
+            </div>
 
             <Planetas_listado_html destino={'titan'} />
             <h1 className="text-light letra-bellefair fs-1 pt-3 pb-3">TITAN</h1>

@@ -8,31 +8,21 @@ import Titan from "./titan/Titan";
 
 
 function Destinos(props) {
-
-    console.log(props.destino);
-
-    if(document.getElementById('fondos_del_espacio2'))
-    {
-        ready();
+    // public\imagenes\fondo-destinos.png
+    const style = {
+        background: "no-repeat " + "url('/imagenes/fondo_destinos.svg')",
+        backgroundSize: "cover"
     }
-
-    function ready() {
-        let url = "no-repeat url('" + ruta_imagen + "')";
-        let fondo_del_body = document.getElementById('fondos_del_espacio2');
-        fondo_del_body.style.background = url;
-        fondo_del_body.style.backgroundSize = "cover";
-    }
-    document.addEventListener("DOMContentLoaded", ready);
 
 
     return (
-        <section id="fondos_del_espacio2" className="text-center">
-            <Nav/>
+        <section style={style} className="text-center ps-3 pe-3">
+            <Nav />
             <h3 className="text-light barlow-condensed fs-5"><span className="text-light text-opacity-25 pe-3 barlow-condensed">01</span> Pick your destination</h3>
 
-            {props.destino === 'luna' ? <Moon/> : props.destino === 'marte' ? <Mars/> : props.destino === 'europe' ? <Europe/>: props.destino === 'titan' ? <Titan/> : null}
-            
-            
+            {props.destino === 'luna' ? <Moon /> : props.destino === 'marte' ? <Mars /> : props.destino === 'europe' ? <Europe /> : props.destino === 'titan' ? <Titan /> : null}
+
+
         </section>
     );
 }

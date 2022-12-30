@@ -8,7 +8,7 @@ function App() {
   return (
 
 
-    <main  className="bg-dark ">
+    <main  className="bg-espacio ">
       <Rutas/>
 
     </main>

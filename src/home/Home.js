@@ -4,21 +4,20 @@ import ruta_imagen from "../recursos/imagenes/Bitmap.jpg";
 import circulo from "./circulo.svg";
 const mix_mode = "mix-blend-mode: difference";
 
+
+
+
 function Home() {
 
 
-    if (document.getElementById('fondos_del_espacio')) {
-        ready();
+    const style = {
+        background: "no-repeat " + "url('./imagenes/Bitmap.jpg')",
+        backgroundSize: "cover"
+
     }
 
-    function ready() {
-        let url = "no-repeat url('" + ruta_imagen + "')";
-        let fondo_del_main = document.getElementById('fondos_del_espacio');
-        fondo_del_main.style.background = url;
-        fondo_del_main.style.backgroundSize = "cover";
-    }
 
-    document.addEventListener("DOMContentLoaded", ready);
+
 
 
 
@@ -27,7 +26,7 @@ function Home() {
 
 
     return (
-        <section id="fondos_del_espacio" className="text-center d-flex flex-column justify-content-between vh-100 ps-3 pe-3">
+        <section id="fondos_del_espacio" style={style} className="text-center d-flex flex-column justify-content-between vh-100 ps-3 pe-3">
             <Nav />
             <div className="d-flex flex-column justify-content-between">
             <p className='letra-gris-oscura mt-3 text-lila barlow-condensed'>SO, YOU WANT TO TRAVEL TO</p>

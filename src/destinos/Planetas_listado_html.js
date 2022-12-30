@@ -46,12 +46,12 @@ switch (props.destino) {
 
     return (
 
-        <div className="d-flex justify-content-center mb-4">
-        <Link to={"/destinos/luna"} className={luna} ><p className="d-block mb-0 p-2 barlow-condensed">Moon</p></Link>
+        <div className="d-flex justify-content-center mb-4 ">
+        <Link to={"/destinos/luna"} className={luna} ><p className="d-block mb-0 p-2 barlow-condensed text-lila">Moon</p></Link>
             
-            <Link to={"/destinos/marte"} className={marte}><p className="d-block mb-0 p-2 barlow-condensed">Mars</p></Link>
-            <Link to={"/destinos/europa"} className={europa}><p className="d-block mb-0 p-2 barlow-condensed">Europa</p></Link>
-            <Link to={"/destinos/titan"} className={titan}><p className="d-block mb-0 p-2 barlow-condensed">Titan</p></Link>
+            <Link to={"/destinos/marte"} className={marte}><p className="d-block mb-0 p-2 barlow-condensed text-lila">Mars</p></Link>
+            <Link to={"/destinos/europa"} className={europa}><p className="d-block mb-0 p-2 barlow-condensed text-lila">Europa</p></Link>
+            <Link to={"/destinos/titan"} className={titan}><p className="d-block mb-0 p-2 barlow-condensed text-lila">Titan</p></Link>
         </div>
     )
 }

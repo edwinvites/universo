@@ -1,15 +1,23 @@
 import React from "react";
-import luna from "./luna.svg"
+// import luna from "./luna.svg"
 import Planetas_listado_html from "../Planetas_listado_html";
 
 
 function Moon() {
 
+    const style_imagen = {
+        height: '230px',
+        width: '230px'
+    }
+
+
     return (
         
         <section>
+            <div style={style_imagen} className="mx-auto  d-flex justify-content-center">
+            <img className="mt-4 mb-4 " src={"/imagenes/luna.svg"}></img>
 
-            <img className="mt-4 mb-4 " src={luna}></img>
+            </div>
 
             <Planetas_listado_html destino={'luna'} />
             <h1 className="text-light letra-bellefair fs-1 pt-3 pb-3">MOON</h1>

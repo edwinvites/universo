@@ -1,15 +1,22 @@
 import React from "react";
-import marte from "./marte.svg"
 import Planetas_listado_html from "../Planetas_listado_html";
 
 
 function Mars() {
 
+    const style_imagen = {
+        height: '230px',
+        width: '230px'
+    }
+
+
     return (
         
         <section>
+            <div style={style_imagen} className="mx-auto  d-flex justify-content-center">
+            <img className="mt-4 mb-4 " src={"/imagenes/marte.svg"}></img>
 
-            <img className="mt-4 mb-4 " src={marte}></img>
+            </div>
 
             <Planetas_listado_html destino={'marte'} />
             <h1 className="text-light letra-bellefair fs-1 pt-3 pb-3">MARS</h1>
