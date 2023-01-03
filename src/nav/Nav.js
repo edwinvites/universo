@@ -46,16 +46,16 @@ function Nav() {
                 </tr>
                 <tr>
                   
-                  <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/destinos"} className="text-decoration-none text-light">01</Link></th>
+                  <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/destinos/luna"} className="text-decoration-none text-light">01</Link></th>
                   <td data-bs-dismiss="offcanvas" aria-label="Close" ><Link to={"/destinos/luna"} className="text-decoration-none text-light">DESTINOS</Link></td>
                 </tr>
                 <tr>
                   <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close">02</th>
-                  <td>CREW</td>
+                  <td data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/tripulacion/douglas"} className="text-decoration-none text-light">CREW</Link></td>
                 </tr>
                 <tr>
                   <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close">03</th>
-                  <td>TECHNOLOGY</td>
+                  <td data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/tecnologia/nave"} className="text-decoration-none text-light">TECHNOLOGY</Link></td>
                 </tr>
               </tbody>
             </table>

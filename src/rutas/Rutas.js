@@ -8,9 +8,10 @@ import {
 } from "react-router-dom";
 
 
-import Nav from "../nav/Nav.js"
 import Home from "../home/Home";
 import Destinos from "../destinos/Destinos.js";
+import Tripulacion from "../tripulantes/Tripulacion.js";
+import Tecnologia from "../tecnologia/Tecnologia";
 
 
 function Rutas() {
@@ -24,6 +25,16 @@ function Rutas() {
         <Route exact path="/destinos/marte" element={<Destinos destino={"marte"} />}></Route>
         <Route exact path="/destinos/europa" element={<Destinos destino={"europe"} />}></Route>
         <Route exact path="/destinos/titan" element={<Destinos destino={"titan"} />}></Route>
+
+
+        <Route exact path="/tripulacion/douglas" element={<Tripulacion nombre={"douglas"} />}></Route>
+        <Route exact path="/tripulacion/mark" element={<Tripulacion nombre={"mark"} />}></Route>
+        <Route exact path="/tripulacion/victor" element={<Tripulacion nombre={"victor"} />}></Route>
+        <Route exact path="/tripulacion/anousheh/" element={<Tripulacion nombre={"anousheh"} />}></Route>
+        
+        <Route exact path="/tecnologia/nave/" element={<Tecnologia nombre={"nave"} />}></Route>
+        <Route exact path="/tecnologia/puerto" element={<Tecnologia nombre={"puerto"} />}></Route>
+        <Route exact path="/tecnologia/capsula" element={<Tecnologia nombre={"capsula"} />}></Route>
       </Routes>
     </Router>
 
