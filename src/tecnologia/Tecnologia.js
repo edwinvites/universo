@@ -15,11 +15,16 @@ function Tecnologia(props) {
 
 
     return (
-        <section style={style} className="text-center ps-3 pe-3">
-            <Nav />
-            <h3 className="text-light barlow-condensed pt-4 fs-5"><span className="text-light text-opacity-25 pe-3 barlow-condensed">03</span>SPACE LAUNCH 101</h3>
-            
-            {props.nombre === 'nave' ? <Nave/>: props.nombre === 'puerto' ? <Puerto/>: props.nombre === 'capsula' ? <Capsula/>: null }
+        <section style={style} className="text-center tablet-tecnologia tablet-tecnologia-sm">
+            <Nav nombre="tecnologia" />
+
+            <div className="d-flex m-0 p-0 justify-content-center justify-content-sm-start">
+
+                <h3 className="text-light barlow-condensed pt-4 ps-sm-4 ms-sm-4 fs-5 fs-sm-52"><span className="text-light text-opacity-25 pe-3 barlow-condensed">03</span>SPACE LAUNCH 101</h3>
+
+            </div>
+
+            {props.nombre === 'nave' ? <Nave /> : props.nombre === 'puerto' ? <Puerto /> : props.nombre === 'capsula' ? <Capsula /> : null}
 
 
         </section>

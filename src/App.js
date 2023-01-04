@@ -1,6 +1,7 @@
 
 
 import React from "react";
+import Nav from "./nav/Nav";
 import Rutas from "./rutas/Rutas";
 
 
@@ -9,6 +10,7 @@ function App() {
 
 
     <main  className="bg-espacio ">
+
       <Rutas/>
 
     </main>
