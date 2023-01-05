@@ -14,13 +14,13 @@ function Moon() {
     return (
 
         <section>
-            <div  className="mx-auto  d-flex justify-content-center mb-sm-2 marco-planetas marco-planetas-sm">
-                <img className="mt-4 mb-4 pt-3 " src={"/imagenes/luna.svg"}></img>
+            <div  className="mx-auto  d-flex justify-content-center mb-sm-4 ">
+                <img className="mt-4 mb-4 pt-3 w-50" src={"/imagenes/luna.png"}></img>
             </div>
 
             <Planetas_listado_html destino={'luna'} />
             <h1 className="text-light letra-bellefair fs-20 pt-3 pb-3">MOON</h1>
-            <p className="text-lila fs-6 me-4 ms-4 mt-4 ps-sm-4 pe-sm-4 pb-4 mb-sm-4 lh-base">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+            <p className="text-lila fs-6 me-4 ms-4 mt-4 ps-sm-4 pe-sm-4 pb-4 mb-sm-4 lh-lg">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
             <hr className="ps-4 pe-4 ms-4 me-4 pt-sm-4 border-bottom " />
             <div className="container-fluid m-0 ">
                 <div className="row m-0 pt-2">

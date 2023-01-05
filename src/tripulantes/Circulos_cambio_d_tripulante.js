@@ -45,7 +45,7 @@ function Circulos_cambio_d_tripulante(props) {
 
     return (
 
-        <div className="d-flex justify-content-center mt-4  ">
+        <div className="d-flex justify-content-center   ">
             <Link to={"/tripulacion/douglas"} ><div className={douglas} ></div></Link>
             <Link to={"/tripulacion/mark"} ><div className={mark} ></div></Link>
             <Link to={"/tripulacion/victor"} ><div className={victor} ></div></Link>

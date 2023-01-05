@@ -14,14 +14,14 @@ function Titan() {
     return (
         
         <section>
-            <div className="mx-auto pt-2 d-flex justify-content-center marco-planetas marco-planetas-sm">
+            <div className="mx-auto pt-2 d-flex justify-content-center mb-sm-4 ">
 
-            <img className="mt-4 mb-4 pt-3 " src={"/imagenes/titan.svg"}></img>
+            <img className="mt-4 mb-4 pt-3 w-50" src={"/imagenes/Bitmaptitan.png"}></img>
             </div>
 
             <Planetas_listado_html destino={'titan'} />
             <h1 className="text-light letra-bellefair fs-20 pt-3 pb-3">TITAN</h1>
-            <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-base">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+            <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-lg">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
             <hr className="ps-4 pe-4 ms-4 me-4 border-bottom "/>
 
 

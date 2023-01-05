@@ -48,10 +48,10 @@ function Planetas_listado_html(props) {
 
         <div className="d-flex justify-content-center mb-4 pt-2 fs-52 ">
 
-            <Link to={"/destinos/luna"} className={luna} ><p className="d-block mb-0 p-2 barlow-condensed text-lila">MOOM</p></Link>
-            <Link to={"/destinos/marte"} className={marte}><p className="d-block mb-0 p-2 barlow-condensed text-lila">MARS</p></Link>
-            <Link to={"/destinos/europa"} className={europa}><p className="d-block mb-0 p-2 barlow-condensed text-lila">EUROPA</p></Link>
-            <Link to={"/destinos/titan"} className={titan}><p className="d-block mb-0 p-2 barlow-condensed text-lila">TITAN</p></Link>
+            <Link to={"/destinos/luna"} className={luna} ><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">MOOM</p></Link>
+            <Link to={"/destinos/marte"} className={marte}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">MARS</p></Link>
+            <Link to={"/destinos/europa"} className={europa}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">EUROPA</p></Link>
+            <Link to={"/destinos/titan"} className={titan}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">TITAN</p></Link>
         </div>
     )
 }

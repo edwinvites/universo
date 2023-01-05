@@ -26,7 +26,7 @@ function Capsula() {
                 <div className="row m-0 p-0">
                     <div className="col-12 col-sm-2"></div>
                     <div className="col-12 col-sm-8">
-                        <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 ">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained. </p>
+                        <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-lg">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained. </p>
                     </div>
                     <div className="col-12 col-sm-2"></div>
                 </div>

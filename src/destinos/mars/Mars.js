@@ -4,23 +4,21 @@ import Planetas_listado_html from "../Planetas_listado_html";
 
 function Mars() {
 
-    const style_imagen = {
-        height: '230px',
-        width: '230px'
-    }
+
 
 
     return (
         
         <section>
-            <div  className="mx-auto  d-flex justify-content-center marco-planetas marco-planetas-sm">
-            <img className="mt-4 mb-4  pt-3 pt-sm-0" src={"/imagenes/marte.svg"}></img>
+            <div   className="mx-auto  d-flex justify-content-center mb-sm-4 ">
+                
+            <img className="mt-4 mb-4  pt-3 pt-sm-0 w-50" src={"/imagenes/Bitmapmarte.png"}></img>
 
             </div>
 
             <Planetas_listado_html destino={'marte'} />
             <h1 className="text-light letra-bellefair fs-20 pt-3 pb-3">MARS</h1>
-            <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-base">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+            <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-lg">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
             <hr className="ps-4 pe-4 ms-4 me-4 border-bottom"/>
 
 

@@ -156,7 +156,12 @@ $utilities: (
     property: font-size,
     responsive: true,
     class: fs,
-    values: $font-sizes )
+    values: $font-sizes ),
+  "border-bottom": (property: border-bottom,
+  responsive: true,
+    values: (null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+      0: 0,
+    ))
 );
 
 
@@ -220,7 +225,7 @@ $utilities: (
   .tablet-tecnologia-sm {
     padding-top: 110px !important;
   }
-  
+
   .tablet-tripulantes {
     padding-top: 110px !important;
   }
@@ -229,7 +234,7 @@ $utilities: (
     height: 350px !important;
   }
 
-  .tablet-imagen-nave-ancho-sm{
+  .tablet-imagen-nave-ancho-sm {
     width: 768px !important;
   }
 

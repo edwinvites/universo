@@ -24,7 +24,7 @@ function Nave() {
                 <div className="row m-0 p-0">
                     <div className="col-12 col-sm-2"></div>
                     <div className="col-12 col-sm-8">
-                        <p className="text-lila fs-6  me-4 ms-4 mt-4 pb-4 ">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad! </p>
+                        <p className="text-lila fs-6  me-4 ms-4 mt-4 pb-4 lh-lg">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad! </p>
                     </div>
                     <div className="col-12 col-sm-2"></div>
                 </div>
