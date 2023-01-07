@@ -9,7 +9,7 @@ function App() {
   return (
 
 
-    <main  className="bg-espacio ">
+    <main  className="bg-espacio h-100">
 
       <Rutas/>
 

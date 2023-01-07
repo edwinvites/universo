@@ -56,9 +56,9 @@ function Nav(props) {
 
   return (
 
-    <nav className="navbar navbar-expand-sm position-absolute start-0 top-0 w-100 ps-3 ps-sm-4 pe-3 pt-sm-0 pe-sm-0">
+    <nav className="navbar navbar-expand-sm position-absolute start-0 top-0 w-100 ps-3 ps-sm-4 pe-3 pt-sm-0 pe-sm-0  mt-xl-4">
       <div className="container-fluid p-0">
-        <div className="navbar-brand ">
+        <div className="navbar-brand ps-xl-4">
           <Link to={"/"} >
 
             <img src={logo_pagina} alt='logo pagina'></img>
@@ -72,9 +72,9 @@ function Nav(props) {
           </svg>
         </button>
 
-        <div style={{ height: "80px", backgroundColor: "rgba(255,255,255,0.04)", backdropFilter: "blur(41px)" }} className="d-none d-sm-flex m-0 p-0 text-white justify-content-center align-items-center">
-
-          <ul className="navbar-nav text-light h-100 ps-4 pe-3 ">
+        <div style={{ height: "80px", backgroundColor: "rgba(255,255,255,0.04)", backdropFilter: "blur(41px)" }} className="d-none d-sm-flex m-0 p-0 text-white justify-content-center  align-items-center w-xl-55 position-relative">
+          <hr className="position-absolute w-75 translate-linea start-0 d-none d-xl-block"></hr>
+          <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 justify-content-xl-around">
             <li className={inicio}>
               <Link to={"/"} className="nav-link  text-light barlow-condensed fs-52  align-self-center" aria-current="page" href="#">
 

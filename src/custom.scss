@@ -152,16 +152,48 @@ $utilities: (
     class: border,
     local-vars: ("border-opacity": 1),
     values: map-merge($utilities-border-colors, (transparent: transparent))),
-  "font-size": (rfs: true,
+  "font-size": (rfs: false,
     property: font-size,
     responsive: true,
     class: fs,
     values: $font-sizes ),
   "border-bottom": (property: border-bottom,
-  responsive: true,
+    responsive: true,
     values: (null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
       0: 0,
-    ))
+    )),
+  "translate-linea": (property: transform,
+    class: translate-linea,
+    values: (null: translate(-90%, -50%),
+      x: translateX(-50%),
+      y: translateY(-50%),
+    )),
+    "width": (
+      property: width,
+      class: w,
+      responsive: true,
+      values: (
+        25: 25%,
+        50: 50%,
+        55: 55%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "height": (
+      property: height,
+      class: h,
+      responsive: true,
+      values: (
+        25: 25%,
+        50: 50%,
+        55: 55%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    )
 );
 
 
@@ -190,6 +222,15 @@ $utilities: (
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
+
+@include media-breakpoint-up(xl) {
+
+  .background_hombe_xl {
+    background: no-repeat url("/imagenes/BitmapespacioLaptop.png") !important;
+    background-size: cover;
+  }
+
+}
 
 @include media-breakpoint-up(sm) {
   .home-padding-sm {
@@ -307,6 +348,42 @@ $utilities: (
   width: 375px;
 }
 
+
+
+
+section::-webkit-scrollbar {
+  -webkit-appearance: none;
+  z-index: 10000;
+}
+
+section::-webkit-scrollbar:vertical {
+  width:10px;
+  z-index: 10000;
+}
+
+section::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+  display: none;
+} 
+
+section::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+section::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+  z-index: 10000;
+}
+
+section::-webkit-scrollbar-track {
+  border-radius: 10px;  
+  z-index: 10000;
+}
+
+nav {
+  z-index: 100;
+}
 // @import "../node_modules/bootstrap/scss/functions";
 
 // $font-family-sans-serif: 'Barlow', sans-serif;
