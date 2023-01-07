@@ -436,6 +436,18 @@
   width: 100% !important;
 }
 
+.w-200 {
+  width: 200% !important;
+}
+
+.w-250 {
+  width: 250% !important;
+}
+
+.w-300 {
+  width: 300% !important;
+}
+
 .w-auto {
   width: auto !important;
 }
@@ -2018,6 +2030,15 @@
   .w-sm-100 {
     width: 100% !important;
   }
+  .w-sm-200 {
+    width: 200% !important;
+  }
+  .w-sm-250 {
+    width: 250% !important;
+  }
+  .w-sm-300 {
+    width: 300% !important;
+  }
   .w-sm-auto {
     width: auto !important;
   }
@@ -2762,6 +2783,15 @@
   }
   .w-md-100 {
     width: 100% !important;
+  }
+  .w-md-200 {
+    width: 200% !important;
+  }
+  .w-md-250 {
+    width: 250% !important;
+  }
+  .w-md-300 {
+    width: 300% !important;
   }
   .w-md-auto {
     width: auto !important;
@@ -3508,6 +3538,15 @@
   .w-lg-100 {
     width: 100% !important;
   }
+  .w-lg-200 {
+    width: 200% !important;
+  }
+  .w-lg-250 {
+    width: 250% !important;
+  }
+  .w-lg-300 {
+    width: 300% !important;
+  }
   .w-lg-auto {
     width: auto !important;
   }
@@ -4253,6 +4292,15 @@
   .w-xl-100 {
     width: 100% !important;
   }
+  .w-xl-200 {
+    width: 200% !important;
+  }
+  .w-xl-250 {
+    width: 250% !important;
+  }
+  .w-xl-300 {
+    width: 300% !important;
+  }
   .w-xl-auto {
     width: auto !important;
   }
@@ -4997,6 +5045,15 @@
   }
   .w-xxl-100 {
     width: 100% !important;
+  }
+  .w-xxl-200 {
+    width: 200% !important;
+  }
+  .w-xxl-250 {
+    width: 250% !important;
+  }
+  .w-xxl-300 {
+    width: 300% !important;
   }
   .w-xxl-auto {
     width: auto !important;

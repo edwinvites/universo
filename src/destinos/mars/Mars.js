@@ -12,8 +12,8 @@ function Mars() {
         <section className="container-fluid p-0 m-0">
             <div className="row p-0 m-0">
                 <div className="col-12 col-xl-6 p-0 m-0">
-                    <div className="mx-auto  d-flex justify-content-center mb-sm-4 ">
-                        <img className="mt-4 mb-4  pt-3 pt-sm-0 w-50 w-xl-75" src={"/imagenes/Bitmapmarte.png"}></img>
+                    <div className="mx-auto pt-xl-4 d-flex justify-content-center mb-sm-4 ">
+                        <img className="mt-4 mb-4  pt-3 pt-sm-0 pt-xl-4 w-50 w-xl-75" src={"/imagenes/Bitmapmarte.png"}></img>
                     </div>
                 </div>
                 <div className="col-12 col-xl-6 p-0 m-0">

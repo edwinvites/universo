@@ -9,7 +9,7 @@ import Puerto from "./Puerto";
 
 function Tecnologia(props) {
     const style = {
-        background: "no-repeat " + "url('/imagenes/Bitmapfondo_tech.svg')",
+        background: "no-repeat " + "url('/imagenes/Bitmap_fondo_ti.png')",
         backgroundSize: "cover"
     }
 

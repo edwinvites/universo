@@ -77,23 +77,26 @@ function Nav(props) {
           <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 justify-content-xl-around">
             <li className={inicio}>
               <Link to={"/"} className="nav-link  text-light barlow-condensed fs-52  align-self-center" aria-current="page" href="#">
-
+                <spam  className="me-2 fw-bold">00</spam>
                 HOME
               </Link>
             </li>
             <li className={destino}>
               <Link to={"/destinos/luna"} className="nav-link text-light barlow-condensed fs-52 align-self-center" href="#">
+                <spam  className="me-2 fw-bold">01</spam>
                 DESTINATION
               </Link>
             </li>
             <li className={tripulacion}>
               <Link to={"/tripulacion/douglas"} className="nav-link text-light barlow-condensed fs-52 align-self-center">
+                <spam  className="me-2 fw-bold">02</spam>
                 CREW
               </Link>
 
             </li>
             <li className={tecnologia}>
               <Link to={"/tecnologia/nave"} className="nav-link text-light barlow-condensed fs-52 align-self-center">
+                <spam  className="me-2 fw-bold">03</spam>
                 TECHNOLOGY
               </Link>
             </li>

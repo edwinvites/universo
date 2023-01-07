@@ -10,6 +10,15 @@ import {
 
 function Circulos_cambio_d_tripulante(props) {
 
+    let laptop1440 = "d-flex justify-content-start";
+    let otrosDispositivos = "d-flex justify-content-center";
+    let alineamiento = otrosDispositivos;
+
+    if (props.tamanio === 1440) {
+        
+        alineamiento = laptop1440;
+    }
+
 
     let douglas, mark, victor, anousheh;
     switch (props.nombre) {
@@ -45,7 +54,7 @@ function Circulos_cambio_d_tripulante(props) {
 
     return (
 
-        <div className="d-flex justify-content-center   ">
+        <div className={alineamiento}>
             <Link to={"/tripulacion/douglas"} ><div className={douglas} ></div></Link>
             <Link to={"/tripulacion/mark"} ><div className={mark} ></div></Link>
             <Link to={"/tripulacion/victor"} ><div className={victor} ></div></Link>

@@ -46,8 +46,6 @@ function Home() {
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                     <div className="col-12 col-sm-2 col-xl-1"></div>
