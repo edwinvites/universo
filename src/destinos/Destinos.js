@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../nav/Nav";
-import ruta_imagen from "../recursos/imagenes/fondo_destinos.svg";
 import Moon from "./moon/Moon";
 import Mars from "./mars/Mars";
 import Europe from "./europa/Europa";
