@@ -15,7 +15,7 @@ function Nav(props) {
 
 
   let activado = "nav-item ps-1 pe-1 d-flex justify-content-center border-bottom border-4";
-  let desactivado = "nav-item ps-1 pe-1 d-flex justify-content-center border-transparent border-bottom border-4";
+  let desactivado = "nav-item ps-1 pe-1 d-flex justify-content-center border-transparent border-bottom-nav-hover border-bottom border-4";
   let inicio, destino, tripulacion, tecnologia;
 
   switch (props.nombre) {
@@ -76,27 +76,27 @@ function Nav(props) {
           <hr className="position-absolute w-75 translate-linea start-0 d-none d-xl-block"></hr>
           <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 justify-content-xl-around">
             <li className={inicio}>
-              <Link to={"/"} className="nav-link  text-light barlow-condensed fs-52  align-self-center" aria-current="page" href="#">
-                <spam  className="me-2 fw-bold">00</spam>
+              <Link to={"/"} className="nav-link  text-light barlow-condensed fs-52  align-self-center " aria-current="page" href="#">
+                <span  className="me-2 fw-bold">00</span>
                 HOME
               </Link>
             </li>
             <li className={destino}>
               <Link to={"/destinos/luna"} className="nav-link text-light barlow-condensed fs-52 align-self-center" href="#">
-                <spam  className="me-2 fw-bold">01</spam>
+                <span  className="me-2 fw-bold">01</span>
                 DESTINATION
               </Link>
             </li>
             <li className={tripulacion}>
               <Link to={"/tripulacion/douglas"} className="nav-link text-light barlow-condensed fs-52 align-self-center">
-                <spam  className="me-2 fw-bold">02</spam>
+                <span  className="me-2 fw-bold">02</span>
                 CREW
               </Link>
 
             </li>
             <li className={tecnologia}>
               <Link to={"/tecnologia/nave"} className="nav-link text-light barlow-condensed fs-52 align-self-center">
-                <spam  className="me-2 fw-bold">03</spam>
+                <span  className="me-2 fw-bold">03</span>
                 TECHNOLOGY
               </Link>
             </li>

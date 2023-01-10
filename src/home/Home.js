@@ -19,8 +19,8 @@ function Home() {
     return (
         <section style={style} className="text-center d-flex flex-column justify-content-between  ps-3 pe-3 background_hombe_xl h-xl-100 overflow-auto">
             <Nav nombre="inicio" />
-            <div className="cotainer-fluid ">
-                <div className="row m-0 p-0">
+            <div className="cotainer-fluid h-100">
+                <div className="row m-0 p-0 align-items-end h-100 pb-5">
                     <div className="col-12 col-sm-2 col-xl-1"></div>
                     <div className="col-12 col-sm-8 col-xl-10">
                         <div className="container-fluid m-0 p-0">
@@ -38,7 +38,7 @@ function Home() {
                                     <div style={{ height: "260px" }} className='mx-auto mt-4 pt-4 mb-4  pb-4 fs-46 bg-none  w-25 d-flex flex-column justify-content-center justify-content-xl-end padding-boton-explorador-sm'>
                                         <div className="position-relative ">
                                             <Link className="text-decoration-none" to={"/destinos/luna"}>
-                                                <div className="bg-white rounded-circle position-absolute start-50 top-50 translate-middle d-flex justify-content-center align-items-center boton_explorer boton_explorer-sm">
+                                                <div className="bg-white rounded-circle position-absolute start-50 top-50 translate-middle d-flex justify-content-center align-items-center boton_explorer boton_explorer-sm shadow-explorer-hover">
                                                     <p style={{ zIndez: 100 }} className="letra-bellefair text-black fs-5 fs-sm-44 p-0 m-0">EXPLORE</p>
                                                 </div>
                                             </Link>

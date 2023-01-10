@@ -24,26 +24,26 @@ function Circulos_cambio_d_tripulante(props) {
     switch (props.nombre) {
         case "douglas":
             douglas = "mt-4 mb-4 me-2 me-sm-4 p-2 bg-white rounded-circle";
-            mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4  me-2 p-2 bg-secondary rounded-circle";
-            victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary rounded-circle";
-            anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-secondary rounded-circle";
+            mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4  me-2 p-2 bg-secondary bg-opacity-50 bg-opacity-100-hover  rounded-circle";
+            victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
+            anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
             break;
         case "mark":
-            douglas = "mt-4 mb-4 me-2 me-sm-4  p-2 bg-secondary rounded-circle";
+            douglas = "mt-4 mb-4 me-2 me-sm-4  p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
             mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-white rounded-circle";
-            victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary rounded-circle";
-            anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-secondary rounded-circle";
+            victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
+            anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
             break;
         case "victor":
-            douglas = "mt-4 mb-4 me-2 me-sm-4  p-2 bg-secondary rounded-circle";
-            mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary rounded-circle";
+            douglas = "mt-4 mb-4 me-2 me-sm-4  p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
+            mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
             victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-white rounded-circle";
-            anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-secondary rounded-circle";
+            anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
             break;
         case "anousheh":
-            douglas = "mt-4 mb-4 me-2 me-sm-4  p-2 bg-secondary rounded-circle";
-            mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary rounded-circle";
-            victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary rounded-circle";
+            douglas = "mt-4 mb-4 me-2 me-sm-4  p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
+            mark = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
+            victor = "mt-4 mb-4 ms-2 ms-sm-4 me-sm-4 me-2 p-2 bg-secondary  bg-opacity-50 bg-opacity-100-hover rounded-circle";
             anousheh = "mt-4 mb-4 ms-2 ms-sm-4 p-2 bg-white rounded-circle";
             break;
 

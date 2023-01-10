@@ -62,7 +62,7 @@ $h54-font-size: $font-size-base * 0.4;
 $h55-font-size: $font-size-base * 0.2;
 
 
-$shadow-explorer: 0px 0px 0px 45px rgba(255, 255, 255, 0.5);
+$shadow-explorer: 0px 0px 0px 80px rgba(255, 255, 255, 0.099);
 
 @import "../node_modules/bootstrap/scss/variables-dark";
 
@@ -140,6 +140,7 @@ $utilities: (
   "background-color": (property: background-color,
     class: bg,
     local-vars: ("bg-opacity": 1),
+    state: hover,
     values: map-merge($utilities-bg-colors,
       ("espacio" : #000000,
         "navbar": rgba(0, 0, 0, 0.3)))),
@@ -159,6 +160,14 @@ $utilities: (
     values: $font-sizes ),
   "border-bottom": (property: border-bottom,
     responsive: true,
+    state: hover,
+    values: (null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+      0: 0,
+      nav:  var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}gray-500)
+    )),
+    "border": (property: border,
+    responsive: true,
+    state: hover,
     values: (null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
       0: 0,
     )),
@@ -196,7 +205,18 @@ $utilities: (
         100: 100%,
         auto: auto
       )
-    )
+    ),
+    "bg-opacity": (
+      css-var: true,
+      class: bg-opacity,
+      state: hover,
+      values: (
+        10: .1,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1
+      ))
 );
 
 

@@ -15,19 +15,19 @@ function Cambios_de_pagina(props) {
     switch (props.nombre) {
         case "nave":
             nave = " me-2 p-2 m-lg-0 bg-white text-black rounded-circle text-center d-flex justify-content-center align-items-center";
-            puerto = "ms-3 me-3 m-lg-0 p-2 text-white bg-none border border-secondary rounded-circle d-flex justify-content-center align-items-center";
-            capsula = "ms-2 p-2 m-lg-0 text-white bg-none border border-secondary rounded-circle d-flex justify-content-center align-items-center";
+            puerto = "ms-3 me-3 m-lg-0 p-2 text-white bg-none border border-secondary rounded-circle border-hover d-flex justify-content-center align-items-center";
+            capsula = "ms-2 p-2 m-lg-0 text-white bg-none border border-secondary rounded-circle border-hover d-flex justify-content-center align-items-center";
 
             break;
         case "puerto":
-            nave = " me-2 p-2 m-lg-0 bg-none text-white border border-secondary rounded-circle text-center d-flex justify-content-center align-items-center";
+            nave = " me-2 p-2 m-lg-0 bg-none text-white border border-secondary rounded-circle border-hover text-center d-flex justify-content-center align-items-center";
             puerto = "ms-3 me-3 p-2 m-lg-0 text-black bg-white  rounded-circle d-flex justify-content-center align-items-center";
-            capsula = "ms-2 p-2 m-lg-0 text-white bg-none border border-secondary rounded-circle d-flex justify-content-center align-items-center";
+            capsula = "ms-2 p-2 m-lg-0 text-white bg-none border border-secondary rounded-circle border-hover d-flex justify-content-center align-items-center";
 
             break;
         case "capsula":
-            nave = " me-2 p-2 m-lg-0 bg-none text-white border border-secondary rounded-circle text-center d-flex justify-content-center align-items-center";
-            puerto = "ms-3 me-3 p-2 m-lg-0 text-white bg-none border border-secondary rounded-circle d-flex justify-content-center align-items-center";
+            nave = " me-2 p-2 m-lg-0 bg-none text-white border border-secondary rounded-circle border-hover text-center d-flex justify-content-center align-items-center";
+            puerto = "ms-3 me-3 p-2 m-lg-0 text-white bg-none border border-secondary rounded-circle border-hover d-flex justify-content-center align-items-center";
             capsula = "ms-2 p-2 m-lg-0 text-black bg-white rounded-circle d-flex justify-content-center align-items-center";
 
             break;

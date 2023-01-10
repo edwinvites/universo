@@ -10,8 +10,8 @@ import {
 
 function Planetas_listado_html(props) {
 
-    let activo = "text-decoration-none text-light  border-bottom border-white border-3 ";
-    let desactivado = "text-decoration-none color_letra_gris_clara text-reset link-light";
+    let activo = "text-decoration-none text-white  border-bottom border-white border-3 ";
+    let desactivado = "text-decoration-none  text-lila border-3 border-bottom-nav-hover text-lila";
     let [luna, marte, europa, titan] = [desactivado, desactivado, desactivado, desactivado];
     switch (props.destino) {
         case "luna":
@@ -48,10 +48,10 @@ function Planetas_listado_html(props) {
 
         <div className="d-flex justify-content-center mb-4 pt-2 fs-52 ">
 
-            <Link to={"/destinos/luna"} className={luna} ><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">MOOM</p></Link>
-            <Link to={"/destinos/marte"} className={marte}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">MARS</p></Link>
-            <Link to={"/destinos/europa"} className={europa}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">EUROPA</p></Link>
-            <Link to={"/destinos/titan"} className={titan}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed text-lila fs-sm-50">TITAN</p></Link>
+            <Link to={"/destinos/luna"} className={luna} ><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed fs-sm-50">MOOM</p></Link>
+            <Link to={"/destinos/marte"} className={marte}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed  fs-sm-50">MARS</p></Link>
+            <Link to={"/destinos/europa"} className={europa}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed  fs-sm-50">EUROPA</p></Link>
+            <Link to={"/destinos/titan"} className={titan}><p className="d-block mb-0 p-2 p-sm-4 barlow-condensed  fs-sm-50">TITAN</p></Link>
         </div>
     )
 }
