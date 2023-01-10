@@ -9469,7 +9469,7 @@ progress {
 
 @media (min-width: 1200px) {
   .background_hombe_xl {
-    background: no-repeat url("./public/imagenes/BitmapespacioLaptop.png") !important;
+    background: no-repeat url("../public/imagenes/BitmapespacioLaptop.png") !important;
     background-size: cover;
   }
 }
