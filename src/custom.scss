@@ -249,7 +249,7 @@ $utilities: (
 @include media-breakpoint-up(xl) {
 
   .background_hombe_xl {
-    background: no-repeat url("/imagenes/BitmapespacioLaptop.png") !important;
+    background: no-repeat url("./public/imagenes/BitmapespacioLaptop.png") !important;
     background-size: cover;
   }
 
