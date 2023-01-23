@@ -9508,6 +9508,26 @@ progress {
   .tablet-imagen-nave-ancho-sm {
     width: 768px !important;
   }
+  section::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  section::-webkit-scrollbar:vertical {
+    width: 10px;
+  }
+  section::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button {
+    display: none;
+  }
+  section::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+  section::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  section::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
 }
 .home-padding {
   padding-top: 70px;
@@ -9571,40 +9591,6 @@ progress {
 
 .tablet-imagen-nave-ancho {
   width: 375px;
-}
-
-section::-webkit-scrollbar {
-  -webkit-appearance: none;
-  z-index: 10000;
-}
-
-section::-webkit-scrollbar:vertical {
-  width: 10px;
-  z-index: 10000;
-}
-
-section::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button {
-  display: none;
-}
-
-section::-webkit-scrollbar:horizontal {
-  height: 10px;
-}
-
-section::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 20px;
-  border: 2px solid #f1f2f3;
-  z-index: 10000;
-}
-
-section::-webkit-scrollbar-track {
-  border-radius: 10px;
-  z-index: 10000;
-}
-
-nav {
-  z-index: 100;
 }
 
 /*# sourceMappingURL=index.css.map */

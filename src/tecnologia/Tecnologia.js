@@ -15,7 +15,7 @@ function Tecnologia(props) {
 
 
     return (
-        <section style={style} className="text-center tablet-tecnologia tablet-tecnologia-sm">
+        <section style={style} className="text-center tablet-tecnologia tablet-tecnologia-sm h-100 overflow-auto">
             <Nav nombre="tecnologia" />
 
             <div className="d-flex m-0 p-0 justify-content-center justify-content-sm-start">
