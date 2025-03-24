@@ -56,7 +56,7 @@ function Nav(props) {
 
   return (
 
-    <nav className="navbar navbar-expand-sm position-absolute start-0 top-0 w-100 ps-3 ps-sm-4 pe-3 pt-sm-0 pe-sm-0  mt-xl-4">
+    <nav className="navbar navbar-expand-sm position-absolute start-0 top-0 w-100 px-4 py-4 ps-sm-4 pt-sm-0 pe-sm-0  mt-xl-4">
       <div className="container-fluid p-0">
         <div className="navbar-brand ps-xl-4">
           <Link to={"/"} >
@@ -77,26 +77,26 @@ function Nav(props) {
           <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 justify-content-xl-around">
             <li className={inicio}>
               <Link to={"/"} className="nav-link  text-light barlow-condensed fs-52  align-self-center " aria-current="page" href="#">
-                <span  className="me-2 fw-bold">00</span>
+                <span className="me-2 fw-bold">00</span>
                 HOME
               </Link>
             </li>
             <li className={destino}>
               <Link to={"/destinos/luna"} className="nav-link text-light barlow-condensed fs-52 align-self-center" href="#">
-                <span  className="me-2 fw-bold">01</span>
+                <span className="me-2 fw-bold">01</span>
                 DESTINATION
               </Link>
             </li>
             <li className={tripulacion}>
               <Link to={"/tripulacion/douglas"} className="nav-link text-light barlow-condensed fs-52 align-self-center">
-                <span  className="me-2 fw-bold">02</span>
+                <span className="me-2 fw-bold">02</span>
                 CREW
               </Link>
 
             </li>
             <li className={tecnologia}>
               <Link to={"/tecnologia/nave"} className="nav-link text-light barlow-condensed fs-52 align-self-center">
-                <span  className="me-2 fw-bold">03</span>
+                <span className="me-2 fw-bold">03</span>
                 TECHNOLOGY
               </Link>
             </li>
@@ -104,35 +104,63 @@ function Nav(props) {
         </div>
 
         {/* --------------------------offcanvas----------------------- */}
-        <div className="offcanvas offcanvas-end offcanvas-vidrio-esmerilado  w-75 barlow-condensed d-sm-none" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
-          <div className="offcanvas-header">
-            <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div  className="offcanvas offcanvas-end offcanvas-vidrio-esmerilado  w-60 barlow-condensed d-sm-none pt-3" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+          <div className="offcanvas-header px-4 pb-5">
+            <h5 className="offcanvas-title" id="offcanvasLabel"></h5>
+
+            <div type="button" className="" data-bs-dismiss="offcanvas" aria-label="Close">
+              <svg width="24" height="21" viewBox="0 0 24 21" fill="red" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4.5752" y="0.954102" width="24" height="3" transform="rotate(45 4.5752 0.954102)" fill="white" />
+                <rect x="2.4541" y="17.9246" width="24" height="3" transform="rotate(-45 2.4541 17.9246)" fill="white" />
+              </svg>
+            </div>
+
           </div>
-          <div className="offcanvas-body ">
-            <table className="table table-borderless text-white">
+          <div className="offcanvas-body px-4 pt-4 fs-7">
 
-              <tbody className="text-start">
-                <tr>
-                  <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/"} className="text-decoration-none text-light">00</Link></th>
+            <div className="container">
+              <div className="row pb-4">
+                <div className="col-2">
+                  <Link to={"/"} className="text-decoration-none text-light fw-bold">00</Link>
+                </div>
+                <div className="col-10 ">
+                  <div className="d-flex justify-content-start">
+                  <Link to={"/"} className="text-decoration-none text-light text-start ">HOME</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="row pb-4">
+                <div className="col-2">
+                  <Link to={"/destinos/luna"} className="text-decoration-none text-light fw-bold ">01</Link>
+                </div>
+                <div className="col-10 ">
+                  <div className="d-flex justify-content-start">
+                    <Link to={"/destinos/luna"} className="text-decoration-none text-light text-start ">DESTINOS</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="row  pb-4">
+                <div className="col-2">
+                  <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light fw-bold ">02</Link>
+                </div>
+                <div className="col-10 ">
+                  <div className="d-flex justify-content-start">
+                    <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light text-start ">CREW</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="row pb-4">
+                <div className="col-2">
+                  <Link to={"/tecnologia/nave"} className="text-decoration-none text-light  fw-bold">03</Link>
+                </div>
+                <div className="col-10 ">
+                  <div className="d-flex justify-content-start">
+                    <Link to={"/tecnologia/nave"} className="text-decoration-none text-light text-start ">TECHNOLOGY</Link>
+                  </div>
+                </div>
+              </div>
 
-                  <td data-bs-dismiss="offcanvas" aria-label="Close" className="text-decoration-none"><Link to={"/"} className="text-decoration-none text-light">HOME</Link></td>
-                </tr>
-                <tr>
-
-                  <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/destinos/luna"} className="text-decoration-none text-light">01</Link></th>
-                  <td data-bs-dismiss="offcanvas" aria-label="Close" ><Link to={"/destinos/luna"} className="text-decoration-none text-light">DESTINOS</Link></td>
-                </tr>
-                <tr>
-                  <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close">02</th>
-                  <td data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/tripulacion/douglas"} className="text-decoration-none text-light">CREW</Link></td>
-                </tr>
-                <tr>
-                  <th className="" scope="row" data-bs-dismiss="offcanvas" aria-label="Close">03</th>
-                  <td data-bs-dismiss="offcanvas" aria-label="Close"><Link to={"/tecnologia/nave"} className="text-decoration-none text-light">TECHNOLOGY</Link></td>
-                </tr>
-              </tbody>
-            </table>
-
+            </div>
 
           </div>
         </div>

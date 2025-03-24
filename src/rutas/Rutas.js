@@ -12,15 +12,20 @@ import Home from "../home/Home";
 import Destinos from "../destinos/Destinos.js";
 import Tripulacion from "../tripulantes/Tripulacion.js";
 import Tecnologia from "../tecnologia/Tecnologia";
+import espacioHome from "../imagenes_2/BitmapespacioLaptop.png";
 
 
 function Rutas() {
+
+  
+
+
   return (
     
     <Router>
       <Routes>
 
-        <Route exact path="/" element={<Home />}></Route>
+        <Route exact path="/" element={<Home fondo={espacioHome} />}  ></Route>
         <Route exact path="/destinos/luna" element={<Destinos destino={"luna"} />}></Route>
         <Route exact path="/destinos/marte" element={<Destinos destino={"marte"} />}></Route>
         <Route exact path="/destinos/europa" element={<Destinos destino={"europe"} />}></Route>
