@@ -4,34 +4,23 @@
 
 
 
-@import "../node_modules/bootstrap/scss/variables";
+
 
 $font-family-base: "Barlow", "Barlow_condensed", "Bellefair";
 
-$blue-900-alt: rgb(11,13,23);
-$blue-300-alt: rgb(208,214,249);
-$theme-colors: (
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark,
-  "blue-300-alt": $blue-300-alt,
-  "blue-900-alt": $blue-900-alt
-);
+$blue-900-alt: rgb(11, 13, 23);
+$blue-300-alt: rgb(208, 214, 249);
 
 
-$h1-font-size: 144px;
-$h2-font-size: 100px;
-$h3-font-size: 56px;
-$h4-font-size: 32px; 
-$h5-font-size: 28px; 
-$h6-font-size: 18px;  
-$h7-font-size: 16px; 
-$h8-font-size: 14px;  
+
+// $h1-font-size: 144px;
+// $h2-font-size: 100px;
+// $h3-font-size: 56px;
+// $h4-font-size: 32px;
+// $h5-font-size: 28px;
+// $h6-font-size: 18px;
+// $h7-font-size: 16px;
+// $h8-font-size: 14px;
 
 // $h13-font-size: $font-size-base * 9.6;
 // $h14-font-size: $font-size-base * 9.4;
@@ -79,69 +68,80 @@ $h8-font-size: 14px;
 
 
 $shadow-explorer: 0px 0px 0px 80px rgba(255, 255, 255, 0.099);
-
+$font-size-base:  0.5rem;
+@import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
-
-
-$font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size,
-  7: $h7-font-size,
-  8: $h8-font-size
-  // 13: $h13-font-size,
-  // 14: $h14-font-size,
-  // 15: $h15-font-size,
-  // 16: $h16-font-size,
-  // 17: $h16-font-size,
-  // 18: $h17-font-size,
-  // 19: $h18-font-size,
-  // 20: $h19-font-size,
-  // 21: $h20-font-size,
-  // 22: $h21-font-size,
-  // 23: $h22-font-size,
-  // 24: $h23-font-size,
-  // 25: $h24-font-size,
-  // 26: $h25-font-size,
-  // 27: $h26-font-size,
-  // 28: $h27-font-size,
-  // 29: $h28-font-size,
-  // 30: $h29-font-size,
-  // 31: $h30-font-size,
-  // 32: $h31-font-size,
-  // 33: $h32-font-size,
-  // 34: $h33-font-size,
-  // 35: $h34-font-size,
-  // 36: $h35-font-size,
-  // 37: $h36-font-size,
-  // 38: $h37-font-size,
-  // 39: $h38-font-size,
-  // 40: $h39-font-size,
-  // 41: $h40-font-size,
-  // 42: $h41-font-size,
-  // 43: $h42-font-size,
-  // 44: $h43-font-size,
-  // 45: $h44-font-size,
-  // 46: $h45-font-size,
-  // 47: $h46-font-size,
-  // 48: $h47-font-size,
-  // 49: $h48-font-size,
-  // 50: $h49-font-size,
-  // 51: $h50-font-size,
-  // 52: $h51-font-size,
-  // 53: $h52-font-size,
-  // 54: $h53-font-size,
-  // 55: $h54-font-size,
-  // 56: $h55-font-size
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "blue-300-alt": $blue-300-alt,
+  "blue-900-alt": $blue-900-alt
 );
+
+// $font-sizes: (
+//   1: $h1-font-size,
+//   2: $h2-font-size,
+//   3: $h3-font-size,
+//   4: $h4-font-size,
+//   5: $h5-font-size,
+//   6: $h6-font-size,
+//   7: $h7-font-size,
+//   8: $h8-font-size // 13: $h13-font-size,
+//   // 14: $h14-font-size,
+//   // 15: $h15-font-size,
+//   // 16: $h16-font-size,
+//   // 17: $h16-font-size,
+//   // 18: $h17-font-size,
+//   // 19: $h18-font-size,
+//   // 20: $h19-font-size,
+//   // 21: $h20-font-size,
+//   // 22: $h21-font-size,
+//   // 23: $h22-font-size,
+//   // 24: $h23-font-size,
+//   // 25: $h24-font-size,
+//   // 26: $h25-font-size,
+//   // 27: $h26-font-size,
+//   // 28: $h27-font-size,
+//   // 29: $h28-font-size,
+//   // 30: $h29-font-size,
+//   // 31: $h30-font-size,
+//   // 32: $h31-font-size,
+//   // 33: $h32-font-size,
+//   // 34: $h33-font-size,
+//   // 35: $h34-font-size,
+//   // 36: $h35-font-size,
+//   // 37: $h36-font-size,
+//   // 38: $h37-font-size,
+//   // 39: $h38-font-size,
+//   // 40: $h39-font-size,
+//   // 41: $h40-font-size,
+//   // 42: $h41-font-size,
+//   // 43: $h42-font-size,
+//   // 44: $h43-font-size,
+//   // 45: $h44-font-size,
+//   // 46: $h45-font-size,
+//   // 47: $h46-font-size,
+//   // 48: $h47-font-size,
+//   // 49: $h48-font-size,
+//   // 50: $h49-font-size,
+//   // 51: $h50-font-size,
+//   // 52: $h51-font-size,
+//   // 53: $h52-font-size,
+//   // 54: $h53-font-size,
+//   // 55: $h54-font-size,
+//   // 56: $h55-font-size
+// );
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
-// @import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/root";
 
 
 
@@ -169,19 +169,14 @@ $utilities: (
     class: border,
     local-vars: ("border-opacity": 1),
     values: map-merge($utilities-border-colors, (transparent: transparent))),
-  "font-size": (rfs: false,
-    property: font-size,
-    responsive: true,
-    class: fs,
-    values: $font-sizes ),
+
   "border-bottom": (property: border-bottom,
     responsive: true,
     state: hover,
     values: (null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
       0: 0,
-      nav:  var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}gray-500)
-    )),
-    "border": (property: border,
+      nav: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}gray-500))),
+  "border": (property: border,
     responsive: true,
     state: hover,
     values: (null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -193,47 +188,39 @@ $utilities: (
       x: translateX(-50%),
       y: translateY(-50%),
     )),
-    "width": (
-      property: width,
-      class: w,
-      responsive: true,
-      values: (
-        25: 25%,
-        50: 50%,
-        55: 55%,
-        60: 60%,
-        75: 75%,
-        100: 100%,
-        200: 200%,
-        250: 250%,
-        300: 300%,
-        auto: auto
-      )
-    ),
-    "height": (
-      property: height,
-      class: h,
-      responsive: true,
-      values: (
-        25: 25%,
-        50: 50%,
-        55: 55%,
-        75: 75%,
-        100: 100%,
-        auto: auto
-      )
-    ),
-    "bg-opacity": (
-      css-var: true,
-      class: bg-opacity,
-      state: hover,
-      values: (
-        10: .1,
-        25: .25,
-        50: .5,
-        75: .75,
-        100: 1
-      ))
+  "width": (property: width,
+    class: w,
+    responsive: true,
+    values: (25: 25%,
+    40: 40%,
+      50: 50%,
+      55: 55%,
+      60: 60%,
+      75: 75%,
+      100: 100%,
+      200: 200%,
+      250: 250%,
+      300: 300%,
+      auto: auto)),
+  "height": (property: height,
+    class: h,
+    responsive: true,
+    values: (25: 25%,
+    40: 40%,
+      50: 50%,
+      55: 55%,
+      60: 60%,
+      75: 75%,
+      100: 100%,
+      auto: auto)),
+  "bg-opacity": (css-var: true,
+    class: bg-opacity,
+    state: hover,
+    values: (10: .1,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1))
 );
 
 
@@ -253,21 +240,75 @@ $utilities: (
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/reboot";
-@import "../node_modules/bootstrap/scss/root";
-@import "../node_modules/bootstrap/scss/tables";
 @import "../node_modules/bootstrap/scss/type";
 
+body {
+height: 100vh !important;
+width: 100vw !important; 
+}
 
-@include media-breakpoint-up(xl) {
+#root {
+  height: 100% !important;
+width: 100% !important; 
+}
 
-  .background_hombe_xl {
-    background: no-repeat url("../public/imagenes/BitmapespacioLaptop.png") !important;
-    background-size: cover;
-  }
+nav {
+  height: 10% !important;
+}
+
+
+
+.menuNavBar {
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(41px);
+  height: max-content;
+}
+
+.navbar-brand>a>img {
+width: calc(5vh);
+}
+
+button>img {
+width: calc(3.5vh);
+}
+
+.paginas {
+  height: 85%;
+}
+
+.display-1{
+  font-size: calc(3.625rem + 5vw);
+  font-weight: 300;
+  line-height: 1.2;
 
 }
 
+
+
 @include media-breakpoint-up(sm) {
+  nav {
+    height: 18vh !important;
+  }
+
+  .navbar-brand>a>svg {
+    transform: scale(1.0);
+    transform-origin: center;
+
+  }
+
+  .navbar-brand {
+    width: 20vw;
+  }
+
+  li>a {
+    height: 100%;
+    align-content: center;
+  }
+
+  .paginas {
+    height: 82vh;
+  }
+
   .home-padding-sm {
     padding-top: 160px !important;
   }
@@ -276,18 +317,9 @@ $utilities: (
     font-size: 150px !important;
   }
 
-  .boton_explorer-sm {
-    height: 242px !important;
-    width: 242px !important;
-    z-index: 10;
-  }
 
-  .padding-boton-explorador-sm {
 
-    padding-top: 200px !important;
-    height: 400px !important;
 
-  }
 
   .padding-top-destinos-sm {
     padding-top: 120px !important;
@@ -315,46 +347,51 @@ $utilities: (
   }
 
 
-  
-section::-webkit-scrollbar {
-  -webkit-appearance: none;
 
-}
+  section::-webkit-scrollbar {
+    -webkit-appearance: none;
 
-section::-webkit-scrollbar:vertical {
-  width:10px;
-
-}
-
-section::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
-  display: none;
-} 
-
-section::-webkit-scrollbar:horizontal {
-  height: 10px;
-}
-
-section::-webkit-scrollbar-thumb {
-  background-color: #fff;
-  border-radius: 20px;
-  border: 2px solid #f1f2f3;
-
-}
-
-section::-webkit-scrollbar-track {
-  border-radius: 10px;  
-
-}
-}
-
-.home-padding {
-  padding-top: 122px;
-}
-
-@media (min-height: 500px) {
-  .altura-minima {
-    height: 667px;
   }
+
+  section::-webkit-scrollbar:vertical {
+    width: 10px;
+
+  }
+
+  section::-webkit-scrollbar-button:increment,
+  body::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  section::-webkit-scrollbar:horizontal {
+    height: 10px;
+  }
+
+  section::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+
+  }
+
+  section::-webkit-scrollbar-track {
+    border-radius: 10px;
+
+  }
+
+  .espacioVacioNav {
+    width: 80px;
+  }
+}
+
+
+@include media-breakpoint-up(xl) {
+
+  .background_hombe_xl {
+    background: no-repeat url("../public/imagenes/BitmapespacioLaptop.png") !important;
+    background-size: cover;
+  }
+
 }
 
 .letra-bellefair {
@@ -389,11 +426,7 @@ section::-webkit-scrollbar-track {
 }
 
 
-.boton_explorer {
-  height: 150px;
-  width: 150px;
-  z-index: 10;
-}
+
 
 .padding-top-destinos {
   padding-top: 70px;
@@ -421,6 +454,12 @@ section::-webkit-scrollbar-track {
 }
 
 
+
+button:focus:not(:focus-visible) {
+  border: none !important;
+  box-shadow: none;
+
+}
 
 
 
@@ -507,6 +546,7 @@ section::-webkit-scrollbar-track {
   font-style: normal;
 
 }
+
 @font-face {
   font-family: "Barlow";
   src: url('/public/fuentes/Barlow/Barlow-Regular.ttf') format('truetype');
@@ -514,6 +554,7 @@ section::-webkit-scrollbar-track {
   font-style: normal;
 
 }
+
 @font-face {
   font-family: "Barlow_condensed";
   src: url('/public/fuentes/BarlowCondensed/BarlowCondensed-Regular.ttf') format('truetype');

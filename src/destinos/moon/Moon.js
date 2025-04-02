@@ -13,7 +13,7 @@ function Moon() {
 
     return (
 
-        <section className="container-fluid m-0 p-0">
+        <section className="container-fluid m-0 p-0 overflow-auto">
             <div className="row m-0 p-0">
                 <div className="col-12 col-xl-6 p-0">
                     <div className="mx-auto pt-xl-4 d-flex justify-content-center mb-sm-4 ">
