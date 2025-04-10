@@ -9,28 +9,15 @@ import {
 } from "react-router-dom";
 import Destinos from "../destinos/Destinos";
 // import "bootstrap/js/dist/offcanvas.js";
-import "bootstrap";
+// import bootstrap from "bootstrap/dist/js/bootstrap.js";
 import { useEffect } from "react";
-
+import { Offcanvas } from "bootstrap";
+// node_modules
 
 function Nav(props) {
 
-  const [Offcanvas, setOffcanvas] = useState('');
+console.log("props nav", props);
 
-
-
-
-  useEffect(() => {
-
-    let myOffcanvas = document.getElementById("offcanvasNavbar");
-    myOffcanvas.addEventListener('hidden.bs.offcanvas', () => {
-      console.log("afdasf");
-
-      // .click();
-    })
-    // console.log("marca");
-
-  }, []);
 
 
   let seleccionado = " border-bottom border-4";
@@ -82,7 +69,7 @@ function Nav(props) {
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
 
-    case "destino":
+    case "destinosId":
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = seleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
@@ -112,7 +99,7 @@ function Nav(props) {
 
   return (
 
-    <nav className="navbar navbar-expand-sm  w-100 px-0 py-0 pt-sm-0 overflow-hidden ">
+    <nav className="navbar navbar-expand-sm w-100 px-0 py-0 pt-sm-0  ">
 
       <div className="container-fluid px-4 py-0 px-sm-0 h-100">
         <div className="navbar-brand h-100 align-content-center " >
@@ -134,7 +121,7 @@ function Nav(props) {
             {/* <li className="espacioVacioNav">
                   </li> */}
             <li className={"nav-item px-1 px-sm-3 d-flex justify-content-center"}>
-              <Link to={""} className={home + " nav-link  text-light barlow-condensed  align-self-center p-0 "} aria-current="page" href="#">
+              <Link to={"/"} className={home + " nav-link  text-light barlow-condensed  align-self-center p-0 "} aria-current="page" href="#">
                 <span className="me-2 fw-bold ">00</span>
                 HOME
               </Link>
@@ -174,7 +161,7 @@ function Nav(props) {
 
 
         {/* --------------------------offcanvas----------------------- */}
-        <div className="offcanvas offcanvas-end offcanvas-vidrio-esmerilado  w-60 barlow-condensed d-sm-none pt-3" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
+        <div className="offcanvas offcanvas-end offcanvas-vidrio-esmerilado  w-60 barlow-condensed d-sm-none pt-3" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"  >
           <div className="offcanvas-header px-4 pb-5">
             <h5 className="offcanvas-title" id="offcanvasLabel"></h5>
 
@@ -186,46 +173,46 @@ function Nav(props) {
             </div>
 
           </div>
-          <div className="offcanvas-body ps-4 pe-0 pt-4 fs-4">
+          <div className="offcanvas-body ps-4 pe-0 pt-4 fs-2 espacio-entre-letras-punto-15" >
 
             <div className="container">
-              <div className="row pb-4 ">
-                <div className="col-2">
-                  <Link to={"/"} className="text-decoration-none text-light fw-bold">00</Link>
+              <div className="row pb-4 lh-1">
+                <div className="col-2 ">
+                  <Link to={"/"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close" >00</span></Link>
                 </div>
-                <div className={"col-10" + inicioOffcanvas}>
-                  <div className="d-flex justify-content-start ">
-                    <Link to={"/"} className="text-decoration-none text-light text-start ">HOME</Link>
+                <div className={"col-10 " + inicioOffcanvas}>
+                  <div className="d-flex justify-content-start   ">
+                    <Link to={"/"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close" >HOME</span></Link>
                   </div>
                 </div>
               </div>
-              <div className="row pb-4">
-                <div className="col-2">
-                  <Link to={"/destinos/moon"} className="text-decoration-none text-light fw-bold ">01</Link>
+              <div className="row pb-4 lh-1">
+                <div className="col-2 ">
+                  <Link to={"/destinos/moon"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">01</span> </Link>
                 </div>
-                <div className={"col-10" + destinoOffcanvas}>
-                  <div className="d-flex justify-content-start">
-                    <Link to={"/destinos/moon"} className="text-decoration-none text-light text-start ">DESTINOS</Link>
+                <div className={"col-10 " + destinoOffcanvas}>
+                  <div className="d-flex justify-content-start  ">
+                    <Link to={"/destinos/moon"} className="text-decoration-none text-light text-start  " > <span data-bs-dismiss="offcanvas" aria-label="Close">DESTINOS</span></Link>
                   </div>
                 </div>
               </div>
-              <div className="row  pb-4">
+              <div className="row  pb-4 lh-1">
                 <div className="col-2">
-                  <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light fw-bold ">02</Link>
+                  <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">02</span></Link>
                 </div>
-                <div className={"col-10" + tripulacionOffcanvas}>
-                  <div className="d-flex justify-content-start">
-                    <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light text-start ">CREW</Link>
+                <div className={"col-10 " + tripulacionOffcanvas}>
+                  <div className="d-flex justify-content-start   ">
+                    <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light text-start  "><span data-bs-dismiss="offcanvas" aria-label="Close">CREW</span></Link>
                   </div>
                 </div>
               </div>
-              <div className="row pb-4">
+              <div className="row pb-4 lh-1">
                 <div className="col-2">
-                  <Link to={"/tecnologia/nave"} className="text-decoration-none text-light  fw-bold">03</Link>
+                  <Link to={"/tecnologia/nave"} className="text-decoration-none text-light  fw-bold"><span data-bs-dismiss="offcanvas" aria-label="Close">03</span></Link>
                 </div>
-                <div className={"col-10" + tecnologiaOffcanvas}>
-                  <div className="d-flex justify-content-start">
-                    <Link to={"/tecnologia/nave"} className="text-decoration-none text-light text-start ">TECHNOLOGY</Link>
+                <div className={"col-10 " + tecnologiaOffcanvas}>
+                  <div className="d-flex justify-content-start  ">
+                    <Link to={"/tecnologia/nave"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close">TECHNOLOGY</span></Link>
                   </div>
                 </div>
               </div>

@@ -1,21 +1,40 @@
 
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "./nav/Nav";
-import Rutas from "./rutas/Rutas";
-import { Link, Navigate, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet, useParams } from "react-router-dom";
 
 
-function App() {
-  let style = {
-    background: "no-repeat " + "url('./imagenes/BitmapespacioLaptop2.png')",
-    backgroundSize: "cover"
-}
+function App(props) {
+
+  let parametros = useParams();
+
+  // console.log("parametros", parametros);
+
+  const fondo = {
+    "": "./imagenes/BitmapespacioLaptop2.png",
+    "destinosId": "../../imagenes/fondoLuna.svg"
+  }
+
+  let [rutaFondo, setRutaFondo] = useState("");
+
+
+
+  useEffect(() => {
+
+    console.log("__________________________________________________________________________________________",);
+    console.log("parametros", parametros);
+    console.log("parametros.destinosId", parametros.destinosId);
+    setRutaFondo(parametros.destinosId ? fondo[Object.keys(parametros)[0]] : fondo[""])
+    // console.log("marca \b");
+  }, [parametros])
+
+
 
 
   return (
-    <main   className="text-center  h-100 background_hombe_xl h-xl-100 ">
-      <Nav pagina={"home"}></Nav>
+    <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover" }} className="text-center   background_hombe_xl h-xl-100 ">
+      <Nav pagina={parametros.destinosId?Object.keys(parametros)[0]:"home"}></Nav>
       <Outlet />
     </main>
 

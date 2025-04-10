@@ -11,21 +11,35 @@ import {
 import Base from './base/Base';
 import Moon from './destinos/moon/Moon';
 import Home from './home/Home';
+import fondo from "./destinos/moon/fondoLuna.svg";
 
-
+// const imagenes = document.createElement("img")
+// imagenes.src= fondo;
 const router = createBrowserRouter(
-  createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
-      <Route path="base" element={<Base />} />
-      <Route path="destinos/moon" element={<Moon />} />
-    </Route>
-  )
+  [
+    {
+      path: "/",
+      element: <App  />,
+      children: [
+        {
+          path: "",
+          element: <Home  />
+        },
+        {
+          path: "destinos/:destinosId",
+          element: <Moon  fondos={fondo} />
+        },
+      ],
+    },
+  ]
 );
+
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}  />
   </>
 );
 
