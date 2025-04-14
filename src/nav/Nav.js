@@ -102,7 +102,7 @@ console.log("props nav", props);
     <nav className="navbar navbar-expand-sm w-100 px-0 py-0 pt-sm-0  ">
 
       <div className="container-fluid px-4 py-0 px-sm-0 h-100">
-        <div className="navbar-brand h-100 align-content-center " >
+        <div className="navbar-brand h-100 align-content-center me-0 " >
           <Link to={"/"} className="p-0 m-0 h-100 align-content-center" >
             <img src={logo_pagina} className="img-fluid">
 
@@ -114,15 +114,14 @@ console.log("props nav", props);
           <img src={iconoToggler} className="img-fluid">
           </img>
         </button>
-        <div className="d-none w-100 d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center w-xl-55 menuNavBar ">
+        <div className="d-none fs-2 espacio-entre-letras-punto-15 w-100 d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  menuNavBar ">
           <hr className=" d-none d-xl-block"></hr>
 
-          <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 fs-8 justify-content-xl-around">
+          <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 fs-3 justify-content-xl-around">
             {/* <li className="espacioVacioNav">
                   </li> */}
             <li className={"nav-item px-1 px-sm-3 d-flex justify-content-center"}>
               <Link to={"/"} className={home + " nav-link  text-light barlow-condensed  align-self-center p-0 "} aria-current="page" href="#">
-                <span className="me-2 fw-bold ">00</span>
                 HOME
               </Link>
             </li>

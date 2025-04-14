@@ -46,12 +46,12 @@ function Planetas_listado_html(props) {
 
     return (
 
-        <div className="d-flex justify-content-around mb-4 pt-2 px-3 fs-1 barlow-condensed ">
+        <div className="d-flex justify-content-around mb-4 pt-2  px-3 fs-2 barlow-condensed espacio-entre-letras-punto-15 ">
 
-            <Link to={"/destinos/moon"} className="text-decoration-none" ><p className={luna+" d-block mb-0  mx-4 pb-2 p-sm-4"}>MOOM</p></Link>
-            <Link to={"/destinos/marte"} className="text-decoration-none"><p className={marte +" d-block mb-0  mx-4 pb-2 p-sm-4"}>MARS</p></Link>
-            <Link to={"/destinos/europa"} className="text-decoration-none"><p className={europa +" d-block mb-0  mx-4 pb-2 p-sm-4"}>EUROPA</p></Link>
-            <Link to={"/destinos/titan"} className="text-decoration-none"><p className={titan +" d-block mb-0  mx-4 pb-2 p-sm-4"}>TITAN</p></Link>
+            <Link to={"/destinos/moon"} className="text-decoration-none" ><span className={luna+" d-block mb-0   pb-2 p-sm-4"}>MOOM</span></Link>
+            <Link to={"/destinos/marte"} className="text-decoration-none"><p className={marte +" d-block mb-0   pb-2 p-sm-4"}>MARS</p></Link>
+            <Link to={"/destinos/europa"} className="text-decoration-none"><p className={europa +" d-block mb-0   pb-2 p-sm-4"}>EUROPA</p></Link>
+            <Link to={"/destinos/titan"} className="text-decoration-none"><p className={titan +" d-block mb-0   pb-2 p-sm-4"}>TITAN</p></Link>
         </div>
     )
 }

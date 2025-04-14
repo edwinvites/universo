@@ -190,9 +190,13 @@ $utilities: (
     )),
   "letter-spacing": (property: letter-spacing,
     class: espacio-entre-letras,
+    responsive: true,
     values: (punto-1: 0.1rem,
-    punto-15:0.15rem,
+    punto-15: 0.15rem,
+    punto-17: 0.17rem,
+    punto-185: 0.185rem,
       punto-2: 0.2rem,
+      punto-25: 0.25rem,
       punto-3: 0.3rem,
       punto-4: 0.4rem,
       punto-5: 0.5rem))
@@ -241,6 +245,7 @@ $utilities: map-merge($utilities,
         ),
       ),
     ));
+
 
 
 
@@ -302,12 +307,10 @@ button>img {
   border: none !important;
 }
 
-.paginas {
-  height: 85%;
-}
+
 
 .display-1 {
-  font-size: calc(4.5rem + 5vw);
+  font-size: calc(4.0rem + 5vw);
   font-weight: 300;
   line-height: 1.2;
 
@@ -319,23 +322,14 @@ button>img {
   line-height: 1.2;
 }
 
-.letter-spacing-02 {
-  letter-spacing: 0.2rem;
-}
-
-.letter-spacing-01 {
-  letter-spacing: 0.1rem;
-}
 
 @include media-breakpoint-up(sm) {
   nav {
-    height: 18vh !important;
+    height: 15vh !important;
   }
 
-  .navbar-brand>a>svg {
-    transform: scale(1.0);
-    transform-origin: center;
-
+  .navbar-brand>a>img {
+    width: calc(7vh);
   }
 
   .navbar-brand {
@@ -346,48 +340,22 @@ button>img {
     height: 100%;
     align-content: center;
   }
-
-  .paginas {
-    height: 82vh;
+  
+  .fs-2 {
+    font-size: calc(1.68rem + 0.1vw) !important;
   }
-
-  .home-padding-sm {
-    padding-top: 160px !important;
+  
+  .fs-3 {
+    font-size: calc(0.5rem + 1vw) !important;
   }
-
-  .tamanio-titulo-sm {
-    font-size: 150px !important;
-  }
-
-
-
-
-
-  .padding-top-destinos-sm {
-    padding-top: 120px !important;
-  }
-
-  .marco-planetas-sm {
-    height: 280px;
-    width: 280px;
-  }
-
-  .tablet-tecnologia-sm {
-    padding-top: 110px !important;
-  }
-
-  .tablet-tripulantes {
-    padding-top: 110px !important;
-  }
-
-  .tablet-imagen-nave-sm {
-    height: 350px !important;
-  }
-
-  .tablet-imagen-nave-ancho-sm {
-    width: 768px !important;
-  }
-
+  .fs-4 {
+    font-size: calc(0.6rem + 1vw) !important;
+}
+  .display-1 {
+    font-size: calc(6.5rem + 5vw);
+    font-weight: 300;
+    line-height: 1.2;
+}
 
 
   section::-webkit-scrollbar {
@@ -405,21 +373,7 @@ button>img {
     display: none;
   }
 
-  section::-webkit-scrollbar:horizontal {
-    height: 10px;
-  }
 
-  section::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border-radius: 20px;
-    border: 2px solid #f1f2f3;
-
-  }
-
-
-  .espacioVacioNav {
-    width: 80px;
-  }
 }
 
 
