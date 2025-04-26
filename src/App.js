@@ -33,8 +33,8 @@ function App(props) {
 
 
   return (
-    <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover" }} className="text-center   background_hombe_xl h-xl-100 ">
-      <Nav pagina={parametros.destinosId?Object.keys(parametros)[0]:"home"}></Nav>
+    <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover" }} className="text-center   background_home_lg  ">
+      <Nav pagina={parametros.destinosId ? Object.keys(parametros)[0]:"home"}></Nav>
       <Outlet />
     </main>
 

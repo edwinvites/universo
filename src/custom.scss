@@ -192,9 +192,9 @@ $utilities: (
     class: espacio-entre-letras,
     responsive: true,
     values: (punto-1: 0.1rem,
-    punto-15: 0.15rem,
-    punto-17: 0.17rem,
-    punto-185: 0.185rem,
+      punto-15: 0.15rem,
+      punto-17: 0.17rem,
+      punto-185: 0.185rem,
       punto-2: 0.2rem,
       punto-25: 0.25rem,
       punto-3: 0.3rem,
@@ -208,23 +208,39 @@ $utilities: (
 $utilities: map-merge($utilities,
     ("width": map-merge(map-get($utilities, "width"),
         (values: map-merge(map-get(map-get($utilities, "width"), "values"),
-            (40: 40%,
+            (3: 3%,
+              5: 5%,
+              40: 40%,
               55: 55%,
               60: 60%,
               75: 75%,
+              80: 80%,
               90: 90%,
-            ),
+              105: 105%),
           ),
         ),
       ),
     ));
 
 $utilities: map-merge($utilities,
+    ("width": map-merge(map-get($utilities, "width"),
+        (responsive: true),
+      ),
+    ));
+
+$utilities: map-merge($utilities,
     ("height": map-merge(map-get($utilities, "height"),
         (values: map-merge(map-get(map-get($utilities, "height"), "values"),
-            (40: 40%,
+            (5: 5%,
+              25:25%,
+              40: 40%,
               55: 55%,
               60: 60%,
+              70: 70%,
+              73: 73%,
+              77: 77%,
+              80: 80%,
+              87: 87%,
               100: 100%,
               200: 200%,
               250: 250%,
@@ -235,18 +251,54 @@ $utilities: map-merge($utilities,
       ),
     ));
 
+$utilities: map-merge($utilities,
+    ("height": map-merge(map-get($utilities, "height"),
+        (responsive: true),
+      ),
+    ));
 
 $utilities: map-merge($utilities,
     ("viewport-height": map-merge(map-get($utilities, "viewport-height"),
         (values: map-merge(map-get(map-get($utilities, "viewport-height"), "values"),
-            (40: 40vh,
+            (15: 15vh,
+              30:30vh,
+              40: 40vh,
+              50: 50vh,
               110: 110vh),
           ),
         ),
       ),
     ));
 
+$utilities: map-merge($utilities,
+    ("viewport-height": map-merge(map-get($utilities, "viewport-height"),
+        (responsive: true),
+      ),
+    ));
 
+$utilities: map-merge($utilities,
+    ("viewport-width": map-merge(map-get($utilities, "viewport-width"),
+        (values: map-merge(map-get(map-get($utilities, "viewport-width"), "values"),
+            (40: 40vh,
+              50: 50vh,
+              80: 80vh,
+              110: 110vh),
+          ),
+        ),
+      ),
+    ));
+
+$utilities: map-merge($utilities,
+    ("viewport-width": map-merge(map-get($utilities, "viewport-width"),
+        (responsive: true),
+      ),
+    ));
+
+$utilities: map-merge($utilities,
+    ("font-size": map-merge(map-get($utilities, "font-size"),
+        (responsive: true),
+      ),
+    ));
 
 
 
@@ -289,7 +341,7 @@ nav {
 
 
 
-.menuNavBar {
+.efectoEsmeril {
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(41px);
   height: max-content;
@@ -307,7 +359,13 @@ button>img {
   border: none !important;
 }
 
+.col-10:hover>div>div {
+  background: $gray-600;
+}
 
+.col-2:hover+.col-10>div>div {
+  background: $gray-600;
+}
 
 .display-1 {
   font-size: calc(4.0rem + 5vw);
@@ -336,26 +394,27 @@ button>img {
     width: 20vw;
   }
 
-  li>a {
-    height: 100%;
-    align-content: center;
+  a:hover~div {
+    background: $gray-600;
   }
-  
+
   .fs-2 {
     font-size: calc(1.68rem + 0.1vw) !important;
   }
-  
+
   .fs-3 {
     font-size: calc(0.5rem + 1vw) !important;
   }
+
   .fs-4 {
     font-size: calc(0.6rem + 1vw) !important;
-}
+  }
+
   .display-1 {
     font-size: calc(6.5rem + 5vw);
     font-weight: 300;
     line-height: 1.2;
-}
+  }
 
 
   section::-webkit-scrollbar {
@@ -377,13 +436,52 @@ button>img {
 }
 
 
-@include media-breakpoint-up(xl) {
+@include media-breakpoint-up(lg) {
 
-  .background_hombe_xl {
+  .background_home_lg {
     background: no-repeat url("../public/imagenes/BitmapespacioLaptop.png") !important;
-    background-size: cover;
+    background-size: cover !important;
   }
 
+  nav {
+    height: 22vh !important;
+    align-items: end;
+  }
+
+  .navbar {
+    align-items: flex-end;
+  }
+
+  .navbar-brand>a>img {
+    width: calc(7vh);
+  }
+
+  .navbar-brand {
+    width: 16vw;
+  }
+
+  .fs-1 {
+    font-size: calc(0.5rem + 1vw) !important;
+  }
+
+  .fs-2 {
+    font-size: calc(1.0rem + 1vw) !important;
+  }
+
+  .fs-3 {
+    font-size: calc(0.3rem + 1vw) !important;
+  }
+
+  .fs-4 {
+    font-size: calc(0.6rem + 1vw) !important;
+  }
+
+
+  .display-1 {
+    font-size: calc(6rem + 5vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
 }
 
 .letra-bellefair {
@@ -422,31 +520,6 @@ button>img {
 
 
 
-
-.padding-top-destinos {
-  padding-top: 70px;
-}
-
-.marco-planetas {
-  height: 230px;
-  width: 230px;
-}
-
-.tablet-tecnologia {
-  padding-top: 60px;
-}
-
-.tablet-tripulantes {
-  padding-top: 50px;
-}
-
-.tablet-imagen-nave {
-  height: 200px;
-}
-
-.tablet-imagen-nave-ancho {
-  width: 375px;
-}
 
 
 

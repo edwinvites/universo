@@ -16,12 +16,12 @@ import { Offcanvas } from "bootstrap";
 
 function Nav(props) {
 
-console.log("props nav", props);
+  console.log("props nav", props);
 
 
 
-  let seleccionado = " border-bottom border-4";
-  let noSeleccionado = " border-transparent border-bottom-nav-hover border-bottom border-4";
+  let seleccionado = "bg-white";
+  let noSeleccionado = "";
   let home, destino, tripulacion, tecnologia;
 
   switch (props.pagina) {
@@ -32,7 +32,7 @@ console.log("props nav", props);
       tecnologia = noSeleccionado;
       break;
 
-    case "destino":
+    case "destinosId":
       home = noSeleccionado;
       destino = seleccionado;
       tripulacion = noSeleccionado;
@@ -57,8 +57,8 @@ console.log("props nav", props);
       break;
   }
 
-  let seleccionadoOffcanvas = " border-end border-white border-3";
-  let noSeleccionadoOffcanvas = " ";
+  let seleccionadoOffcanvas = " bg-white";
+  let noSeleccionadoOffcanvas = "";
   let inicioOffcanvas, destinoOffcanvas, tripulacionOffcanvas, tecnologiaOffcanvas;
 
   switch (props.pagina) {
@@ -101,7 +101,7 @@ console.log("props nav", props);
 
     <nav className="navbar navbar-expand-sm w-100 px-0 py-0 pt-sm-0  ">
 
-      <div className="container-fluid px-4 py-0 px-sm-0 h-100">
+      <div className="container-fluid  px-4 py-0 px-sm-0 h-100 h-lg-70">
         <div className="navbar-brand h-100 align-content-center me-0 " >
           <Link to={"/"} className="p-0 m-0 h-100 align-content-center" >
             <img src={logo_pagina} className="img-fluid">
@@ -114,35 +114,44 @@ console.log("props nav", props);
           <img src={iconoToggler} className="img-fluid">
           </img>
         </button>
-        <div className="d-none fs-2 espacio-entre-letras-punto-15 w-100 d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  menuNavBar ">
-          <hr className=" d-none d-xl-block"></hr>
+        <div className=" d-none d-lg-block w-100">
+          <hr size="4" className="w-105 z-3 position-relative bg-body z-3 m-0 d-none d-lg-block" />
 
-          <ul className="navbar-nav text-light h-100 w-xl-75 ps-4 pe-3 fs-3 justify-content-xl-around">
+        </div>
+        <div className="d-none fs-2 espacio-entre-letras-punto-15 w-100  d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  efectoEsmeril ">
+          <ul className="navbar-nav text-light h-100  ps-4 pe-4 fs-3 fs-lg-1 justify-content-xl-around">
             {/* <li className="espacioVacioNav">
                   </li> */}
-            <li className={"nav-item px-1 px-sm-3 d-flex justify-content-center"}>
-              <Link to={"/"} className={home + " nav-link  text-light barlow-condensed  align-self-center p-0 "} aria-current="page" href="#">
+            <li className="nav-item px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column">
+              <div className="h-5"></div>
+              <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center p-0 " aria-current="page" href="#">
                 HOME
               </Link>
+              <div className={home + " h-5"}></div>
             </li>
-            <li className={"nav-item px-1 px-sm-3 d-flex justify-content-center"}>
-              <Link to={"/destinos/moon"} className={destino + " nav-link text-light barlow-condensed  align-self-center p-0"} href="#">
+            <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
+              <div className="h-5"></div>
+              <Link to={"/destinos/moon"} className=" nav-link text-light barlow-condensed  align-self-center p-0" href="#">
                 <span className="me-2 fw-bold">01</span>
                 DESTINATION
               </Link>
+              <div className={destino + " h-5"}></div>
             </li>
-            <li className={"nav-item px-1 px-sm-3 d-flex justify-content-center"}>
-              <Link to={"/tripulacion/douglas"} className={tripulacion + " nav-link text-light barlow-condensed  align-self-center p-0"}>
+            <li className={"nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"}>
+            <div className="h-5"></div>
+              <Link to={"/tripulacion/douglas"} className={ " nav-link text-light barlow-condensed  align-self-center p-0"}>
                 <span className="me-2 fw-bold">02</span>
                 CREW
               </Link>
-
+              <div className={tripulacion + " h-5"}></div>
             </li>
-            <li className={"nav-item px-1 px-sm-3 d-flex justify-content-center"}>
-              <Link to={"/tecnologia/nave"} className={tecnologia + " nav-link text-light barlow-condensed  align-self-center p-0"}>
+            <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
+            <div className="h-5"></div>
+              <Link to={"/tecnologia/nave"} className={ " nav-link text-light barlow-condensed  align-self-center p-0"}>
                 <span className="me-2 fw-bold">03</span>
                 TECHNOLOGY
               </Link>
+              <div className={tecnologia + " h-5"}></div>
             </li>
           </ul>
         </div>
@@ -179,19 +188,22 @@ console.log("props nav", props);
                 <div className="col-2 ">
                   <Link to={"/"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close" >00</span></Link>
                 </div>
-                <div className={"col-10 " + inicioOffcanvas}>
-                  <div className="d-flex justify-content-start   ">
+                <div className={"col-10 pe-0"}>
+                  <div className="d-flex justify-content-between   ">
                     <Link to={"/"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close" >HOME</span></Link>
+                    <div className={"w-3" + inicioOffcanvas}></div>
                   </div>
+
                 </div>
               </div>
               <div className="row pb-4 lh-1">
                 <div className="col-2 ">
                   <Link to={"/destinos/moon"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">01</span> </Link>
                 </div>
-                <div className={"col-10 " + destinoOffcanvas}>
-                  <div className="d-flex justify-content-start  ">
+                <div className={"col-10 pe-0" }>
+                  <div className="d-flex justify-content-between  ">
                     <Link to={"/destinos/moon"} className="text-decoration-none text-light text-start  " > <span data-bs-dismiss="offcanvas" aria-label="Close">DESTINOS</span></Link>
+                    <div className={"w-3 " + destinoOffcanvas}></div>
                   </div>
                 </div>
               </div>
@@ -199,9 +211,10 @@ console.log("props nav", props);
                 <div className="col-2">
                   <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">02</span></Link>
                 </div>
-                <div className={"col-10 " + tripulacionOffcanvas}>
-                  <div className="d-flex justify-content-start   ">
+                <div className={"col-10  pe-0 " + tripulacionOffcanvas}>
+                  <div className="d-flex justify-content-between   ">
                     <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light text-start  "><span data-bs-dismiss="offcanvas" aria-label="Close">CREW</span></Link>
+                    <div className={"w-3 " + tripulacionOffcanvas}></div>
                   </div>
                 </div>
               </div>
@@ -209,9 +222,10 @@ console.log("props nav", props);
                 <div className="col-2">
                   <Link to={"/tecnologia/nave"} className="text-decoration-none text-light  fw-bold"><span data-bs-dismiss="offcanvas" aria-label="Close">03</span></Link>
                 </div>
-                <div className={"col-10 " + tecnologiaOffcanvas}>
-                  <div className="d-flex justify-content-start  ">
+                <div className={"col-10 pe-0 " + tecnologiaOffcanvas}>
+                  <div className="d-flex justify-content-between  ">
                     <Link to={"/tecnologia/nave"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close">TECHNOLOGY</span></Link>
+                    <div className={"w-3 " + tecnologiaOffcanvas}></div>
                   </div>
                 </div>
               </div>
