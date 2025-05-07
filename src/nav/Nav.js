@@ -16,7 +16,7 @@ import { Offcanvas } from "bootstrap";
 
 function Nav(props) {
 
-  console.log("props nav", props);
+
 
 
 
@@ -99,7 +99,7 @@ function Nav(props) {
 
   return (
 
-    <nav className="navbar navbar-expand-sm w-100 px-0 py-0 pt-sm-0  ">
+    <nav className="navbar navbar-expand-sm w-100 px-0 py-4 pt-sm-0  ">
 
       <div className="container-fluid  px-4 py-0 px-sm-0 h-100 h-lg-70">
         <div className="navbar-brand h-100 align-content-center me-0 " >
@@ -131,7 +131,7 @@ function Nav(props) {
             </li>
             <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
               <div className="h-5"></div>
-              <Link to={"/destinos/moon"} className=" nav-link text-light barlow-condensed  align-self-center p-0" href="#">
+              <Link to={"/home/destinos/moon"} className=" nav-link text-light barlow-condensed  align-self-center p-0" href="#">
                 <span className="me-2 fw-bold">01</span>
                 DESTINATION
               </Link>

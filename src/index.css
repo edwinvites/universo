@@ -795,6 +795,14 @@
   height: 50vh !important;
 }
 
+.vh-55 {
+  height: 55vh !important;
+}
+
+.vh-60 {
+  height: 60vh !important;
+}
+
 .vh-110 {
   height: 110vh !important;
 }
@@ -2409,6 +2417,12 @@
   .vh-sm-50 {
     height: 50vh !important;
   }
+  .vh-sm-55 {
+    height: 55vh !important;
+  }
+  .vh-sm-60 {
+    height: 60vh !important;
+  }
   .vh-sm-110 {
     height: 110vh !important;
   }
@@ -3153,6 +3167,12 @@
   }
   .vh-md-50 {
     height: 50vh !important;
+  }
+  .vh-md-55 {
+    height: 55vh !important;
+  }
+  .vh-md-60 {
+    height: 60vh !important;
   }
   .vh-md-110 {
     height: 110vh !important;
@@ -3899,6 +3919,12 @@
   .vh-lg-50 {
     height: 50vh !important;
   }
+  .vh-lg-55 {
+    height: 55vh !important;
+  }
+  .vh-lg-60 {
+    height: 60vh !important;
+  }
   .vh-lg-110 {
     height: 110vh !important;
   }
@@ -4644,6 +4670,12 @@
   .vh-xl-50 {
     height: 50vh !important;
   }
+  .vh-xl-55 {
+    height: 55vh !important;
+  }
+  .vh-xl-60 {
+    height: 60vh !important;
+  }
   .vh-xl-110 {
     height: 110vh !important;
   }
@@ -5388,6 +5420,12 @@
   }
   .vh-xxl-50 {
     height: 50vh !important;
+  }
+  .vh-xxl-55 {
+    height: 55vh !important;
+  }
+  .vh-xxl-60 {
+    height: 60vh !important;
   }
   .vh-xxl-110 {
     height: 110vh !important;
@@ -8997,10 +9035,6 @@ main {
   min-height: 100vh;
 }
 
-nav {
-  height: 12vh !important;
-}
-
 .efectoEsmeril {
   background-color: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(41px);
@@ -9008,11 +9042,11 @@ nav {
 }
 
 .navbar-brand > a > img {
-  width: 5vh;
+  width: 8vh;
 }
 
 button > img {
-  width: 3.5vh;
+  width: 4vh;
 }
 
 .navbar-toggler {

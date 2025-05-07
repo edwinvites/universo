@@ -1,22 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../nav/Nav";
 import logoExplorer from "./botonExplorer.svg";
 import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    Link,
+    redirect,
+    useSearchParams,
+    useNavigate
 } from "react-router-dom";
 import Destinos from "../destinos/Destinos";
 
 
 
-function Home(fondo) {
+function Home() {
+
+const navigate = useNavigate();
+// function pruebas() {
+//     redirect("/tamanioLaptop");
+
+// }
 
 
 
+let casa = 5;
+let [searchParams, setSearchParams] = useSearchParams();
+
+const [boton,setboton] = useState(false);
+
+// console.log("bton",boton);
 
 
+useEffect(()=>{
+
+// navigate("tamanioLaptop");
+// console.log("activado");
+
+},[boton])
+
+function setterBoton() {
+    setboton(true)
+}
 
     return (
 
@@ -31,8 +56,8 @@ function Home(fondo) {
                             <div className="col-12 col-sm-8 col-lg-6 px-0 h-60">
                                 <div className="d-flex flex-column justify-content-between  ">
                                     <p className=' mt-4 text-lila fs-2 espacio-entre-letras-punto-1 espacio-entre-letras-sm-punto-25 barlow-condensed text-xl-start'>SO, YOU WANT TO TRAVEL TO</p>
-                                    <p className=' text-light letra-bellefair pt-2 mt-1 display-1 text-xl-start'>SPACE</p>
-                                    <p className=' fs-3 text-lila mb-5 pt-3 pb-5 pt-sm-2 pb-sm-5 lh-lg text-xl-start'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
+                                    <p className=' text-light letra-bellefair pt-2 mt-1 display-1 text-xl-start' >SPACE</p>
+                                    <p className=' fs-3 text-lila mb-5 pt-3 pb-5 pt-sm-2 pb-sm-5 py-lg-0 mb-lg-0 lh-lg text-xl-start'>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!</p>
                                 </div>
                             </div>
                             <div className="col-sm-2 p-0  d-lg-none"></div>

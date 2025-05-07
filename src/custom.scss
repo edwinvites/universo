@@ -264,6 +264,8 @@ $utilities: map-merge($utilities,
               30:30vh,
               40: 40vh,
               50: 50vh,
+              55: 55vh,
+              60: 60vh,
               110: 110vh),
           ),
         ),
@@ -335,10 +337,6 @@ main {
   min-height: 100vh;
 }
 
-nav {
-  height: 12vh !important;
-}
-
 
 
 .efectoEsmeril {
@@ -348,11 +346,11 @@ nav {
 }
 
 .navbar-brand>a>img {
-  width: calc(5vh);
+  width: calc(8vh);
 }
 
 button>img {
-  width: calc(3.5vh);
+  width: calc(4vh);
 }
 
 .navbar-toggler {
@@ -437,11 +435,6 @@ button>img {
 
 
 @include media-breakpoint-up(lg) {
-
-  .background_home_lg {
-    background: no-repeat url("../public/imagenes/BitmapespacioLaptop.png") !important;
-    background-size: cover !important;
-  }
 
   nav {
     height: 22vh !important;

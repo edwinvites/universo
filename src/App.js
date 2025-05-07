@@ -2,39 +2,67 @@
 
 import React, { useEffect, useState } from "react";
 import Nav from "./nav/Nav";
-import { Link, Navigate, Outlet, useParams } from "react-router-dom";
+import { Link, Navigate, Outlet, redirect, useLocation, useNavigate, useParams } from "react-router-dom";
 
 
 function App(props) {
+  const navigate = useNavigate();
+  console.log(window.innerWidth);
+
+
 
   let parametros = useParams();
 
-  // console.log("parametros", parametros);
-
-  const fondo = {
-    "": "./imagenes/BitmapespacioLaptop2.png",
-    "destinosId": "../../imagenes/fondoLuna.svg"
-  }
-
-  let [rutaFondo, setRutaFondo] = useState("");
-
+  const location = useLocation();
 
 
   useEffect(() => {
+    if ((window.innerWidth > 990) && (window.location.pathname == "/home")) {
+      navigate("../tamanioLaptop")
 
-    console.log("__________________________________________________________________________________________",);
-    console.log("parametros", parametros);
-    console.log("parametros.destinosId", parametros.destinosId);
-    setRutaFondo(parametros.destinosId ? fondo[Object.keys(parametros)[0]] : fondo[""])
-    // console.log("marca \b");
-  }, [parametros])
+    }
 
+    if (window.innerWidth < 990 && window.location.pathname == "/tamanioLaptop") {
+      navigate("../home")
+    }
+    
+    setRutaFondo(fondo[location.pathname]);
+  }, [location])
+
+  const fondo = {
+    "/home": "./imagenes/BitmapespacioLaptop2.png",
+    "/tamanioLaptop": "./imagenes/BitmapespacioLaptop.png",
+    "destinosId": "../../imagenes/fondoLuna.svg"
+  }
+  let [rutaFondo, setRutaFondo] = useState();
+
+
+
+  
+
+  useEffect(() => {
+
+
+
+    window.addEventListener("resize", () => {
+
+      if ((window.innerWidth > 990) && (window.location.pathname == "/home")) {
+        navigate("../tamanioLaptop")
+
+      }
+
+      if (window.innerWidth < 990 && window.location.pathname == "/tamanioLaptop") {
+        navigate("../home")
+      }
+    }
+    )
+  }, [])
 
 
 
   return (
-    <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover" }} className="text-center   background_home_lg  ">
-      <Nav pagina={parametros.destinosId ? Object.keys(parametros)[0]:"home"}></Nav>
+    <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover" }} className="text-center    ">
+      <Nav pagina={parametros.destinosId ? Object.keys(parametros)[0] : "home"}></Nav>
       <Outlet />
     </main>
 
