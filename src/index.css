@@ -684,19 +684,19 @@
 }
 
 .vw-40 {
-  width: 40vh !important;
+  width: 40vw !important;
 }
 
 .vw-50 {
-  width: 50vh !important;
+  width: 50vw !important;
 }
 
 .vw-80 {
-  width: 80vh !important;
+  width: 80vw !important;
 }
 
 .vw-110 {
-  width: 110vh !important;
+  width: 110vw !important;
 }
 
 .min-vw-100 {
@@ -777,6 +777,18 @@
 
 .vh-100 {
   height: 100vh !important;
+}
+
+.vh-7 {
+  height: 7vh !important;
+}
+
+.vh-8 {
+  height: 8vh !important;
+}
+
+.vh-10 {
+  height: 10vh !important;
 }
 
 .vh-15 {
@@ -2340,16 +2352,16 @@
     width: 100vw !important;
   }
   .vw-sm-40 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .vw-sm-50 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .vw-sm-80 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .vw-sm-110 {
-    width: 110vh !important;
+    width: 110vw !important;
   }
   .h-sm-25 {
     height: 25% !important;
@@ -2404,6 +2416,15 @@
   }
   .vh-sm-100 {
     height: 100vh !important;
+  }
+  .vh-sm-7 {
+    height: 7vh !important;
+  }
+  .vh-sm-8 {
+    height: 8vh !important;
+  }
+  .vh-sm-10 {
+    height: 10vh !important;
   }
   .vh-sm-15 {
     height: 15vh !important;
@@ -3091,16 +3112,16 @@
     width: 100vw !important;
   }
   .vw-md-40 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .vw-md-50 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .vw-md-80 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .vw-md-110 {
-    width: 110vh !important;
+    width: 110vw !important;
   }
   .h-md-25 {
     height: 25% !important;
@@ -3155,6 +3176,15 @@
   }
   .vh-md-100 {
     height: 100vh !important;
+  }
+  .vh-md-7 {
+    height: 7vh !important;
+  }
+  .vh-md-8 {
+    height: 8vh !important;
+  }
+  .vh-md-10 {
+    height: 10vh !important;
   }
   .vh-md-15 {
     height: 15vh !important;
@@ -3842,16 +3872,16 @@
     width: 100vw !important;
   }
   .vw-lg-40 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .vw-lg-50 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .vw-lg-80 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .vw-lg-110 {
-    width: 110vh !important;
+    width: 110vw !important;
   }
   .h-lg-25 {
     height: 25% !important;
@@ -3906,6 +3936,15 @@
   }
   .vh-lg-100 {
     height: 100vh !important;
+  }
+  .vh-lg-7 {
+    height: 7vh !important;
+  }
+  .vh-lg-8 {
+    height: 8vh !important;
+  }
+  .vh-lg-10 {
+    height: 10vh !important;
   }
   .vh-lg-15 {
     height: 15vh !important;
@@ -4593,16 +4632,16 @@
     width: 100vw !important;
   }
   .vw-xl-40 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .vw-xl-50 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .vw-xl-80 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .vw-xl-110 {
-    width: 110vh !important;
+    width: 110vw !important;
   }
   .h-xl-25 {
     height: 25% !important;
@@ -4657,6 +4696,15 @@
   }
   .vh-xl-100 {
     height: 100vh !important;
+  }
+  .vh-xl-7 {
+    height: 7vh !important;
+  }
+  .vh-xl-8 {
+    height: 8vh !important;
+  }
+  .vh-xl-10 {
+    height: 10vh !important;
   }
   .vh-xl-15 {
     height: 15vh !important;
@@ -5344,16 +5392,16 @@
     width: 100vw !important;
   }
   .vw-xxl-40 {
-    width: 40vh !important;
+    width: 40vw !important;
   }
   .vw-xxl-50 {
-    width: 50vh !important;
+    width: 50vw !important;
   }
   .vw-xxl-80 {
-    width: 80vh !important;
+    width: 80vw !important;
   }
   .vw-xxl-110 {
-    width: 110vh !important;
+    width: 110vw !important;
   }
   .h-xxl-25 {
     height: 25% !important;
@@ -5408,6 +5456,15 @@
   }
   .vh-xxl-100 {
     height: 100vh !important;
+  }
+  .vh-xxl-7 {
+    height: 7vh !important;
+  }
+  .vh-xxl-8 {
+    height: 8vh !important;
+  }
+  .vh-xxl-10 {
+    height: 10vh !important;
   }
   .vh-xxl-15 {
     height: 15vh !important;
@@ -9073,6 +9130,10 @@ button > img {
   line-height: 1.2;
 }
 
+a:hover ~ div {
+  background: #6c757d;
+}
+
 @media (min-width: 576px) {
   nav {
     height: 15vh !important;
@@ -9082,9 +9143,6 @@ button > img {
   }
   .navbar-brand {
     width: 20vw;
-  }
-  a:hover ~ div {
-    background: #6c757d;
   }
   .fs-2 {
     font-size: calc(1.68rem + 0.1vw) !important;
@@ -9112,10 +9170,6 @@ button > img {
   }
 }
 @media (min-width: 992px) {
-  .background_home_lg {
-    background: no-repeat url("../public/imagenes/BitmapespacioLaptop.png") !important;
-    background-size: cover !important;
-  }
   nav {
     height: 22vh !important;
     align-items: end;

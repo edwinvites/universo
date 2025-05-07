@@ -15,6 +15,8 @@ function App(props) {
 
   const location = useLocation();
 
+  console.log("location", location.pathname);
+  
 
   useEffect(() => {
     if ((window.innerWidth > 990) && (window.location.pathname == "/home")) {
@@ -25,14 +27,17 @@ function App(props) {
     if (window.innerWidth < 990 && window.location.pathname == "/tamanioLaptop") {
       navigate("../home")
     }
-    
+
     setRutaFondo(fondo[location.pathname]);
+
+    console.log("fondo[location.pathname]", fondo[location.pathname]);
+    
   }, [location])
 
   const fondo = {
     "/home": "./imagenes/BitmapespacioLaptop2.png",
     "/tamanioLaptop": "./imagenes/BitmapespacioLaptop.png",
-    "destinosId": "../../imagenes/fondoLuna.svg"
+    "/destinos/moon": "../../imagenes/fondoLuna.png"
   }
   let [rutaFondo, setRutaFondo] = useState();
 

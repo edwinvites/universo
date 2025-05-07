@@ -1,6 +1,5 @@
 import React from "react";
 // import europa from "/imagenes/europa.svg"
-import Planetas_listado_html from "../Planetas_listado_html";
 
 
 function Europa() {
@@ -22,7 +21,6 @@ function Europa() {
 
                 <div className="col-12 col-xl-6">
 
-                    <Planetas_listado_html destino={'europa'} />
                     <h1 className="text-light letra-bellefair fs-32 fs-sm-20 fs-xl-14 pt-3 pb-3">EUROPE</h1>
                     <p className="text-lila fs-6 me-4 ms-4 pb-4 lh-lg">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
                     <hr className="ps-4 pe-4 ms-4 me-4 border-bottom" />

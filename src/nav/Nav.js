@@ -120,8 +120,7 @@ function Nav(props) {
         </div>
         <div className="d-none fs-2 espacio-entre-letras-punto-15 w-100  d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  efectoEsmeril ">
           <ul className="navbar-nav text-light h-100  ps-4 pe-4 fs-3 fs-lg-1 justify-content-xl-around">
-            {/* <li className="espacioVacioNav">
-                  </li> */}
+
             <li className="nav-item px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column">
               <div className="h-5"></div>
               <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center p-0 " aria-current="page" href="#">

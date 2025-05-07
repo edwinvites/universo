@@ -1,6 +1,5 @@
 import React from "react";
 // import titan from "./titan.svg"
-import Planetas_listado_html from "../Planetas_listado_html";
 
 
 function Titan() {
@@ -21,7 +20,6 @@ function Titan() {
                     </div>
                 </div>
                 <div className="col-12 col-xl-6 p-0">
-                    <Planetas_listado_html destino={'titan'} />
                     <h1 className="text-light letra-bellefair fs-25 fs-sm-11 pt-3 pb-3">TITAN</h1>
                     <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-lg">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
                     <hr className="ps-4 pe-4 ms-4 me-4 border-bottom " />

@@ -260,7 +260,10 @@ $utilities: map-merge($utilities,
 $utilities: map-merge($utilities,
     ("viewport-height": map-merge(map-get($utilities, "viewport-height"),
         (values: map-merge(map-get(map-get($utilities, "viewport-height"), "values"),
-            (15: 15vh,
+            ( 7: 7vh,
+              8: 8vh,
+              10: 10vh,
+              15: 15vh,
               30:30vh,
               40: 40vh,
               50: 50vh,
@@ -281,10 +284,10 @@ $utilities: map-merge($utilities,
 $utilities: map-merge($utilities,
     ("viewport-width": map-merge(map-get($utilities, "viewport-width"),
         (values: map-merge(map-get(map-get($utilities, "viewport-width"), "values"),
-            (40: 40vh,
-              50: 50vh,
-              80: 80vh,
-              110: 110vh),
+            (40: 40vw,
+              50: 50vw,
+              80: 80vw,
+              110: 110vw),
           ),
         ),
       ),
@@ -378,6 +381,10 @@ button>img {
   line-height: 1.2;
 }
 
+a:hover~div {
+  background: $gray-600;
+}
+
 
 @include media-breakpoint-up(sm) {
   nav {
@@ -390,10 +397,6 @@ button>img {
 
   .navbar-brand {
     width: 20vw;
-  }
-
-  a:hover~div {
-    background: $gray-600;
   }
 
   .fs-2 {

@@ -1,5 +1,4 @@
 import React from "react";
-import Planetas_listado_html from "../Planetas_listado_html";
 
 
 function Mars() {
@@ -17,7 +16,6 @@ function Mars() {
                     </div>
                 </div>
                 <div className="col-12 col-xl-6 p-0 m-0">
-                    <Planetas_listado_html destino={'marte'} />
                     <h1 className="text-light letra-bellefair fs-20 fs-xl-12 pt-3 pb-3 ">MARS</h1>
                     <p className="text-lila fs-6 me-4 ms-4 mt-4 pb-4 lh-lg">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
                     <hr className="ps-4 pe-4 ms-4 me-4 border-bottom" />
