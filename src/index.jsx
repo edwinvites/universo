@@ -65,11 +65,23 @@ const router = createBrowserRouter(
         element: <Destinos astro={"mars"} />
       },
       {
+        path: "mars/laptop",
+        element: <Destinos astro={"mars"} />
+      },
+      {
         path: "europa",
         element: <Destinos astro={"europa"} />
       },
       {
+        path: "europa/laptop",
+        element: <Destinos astro={"europa"} />
+      },
+      {
         path: "titan",
+        element: <Destinos astro={"titan"} />
+      },
+      {
+        path: "titan/laptop",
         element: <Destinos astro={"titan"} />
       },
 

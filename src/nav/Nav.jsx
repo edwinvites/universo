@@ -49,7 +49,21 @@ function Nav(props) {
       tecnologia = noSeleccionado;
       break;
 
+    case ("/destinos/moon/laptop"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
     case ("/destinos/mars"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+      case ("/destinos/mars/laptop"):
       home = noSeleccionado;
       destino = seleccionado;
       tripulacion = noSeleccionado;
@@ -63,7 +77,21 @@ function Nav(props) {
       tecnologia = noSeleccionado;
       break;
 
+    case ("/destinos/europa/laptop"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
     case ("/destinos/titan"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case ("/destinos/titan/laptop"):
       home = noSeleccionado;
       destino = seleccionado;
       tripulacion = noSeleccionado;
@@ -114,19 +142,51 @@ function Nav(props) {
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
+
+
+    case ("/destinos/moon/laptop"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
     case ("/destinos/mars"):
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = seleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
+
+    case ("/destinos/mars/laptop"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
     case ("/destinos/europa"):
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = seleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
+
+    case ("/destinos/europa/laptop"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
     case ("/destinos/titan"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case ("/destinos/titan/laptop"):
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = seleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
@@ -174,7 +234,7 @@ function Nav(props) {
         </div>
 
         <div className="d-none fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  efectoEsmeril ">
-          <ul className="navbar-nav text-light h-100  ps-4 pe-4 fs-11  justify-content-xl-around">
+          <ul className="navbar-nav text-light h-100 w-lg-90 ps-4 pe-4 fs-11  justify-content-xl-around">
 
             <li className="nav-item px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column">
               <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center d-block h-100 p-0 " aria-current="page" href="#">
