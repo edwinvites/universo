@@ -13,62 +13,23 @@ $blue-300-alt: rgb(208, 214, 249);
 
 
 
-// $h1-font-size: 144px;
-// $h2-font-size: 100px;
-// $h3-font-size: 56px;
-// $h4-font-size: 32px;
-// $h5-font-size: 28px;
-// $h6-font-size: 18px;
-// $h7-font-size: 16px;
-// $h8-font-size: 14px;
-
-// $h13-font-size: $font-size-base * 9.6;
-// $h14-font-size: $font-size-base * 9.4;
-// $h15-font-size: $font-size-base * 9.2;
-// $h16-font-size: $font-size-base * 8.0;
-// $h17-font-size: $font-size-base * 7.8;
-// $h18-font-size: $font-size-base * 7.6;
-// $h19-font-size: $font-size-base * 7.4;
-// $h20-font-size: $font-size-base * 7.2;
-// $h21-font-size: $font-size-base * 7.0;
-// $h22-font-size: $font-size-base * 6.8;
-// $h23-font-size: $font-size-base * 6.6;
-// $h24-font-size: $font-size-base * 6.4;
-// $h25-font-size: $font-size-base * 6.2;
-// $h26-font-size: $font-size-base * 6.0;
-// $h27-font-size: $font-size-base * 5.8;
-// $h28-font-size: $font-size-base * 5.6;
-// $h29-font-size: $font-size-base * 5.4;
-// $h30-font-size: $font-size-base * 5.2;
-// $h31-font-size: $font-size-base * 5.0;
-// $h32-font-size: $font-size-base * 4.8;
-// $h33-font-size: $font-size-base * 4.6;
-// $h34-font-size: $font-size-base * 4.4;
-// $h35-font-size: $font-size-base * 4.2;
-// $h36-font-size: $font-size-base * 4.0;
-// $h37-font-size: $font-size-base * 3.8;
-// $h38-font-size: $font-size-base * 3.6;
-// $h39-font-size: $font-size-base * 3.4;
-// $h40-font-size: $font-size-base * 3.2;
-// $h41-font-size: $font-size-base * 3.0;
-// $h42-font-size: $font-size-base * 2.8;
-// $h43-font-size: $font-size-base * 2.6;
-// $h44-font-size: $font-size-base * 2.4;
-// $h45-font-size: $font-size-base * 2.2;
-// $h46-font-size: $font-size-base * 2.0;
-// $h47-font-size: $font-size-base * 1.8;
-// $h48-font-size: $font-size-base * 1.6;
-// $h49-font-size: $font-size-base * 1.4;
-// $h50-font-size: $font-size-base * 1.2;
-// $h51-font-size: $font-size-base * 1.0;
-// $h52-font-size: $font-size-base * 0.8;
-// $h53-font-size: $font-size-base * 0.6;
-// $h54-font-size: $font-size-base * 0.4;
-// $h55-font-size: $font-size-base * 0.2;
-
+$h1-font-size: 144px;
+$h2-font-size: 96px;
+$h3-font-size: 80px;
+$h4-font-size: 56px;
+$h5-font-size: 40px;
+$h6-font-size: 32px;
+$h7-font-size: 28px;
+$h8-font-size: 24px;
+$h9-font-size: 20px;
+$h10-font-size: 18px;
+$h11-font-size: 16px;
+$h12-font-size: 15px;
+$h13-font-size: 14px;  
 
 $shadow-explorer: 0px 0px 0px 55px rgba(255, 255, 255, 0.099);
-$font-size-base: 0.5rem;
+// $font-size-base: 0.5rem;
+$enable-rfs: false;
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
@@ -85,59 +46,21 @@ $theme-colors: (
   "blue-900-alt": $blue-900-alt
 );
 
-// $font-sizes: (
-//   1: $h1-font-size,
-//   2: $h2-font-size,
-//   3: $h3-font-size,
-//   4: $h4-font-size,
-//   5: $h5-font-size,
-//   6: $h6-font-size,
-//   7: $h7-font-size,
-//   8: $h8-font-size // 13: $h13-font-size,
-//   // 14: $h14-font-size,
-//   // 15: $h15-font-size,
-//   // 16: $h16-font-size,
-//   // 17: $h16-font-size,
-//   // 18: $h17-font-size,
-//   // 19: $h18-font-size,
-//   // 20: $h19-font-size,
-//   // 21: $h20-font-size,
-//   // 22: $h21-font-size,
-//   // 23: $h22-font-size,
-//   // 24: $h23-font-size,
-//   // 25: $h24-font-size,
-//   // 26: $h25-font-size,
-//   // 27: $h26-font-size,
-//   // 28: $h27-font-size,
-//   // 29: $h28-font-size,
-//   // 30: $h29-font-size,
-//   // 31: $h30-font-size,
-//   // 32: $h31-font-size,
-//   // 33: $h32-font-size,
-//   // 34: $h33-font-size,
-//   // 35: $h34-font-size,
-//   // 36: $h35-font-size,
-//   // 37: $h36-font-size,
-//   // 38: $h37-font-size,
-//   // 39: $h38-font-size,
-//   // 40: $h39-font-size,
-//   // 41: $h40-font-size,
-//   // 42: $h41-font-size,
-//   // 43: $h42-font-size,
-//   // 44: $h43-font-size,
-//   // 45: $h44-font-size,
-//   // 46: $h45-font-size,
-//   // 47: $h46-font-size,
-//   // 48: $h47-font-size,
-//   // 49: $h48-font-size,
-//   // 50: $h49-font-size,
-//   // 51: $h50-font-size,
-//   // 52: $h51-font-size,
-//   // 53: $h52-font-size,
-//   // 54: $h53-font-size,
-//   // 55: $h54-font-size,
-//   // 56: $h55-font-size
-// );
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+  11: $h11-font-size,
+  12: $h12-font-size,
+  13: $h13-font-size
+);
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -210,7 +133,13 @@ $utilities: map-merge($utilities,
         (values: map-merge(map-get(map-get($utilities, "width"), "values"),
             (3: 3%,
               5: 5%,
+              27: 27%,
+              30: 30%,
+              34: 34%,
+              38: 38%,
               40: 40%,
+              45: 45%,
+              50: 50%,
               55: 55%,
               60: 60%,
               75: 75%,
@@ -305,7 +234,28 @@ $utilities: map-merge($utilities,
       ),
     ));
 
+    $utilities: map-merge($utilities,
+    ("line-height": map-merge(map-get($utilities, "line-height"),
+        (values: map-merge(map-get(map-get($utilities, "line-height"), "values"),
+            (
+              18: 1.8
+            ),
+          ),
+        ),
+      ),
+    ));
 
+    $utilities: map-merge($utilities,
+    ("start": map-merge(map-get($utilities, "start"),
+        (values: map-merge(map-get(map-get($utilities, "start"), "values"),
+            (
+              16: 16%,
+              18: 18%
+            ),
+          ),
+        ),
+      ),
+    ));
 
 @import "../node_modules/bootstrap/scss/utilities/api";
 
@@ -336,9 +286,7 @@ body {
   width: 100vw !important;
 }
 
-main {
-  min-height: 100vh;
-}
+
 
 
 
@@ -349,7 +297,7 @@ main {
 }
 
 .navbar-brand>a>img {
-  width: calc(8vh);
+  width: calc(6vh);
 }
 
 button>img {
@@ -360,33 +308,21 @@ button>img {
   border: none !important;
 }
 
-.col-10:hover>div>div {
+.estadoHover:hover>div:last-of-type {
   background: $gray-600;
 }
 
-.col-2:hover+.col-10>div>div {
-  background: $gray-600;
+// .nav-link > div:hover > div:last-of-type {
+//   background: $gray-600;
+// } 
+
+#imagenExplorer {
+  width: 144px !important;
 }
-
-.display-1 {
-  font-size: calc(4.0rem + 5vw);
-  font-weight: 300;
-  line-height: 1.2;
-
-}
-
-.display-2 {
-  font-size: calc(2.575rem + 3.9vw);
-  font-weight: 300;
-  line-height: 1.2;
-}
-
-a:hover~div {
-  background: $gray-600;
-}
-
 
 @include media-breakpoint-up(sm) {
+
+
   nav {
     height: 15vh !important;
   }
@@ -399,17 +335,17 @@ a:hover~div {
     width: 20vw;
   }
 
-  .fs-2 {
-    font-size: calc(1.68rem + 0.1vw) !important;
-  }
+  // .fs-2 {
+  //   font-size: calc(1.68rem + 0.1vw) !important;
+  // }
 
-  .fs-3 {
-    font-size: calc(0.5rem + 1vw) !important;
-  }
+  // .fs-3 {
+  //   font-size: calc(0.5rem + 1vw) !important;
+  // }
 
-  .fs-4 {
-    font-size: calc(0.6rem + 1vw) !important;
-  }
+  // .fs-4 {
+  //   font-size: calc(0.6rem + 1vw) !important;
+  // }
 
   .display-1 {
     font-size: calc(6.5rem + 5vw);
@@ -433,6 +369,9 @@ a:hover~div {
     display: none;
   }
 
+  #imagenExplorer {
+    width: 272px !important;
+  }
 
 }
 
@@ -453,24 +392,24 @@ a:hover~div {
   }
 
   .navbar-brand {
-    width: 16vw;
+    width: 20vw;
   }
 
-  .fs-1 {
-    font-size: calc(0.5rem + 1vw) !important;
-  }
+  // .fs-1 {
+  //   font-size: calc(0.5rem + 1vw) !important;
+  // }
 
-  .fs-2 {
-    font-size: calc(1.0rem + 1vw) !important;
-  }
+  // .fs-2 {
+  //   font-size: calc(1.0rem + 1vw) !important;
+  // }
 
-  .fs-3 {
-    font-size: calc(0.3rem + 1vw) !important;
-  }
+  // .fs-3 {
+  //   font-size: calc(0.3rem + 1vw) !important;
+  // }
 
-  .fs-4 {
-    font-size: calc(0.6rem + 1vw) !important;
-  }
+  // .fs-4 {
+  //   font-size: calc(0.6rem + 1vw) !important;
+  // }
 
 
   .display-1 {

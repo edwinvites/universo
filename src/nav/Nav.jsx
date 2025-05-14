@@ -18,21 +18,52 @@ function Nav(props) {
 
 
 
+  let path = window.location.pathname;
 
 
-  let seleccionado = "bg-white";
+
+
+  let seleccionado = "bg-white ";
   let noSeleccionado = "";
   let home, destino, tripulacion, tecnologia;
 
-  switch (props.pagina) {
-    case "home":
+  switch (path) {
+    case ("/home"):
       home = seleccionado;
       destino = noSeleccionado;
       tripulacion = noSeleccionado;
       tecnologia = noSeleccionado;
       break;
 
-    case "destinosId":
+    case ("/tamanioLaptop"):
+      home = seleccionado;
+      destino = noSeleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case ("/destinos/moon"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case ("/destinos/mars"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case ("/destinos/europa"):
+      home = noSeleccionado;
+      destino = seleccionado;
+      tripulacion = noSeleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case ("/destinos/titan"):
       home = noSeleccionado;
       destino = seleccionado;
       tripulacion = noSeleccionado;
@@ -61,15 +92,41 @@ function Nav(props) {
   let noSeleccionadoOffcanvas = "";
   let inicioOffcanvas, destinoOffcanvas, tripulacionOffcanvas, tecnologiaOffcanvas;
 
-  switch (props.pagina) {
-    case "home":
+  switch (path) {
+    case ("/home"):
       inicioOffcanvas = seleccionadoOffcanvas;
       destinoOffcanvas = noSeleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
 
-    case "destinosId":
+    case ("/tamanioLaptop"):
+      inicioOffcanvas = seleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+
+    case ("/destinos/moon"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+    case ("/destinos/mars"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+    case ("/destinos/europa"):
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = seleccionadoOffcanvas;
+      tripulacionOffcanvas = noSeleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+    case ("/destinos/titan"):
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = seleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
@@ -105,52 +162,65 @@ function Nav(props) {
         <div className="navbar-brand h-100 align-content-center me-0 " >
           <Link to={"/"} className="p-0 m-0 h-100 align-content-center" >
             <img src={logo_pagina} className="img-fluid">
-
             </img>
-
           </Link>
         </div>
         <button className="navbar-toggler text-light h-100 px-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <img src={iconoToggler} className="img-fluid">
           </img>
         </button>
-        <div className=" d-none d-lg-block w-100">
-          <hr size="4" className="w-105 z-3 position-relative bg-body z-3 m-0 d-none d-lg-block" />
-
+        <div className=" d-none d-lg-flex w-md-34 w-xl-38 position-absolute start-16">
+          <hr size="4" className=" w-100 bg-body z-3 m-0 d-none d-lg-block" />
         </div>
-        <div className="d-none fs-2 espacio-entre-letras-punto-15 w-100  d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  efectoEsmeril ">
-          <ul className="navbar-nav text-light h-100  ps-4 pe-4 fs-3 fs-lg-1 justify-content-xl-around">
+
+        <div className="d-none fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  efectoEsmeril ">
+          <ul className="navbar-nav text-light h-100  ps-4 pe-4 fs-11  justify-content-xl-around">
 
             <li className="nav-item px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column">
-              <div className="h-5"></div>
-              <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center p-0 " aria-current="page" href="#">
-                HOME
+              <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center d-block h-100 p-0 " aria-current="page" href="#">
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <spam>HOME</spam>
+                  <div className={home + " h-5"}></div>
+                </div>
               </Link>
-              <div className={home + " h-5"}></div>
             </li>
             <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-              <div className="h-5"></div>
-              <Link to={"/home/destinos/moon"} className=" nav-link text-light barlow-condensed  align-self-center p-0" href="#">
-                <span className="me-2 fw-bold">01</span>
-                DESTINATION
+              <Link to={"../destinos/moon"} className=" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0" href="#">
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <div>
+                    <span className="me-2 fw-bold">01</span>
+                    <spam>DESTINATION</spam>
+                  </div>
+                  <div className={destino + " h-5"}></div>
+                </div>
+
               </Link>
-              <div className={destino + " h-5"}></div>
             </li>
             <li className={"nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"}>
-            <div className="h-5"></div>
-              <Link to={"/tripulacion/douglas"} className={ " nav-link text-light barlow-condensed  align-self-center p-0"}>
-                <span className="me-2 fw-bold">02</span>
-                CREW
+              <Link to={"/tripulacion/douglas"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <div>
+                    <span className="me-2 fw-bold">02</span>
+                    <spam>CREW</spam>
+                  </div>
+                  <div className={tripulacion + " h-5"}></div>
+                </div>
               </Link>
-              <div className={tripulacion + " h-5"}></div>
             </li>
             <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-            <div className="h-5"></div>
-              <Link to={"/tecnologia/nave"} className={ " nav-link text-light barlow-condensed  align-self-center p-0"}>
-                <span className="me-2 fw-bold">03</span>
-                TECHNOLOGY
+              <Link to={"/tecnologia/nave"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <div>
+                    <span className="me-2 fw-bold">03</span>
+                    <spam>TECHNOLOGY</spam>
+                  </div>
+                  <div className={tecnologia + " h-5"}></div>
+                </div>
               </Link>
-              <div className={tecnologia + " h-5"}></div>
             </li>
           </ul>
         </div>
@@ -168,6 +238,7 @@ function Nav(props) {
 
 
         {/* --------------------------offcanvas----------------------- */}
+
         <div className="offcanvas offcanvas-end offcanvas-vidrio-esmerilado  w-60 barlow-condensed d-sm-none pt-3" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"  >
           <div className="offcanvas-header px-4 pb-5">
             <h5 className="offcanvas-title" id="offcanvasLabel"></h5>
@@ -180,7 +251,7 @@ function Nav(props) {
             </div>
 
           </div>
-          <div className="offcanvas-body ps-4 pe-0 pt-4 fs-2 espacio-entre-letras-punto-15" >
+          <div className="offcanvas-body ps-4 pe-0 pt-4 fs-11 espacio-entre-letras-punto-15" >
 
             <div className="container">
               <div className="row pb-4 lh-1">
@@ -199,7 +270,7 @@ function Nav(props) {
                 <div className="col-2 ">
                   <Link to={"/destinos/moon"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">01</span> </Link>
                 </div>
-                <div className={"col-10 pe-0" }>
+                <div className={"col-10 pe-0"}>
                   <div className="d-flex justify-content-between  ">
                     <Link to={"/destinos/moon"} className="text-decoration-none text-light text-start  " > <span data-bs-dismiss="offcanvas" aria-label="Close">DESTINOS</span></Link>
                     <div className={"w-3 " + destinoOffcanvas}></div>

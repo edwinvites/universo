@@ -7,7 +7,7 @@ function Descripcion(props) {
             "nombre": "MOON",
             "descripcion": "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites."
         },
-        "marte": {
+        "mars": {
             "nombre": "MARS",
             "descripcion": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two times the height of Everest!"
         },
@@ -22,7 +22,7 @@ function Descripcion(props) {
     }
 
     return (
-        <p className="text-lila fs-1  px-5 mb-0 ps-sm-4 pe-sm-4 pb-4 mb-sm-4 lh-lg">
+        <p className="text-lila text-lg-start fs-12 fs-sm-11 fs-lg-10 px-5  px-sm-4 ps-lg-0 pb-4 pb-sm-0 mb-0 lh-18">
             {info[props.astro].descripcion}
         </p>
 

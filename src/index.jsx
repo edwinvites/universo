@@ -29,6 +29,11 @@ const router = createBrowserRouter(
   }
     ,
   {
+    path: "*",
+    element: <div>No Found</div >
+  }
+    ,
+  {
     path: "/:idhome",
     element: <App></App>,
     children: [
@@ -52,9 +57,22 @@ const router = createBrowserRouter(
         element: <Destinos astro={"moon"} />
       },
       {
-        path: "tamanioLaptop",
-        element: <Home fondo={"tamanioLaptop"} />
-      }
+        path: "moon/laptop",
+        element: <Destinos astro={"moon"} />
+      },
+      {
+        path: "mars",
+        element: <Destinos astro={"mars"} />
+      },
+      {
+        path: "europa",
+        element: <Destinos astro={"europa"} />
+      },
+      {
+        path: "titan",
+        element: <Destinos astro={"titan"} />
+      },
+
     ]
   },
   ]

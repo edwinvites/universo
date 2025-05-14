@@ -4,42 +4,51 @@ import ImagenAstro from "./ImagenAstro";
 import BarraDeDestinos from "./BarraDeDestinos";
 import NombreAstro from "./NombreAstro";
 import Descripcion from "./Descripcion";
+import DatosAstro from "./DatosAstro";
 
-function Destinos(props) { 
+function Destinos(props) {
 
 
+    
 
     return (
-        
-        <section className="container-fluid mx-0 mt-5 p-0 h-90 ">
-            <div className="row m-0 px-0 pb-0 pt-4 pb-3 h-100">
-                <Subtitulo astro={props.astro}/>
-                <div className="col-12 col-xl-6 p-0 vh-60">
-                    <div  className=" pt-lg-4 d-flex justify-content-center mb-sm-4 h-100">
+
+        <section className="container-fluid mx-0 mt-5 p-0 h-90 px-lg-5  ">
+            <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-lg-5 h-100 d-lg-block d-none">
+                <Subtitulo astro={props.astro} />
+                <div className="col-12 pt-lg-5 px-5">
+                    <div className="row justify-content-around">
+                        <div className="col-5">
+                        <ImagenAstro astro={props.astro} />
+                        </div>
+                        <div className="col-5">
+                            <div className="d-flex flex-column justify-content-between ">
+                            <BarraDeDestinos astro={props.astro} />
+                            <NombreAstro astro={props.astro} />
+                            <Descripcion astro={props.astro} />
+                            <hr size="4" className="mx-0 z-3   bg-white " />
+                            <DatosAstro astro={props.astro}/>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-lg-5 h-100 d-lg-none">
+                <Subtitulo astro={props.astro} />
+                <div className="col-12 col-lg-6 p-0  ">
+                    <div className=" pt-lg-4 d-flex justify-content-center mb-sm-4 h-100">
                         <ImagenAstro astro={props.astro} />
                     </div>
 
                 </div>
-                <div className="col-12 col-xl-6 p-0">
+                <div className="col-12 col-lg-6 p-0">
                     <BarraDeDestinos astro={props.astro} />
                     <NombreAstro astro={props.astro} />
                     <Descripcion astro={props.astro} />
-                    <hr className="mx-5  pt-sm-4 border-bottom " />
-                    <div className="container m-0 ">
-                        <div className="row m-0 pt-2">
+                    <hr size="4" className="mx-5 z-3 my-sm-5  bg-white " />
 
-                            <div className="col-12 col-sm-6 text-lila pt-1 pb-3 pt-sm-0 ">
-                                <p className="fs-1 my-3 barlow-condensed espacio-entre-letras-punto-1">AVG. DISTANCE</p>
-                                <p className="display-4 my-2 letra-bellefair text-white">384,400 KM</p>
-                            </div>
-                            <div className="col-12 col-sm-6 pt-3 pt-sm-0 pb-2 pb-sm-0">
-                                <p className="fs-1 my-3 text-lila barlow-condensed espacio-entre-letras-punto-1">EST. TRAVEL TIME</p>
-                                <p className="display-4 my-2 letra-bellefair text-white ">3 DAYS</p>
-                            </div>
-                        </div>
-
-                    </div>
-
+                    <DatosAstro astro={props.astro} />
 
                 </div>
 
@@ -47,7 +56,7 @@ function Destinos(props) {
 
         </section>
     )
-    
+
 }
 
 export default Destinos;

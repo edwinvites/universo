@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 
 
 function BarraDeDestinos(props) {
-    console.log("props.astro", props.astro);
-    
+
     let activo = " bg-white ";
     let desactivado = "";
     let [luna, marte, europa, titan] = [desactivado, desactivado, desactivado, desactivado];
@@ -20,7 +19,7 @@ function BarraDeDestinos(props) {
             europa = desactivado;
             titan = desactivado;
             break;
-        case "marte":
+        case "mars":
             luna = desactivado;
             marte = activo;
             europa = desactivado;
@@ -61,7 +60,7 @@ function BarraDeDestinos(props) {
             textEurope = textInactivo;
             textTitan = textInactivo;
             break;
-        case "europe":
+        case "europa":
             textMoon = textInactivo;
             textMars = textInactivo;
             textEurope = textActivo;
@@ -81,26 +80,42 @@ function BarraDeDestinos(props) {
 
 
     return (
-        <div className="d-flex justify-content-around px-5 fs-2 barlow-condensed espacio-entre-letras-punto-15 vh-7  ">
-            <div className="h-100  d-flex justify-content-between flex-column">
-                <div className="h-5"></div>
-                <Link to={"/destinos/moon"} className={textMoon + " text-decoration-none"} ><span className={"m-0"}>MOOM</span></Link>
-                <div className={luna + " h-5"}></div>   
+        <div className="d-flex justify-content-around justify-content-lg-start px-5 ps-lg-0 fs-13 fs-sm-11 barlow-condensed espacio-entre-letras-punto-15 vh-7  ">
+            <div className="h-100  d-flex justify-content-between flex-column pe-lg-3">
+                <Link to={"/destinos/moon"} className={textMoon + " text-decoration-none d-block h-100"} >
+                    <div  className="d-flex justify-content-between flex-column h-100 estadoHover">
+                        <div className="h-5"></div>
+                        <span className={"m-0"}>MOOM</span>
+                        <div className={luna + " h-5"}></div>
+                    </div>
+                </Link>
             </div>
-            <div className="h-100  d-flex justify-content-between flex-column">
-                <div className="h-5"></div>
-                <Link to={"/destinos/marte"} className={textMars + " text-decoration-none"} ><span className={"m-0"}>MARS</span></Link>
-                <div className={marte + " h-5"}></div>   
+            <div className="h-100  d-flex justify-content-between flex-column px-lg-3">
+                <Link to={"/destinos/mars"} className={textMars + " text-decoration-none d-block h-100 "} >
+                    <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                        <div className="h-5"></div>
+                        <span className={"m-0"}>MARS</span>
+                        <div className={marte + " h-5"}></div>
+                    </div>
+                </Link>
             </div>
-            <div className="h-100  d-flex justify-content-between flex-column">
-                <div className="h-5"></div>
-                <Link to={"/destinos/europa"} className={textEurope + " text-decoration-none"} ><span className={"m-0"}>EUROPA</span></Link>
-                <div className={europa + " h-5"}></div>   
+            <div className="h-100  d-flex justify-content-between flex-column px-lg-3">
+                <Link to={"/destinos/europa"} className={textEurope + " text-decoration-none d-block h-100 "} >
+                    <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                        <div className="h-5"></div>
+                        <span className={"m-0"}>EUROPA</span>
+                        <div className={europa + " h-5"}></div>
+                    </div>
+                </Link>
             </div>
-            <div className="h-100  d-flex justify-content-between flex-column">
-                <div className="h-5"></div>
-                <Link to={"/destinos/titan"} className={textTitan + " text-decoration-none"} ><span className={"m-0"}>TITAN</span></Link>
-                <div className={titan + " h-5"}></div>   
+            <div className="h-100  d-flex justify-content-between flex-column px-lg-3">
+                <Link to={"/destinos/titan"} className={textTitan + " text-decoration-none d-block h-100 "} >
+                    <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                        <div className="h-5"></div>
+                        <span className={"m-0"}>TITAN</span>
+                        <div className={titan + " h-5"}></div>
+                    </div>
+                </Link>
             </div>
         </div>
     );
