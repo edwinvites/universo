@@ -27,35 +27,47 @@ function App(props) {
     }
 
     if (window.innerWidth < 990 && window.location.pathname == "/destinos/moon/laptop") {
-        navigate("../destinos/moon")
+      navigate("../destinos/moon")
     }
-    
+
     if ((window.innerWidth > 990) && (window.location.pathname == "/destinos/moon")) {
       navigate("../destinos/moon/laptop");
     }
 
     if (window.innerWidth < 990 && window.location.pathname == "/destinos/mars/laptop") {
-        navigate("../destinos/mars")
+      navigate("../destinos/mars")
     }
-    
+
     if ((window.innerWidth > 990) && (window.location.pathname == "/destinos/mars")) {
       navigate("../destinos/mars/laptop");
     }
 
     if (window.innerWidth < 990 && window.location.pathname == "/destinos/europa/laptop") {
-        navigate("../destinos/europa")
+      navigate("../destinos/europa")
     }
-    
+
     if ((window.innerWidth > 990) && (window.location.pathname == "/destinos/europa")) {
       navigate("../destinos/europa/laptop");
     }
 
     if (window.innerWidth < 990 && window.location.pathname == "/destinos/titan/laptop") {
-        navigate("../destinos/titan")
+      navigate("../destinos/titan")
     }
-    
+
     if ((window.innerWidth > 990) && (window.location.pathname == "/destinos/titan")) {
       navigate("../destinos/titan/laptop");
+    }
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/douglas-hurley/tablet" || window.location.pathname == "/crew/douglas-hurley/laptop")) {
+      navigate("../crew/douglas-hurley")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <=  990) && ((window.location.pathname == "/crew/douglas-hurley") || (window.location.pathname == "/crew/douglas-hurley/laptop"))) {
+      navigate("../crew/douglas-hurley/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/douglas-hurley/tablet") || (window.location.pathname == "/crew/douglas-hurley"))) {
+      navigate("../crew/douglas-hurley/laptop");
     }
 
 
@@ -74,7 +86,10 @@ function App(props) {
     "/destinos/europa": "../../imagenes/fondoLuna.png",
     "/destinos/europa/laptop": "../../imagenes/fondoLuna.png",
     "/destinos/titan": "../../imagenes/fondoLuna.png",
-    "/destinos/titan/laptop": "../../imagenes/fondoLuna.png"
+    "/destinos/titan/laptop": "../../imagenes/fondoLuna.png",
+    "/crew/douglas-hurley": "../../imagenes/backgroundCrew.png",
+    "/crew/douglas-hurley/tablet": "../../imagenes/backgroundCrew.png",
+    "/crew/douglas-hurley/laptop": "../../imagenes/backgroundCrew.png",
   }
   let [rutaFondo, setRutaFondo] = useState();
 
@@ -93,7 +108,7 @@ function App(props) {
       if ((window.innerWidth > 990) && (window.location.pathname == "/home")) {
         navigate("../tamanioLaptop")
       }
-      
+
       if (window.innerWidth < 990 && window.location.pathname == "/tamanioLaptop") {
         navigate("../home")
       }
@@ -129,6 +144,20 @@ function App(props) {
       if (window.innerWidth < 990 && window.location.pathname == "/destinos/titan/laptop") {
         navigate("../destinos/titan")
       }
+
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/douglas-hurley/tablet" || window.location.pathname == "/crew/douglas-hurley/laptop")) {
+      navigate("../crew/douglas-hurley")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <= 990) && ((window.location.pathname == "/crew/douglas-hurley") || (window.location.pathname == "/crew/douglas-hurley/laptop"))) {
+      navigate("../crew/douglas-hurley/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/douglas-hurley/tablet") || (window.location.pathname == "/crew/douglas-hurley"))) {
+      navigate("../crew/douglas-hurley/laptop");
+    }
+
 
     }
     )

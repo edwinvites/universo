@@ -240,7 +240,7 @@ function Nav(props) {
               <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center d-block h-100 p-0 " aria-current="page" href="#">
                 <div className="d-flex justify-content-between flex-column h-100 estadoHover">
                   <div className="h-5"></div>
-                  <spam>HOME</spam>
+                  <span>HOME</span>
                   <div className={home + " h-5"}></div>
                 </div>
               </Link>
@@ -251,7 +251,7 @@ function Nav(props) {
                   <div className="h-5"></div>
                   <div>
                     <span className="me-2 fw-bold">01</span>
-                    <spam>DESTINATION</spam>
+                    <span>DESTINATION</span>
                   </div>
                   <div className={destino + " h-5"}></div>
                 </div>
@@ -259,12 +259,12 @@ function Nav(props) {
               </Link>
             </li>
             <li className={"nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"}>
-              <Link to={"/tripulacion/douglas"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
+              <Link to={"/crew/douglas-hurley"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
                 <div className="d-flex justify-content-between flex-column h-100 estadoHover">
                   <div className="h-5"></div>
                   <div>
                     <span className="me-2 fw-bold">02</span>
-                    <spam>CREW</spam>
+                    <span>CREW</span>
                   </div>
                   <div className={tripulacion + " h-5"}></div>
                 </div>
@@ -276,7 +276,7 @@ function Nav(props) {
                   <div className="h-5"></div>
                   <div>
                     <span className="me-2 fw-bold">03</span>
-                    <spam>TECHNOLOGY</spam>
+                    <span>TECHNOLOGY</span>
                   </div>
                   <div className={tecnologia + " h-5"}></div>
                 </div>

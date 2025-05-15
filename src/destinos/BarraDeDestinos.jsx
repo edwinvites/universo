@@ -1,9 +1,5 @@
 import React from "react";
-import Nav from "../nav/Nav";
-import Moon from "./moon/Moon";
-import Mars from "./mars/Mars";
-import Europe from "./europa/Europa";
-import Titan from "./titan/Titan";
+
 import { Link } from "react-router-dom";
 
 

@@ -27,7 +27,6 @@ $h11-font-size: 16px;
 $h12-font-size: 15px;
 $h13-font-size: 14px;  
 
-$shadow-explorer: 0px 0px 0px 55px rgba(255, 255, 255, 0.099);
 // $font-size-base: 0.5rem;
 $enable-rfs: false;
 @import "../node_modules/bootstrap/scss/variables";
@@ -83,11 +82,6 @@ $utilities: (
     values: map-merge($utilities-bg-colors,
       ("espacio" : #000000,
         "navbar": rgba(0, 0, 0, 0.3)))),
-
-  "shadow": (property: box-shadow,
-    class: shadow-explorer,
-    state: hover,
-    values: (null: $shadow-explorer )),
   "border-color": (property: border-color,
     class: border,
     local-vars: ("border-opacity": 1),
@@ -144,7 +138,9 @@ $utilities: map-merge($utilities,
               60: 60%,
               75: 75%,
               80: 80%,
+              82: 82%,
               90: 90%,
+              91: 91%,
               105: 105%),
           ),
         ),
@@ -257,6 +253,8 @@ $utilities: map-merge($utilities,
       ),
     ));
 
+
+
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 @import "../node_modules/bootstrap/scss/nav";
@@ -287,7 +285,11 @@ body {
 }
 
 
-
+.explorer-shadow:hover {
+  -webkit-box-shadow: 0px 0px 0px 55px rgba(255, 255, 255, 0.099);
+  -moz-box-shadow: 0px 0px 0px 55px rgba(255, 255, 255, 0.099);
+  box-shadow:  0px 0px 0px 55px rgba(255, 255, 255, 0.099);
+}
 
 
 .efectoEsmeril {
@@ -318,6 +320,11 @@ button>img {
 
 #imagenExplorer {
   width: 144px !important;
+}
+
+#circlesCrew >a >div {
+width: 10px;
+height: 10px;
 }
 
 @include media-breakpoint-up(sm) {
@@ -411,12 +418,19 @@ button>img {
   //   font-size: calc(0.6rem + 1vw) !important;
   // }
 
+// $shadow-explorer:  0px 0px 0px 85px rgba(255, 255, 255, 0.099);
 
-  .display-1 {
-    font-size: calc(6rem + 5vw);
-    font-weight: 300;
-    line-height: 1.2;
-  }
+.explorer-shadow:hover {
+  -webkit-box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.099);
+  -moz-box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.099);
+  box-shadow:  0px 0px 0px 85px rgba(255, 255, 255, 0.099);
+}
+
+#circlesCrew >a >div {
+width: 15px;
+height: 15px;
+}
+
 }
 
 .letra-bellefair {

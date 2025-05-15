@@ -9,12 +9,11 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Base from './base/Base';
-import Moon from './destinos/moon/Moon';
+
 import Home from './home/Home';
 // import fondo from "./destinos/moon/fondoLuna.svg";
-import Victor from './tripulantes/Victor';
 import Destinos from './destinos/Destinos';
+import Crew from './tripulantes/Crew';
 
 // const imagenes = document.createElement("img")
 // imagenes.src= fondo;
@@ -85,6 +84,24 @@ const router = createBrowserRouter(
         element: <Destinos astro={"titan"} />
       },
 
+    ]
+  },
+  {
+    path: "/crew",
+    element: <App/>,
+    children: [
+      {
+        path: "douglas-hurley",
+        element: <Crew men={"douglas-hurley"} />
+      },
+      {
+        path: "douglas-hurley/tablet",
+        element: <Crew men={"douglas-hurley/tablet"} />
+      },
+      {
+        path: "douglas-hurley/laptop",
+        element: <Crew men={"douglas-hurley/laptop"} />
+      },
     ]
   },
   ]

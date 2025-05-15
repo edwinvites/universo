@@ -15,7 +15,9 @@ function Destinos(props) {
 
         <section className="container-fluid mx-0 mt-5 p-0 h-90 px-lg-5  ">
             <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-lg-5 h-100 d-lg-block d-none">
+                <div className="col-12 p-0">
                 <Subtitulo astro={props.astro} />
+                </div>
                 <div className="col-12 pt-lg-5 px-5">
                     <div className="row justify-content-around">
                         <div className="col-5">
@@ -35,7 +37,9 @@ function Destinos(props) {
 
             </div>
             <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-lg-5 h-100 d-lg-none">
+                <div className="col-12 p-0">
                 <Subtitulo astro={props.astro} />
+                </div>
                 <div className="col-12 col-lg-6 p-0  ">
                     <div className=" pt-lg-4 d-flex justify-content-center mb-sm-4 h-100">
                         <ImagenAstro astro={props.astro} />
