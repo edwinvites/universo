@@ -92,15 +92,51 @@ const router = createBrowserRouter(
     children: [
       {
         path: "douglas-hurley",
-        element: <Crew men={"douglas-hurley"} />
+        element: <Crew path={"douglas-hurley"} />
       },
       {
         path: "douglas-hurley/tablet",
-        element: <Crew men={"douglas-hurley/tablet"} />
+        element: <Crew path={"douglas-hurley/tablet"} />
       },
       {
         path: "douglas-hurley/laptop",
-        element: <Crew men={"douglas-hurley/laptop"} />
+        element: <Crew path={"douglas-hurley/laptop"} />
+      },
+      {
+        path: "mark-shuttleworth",
+        element: <Crew path={"mark-shuttleworth"} />
+      },
+      {
+        path: "mark-shuttleworth/tablet",
+        element: <Crew path={"mark-shuttleworth/tablet"} />
+      },
+      {
+        path: "mark-shuttleworth/laptop",
+        element: <Crew path={"mark-shuttleworth/laptop"} />
+      },
+      {
+        path: "victor-glover",
+        element: <Crew path={"victor-glover"} />
+      },
+      {
+        path: "victor-glover/tablet",
+        element: <Crew path={"victor-glover/tablet"} />
+      },
+      {
+        path: "victor-glover/laptop",
+        element: <Crew path={"victor-glover/laptop"} />
+      },
+      {
+        path: "anousheh-ansari",
+        element: <Crew path={"anousheh-ansari"} />
+      },
+      {
+        path: "anousheh-ansari/tablet",
+        element: <Crew path={"anousheh-ansari/tablet"} />
+      },
+      {
+        path: "anousheh-ansari/laptop",
+        element: <Crew path={"anousheh-ansari/laptop"} />
       },
     ]
   },

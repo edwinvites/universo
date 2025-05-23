@@ -70,6 +70,43 @@ function App(props) {
       navigate("../crew/douglas-hurley/laptop");
     }
 
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/mark-shuttleworth/tablet" || window.location.pathname == "/crew/mark-shuttleworth/laptop")) {
+      navigate("../crew/mark-shuttleworth")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <=  990) && ((window.location.pathname == "/crew/mark-shuttleworth") || (window.location.pathname == "/crew/mark-shuttleworth/laptop"))) {
+      navigate("../crew/mark-shuttleworth/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/mark-shuttleworth/tablet") || (window.location.pathname == "/crew/mark-shuttleworth"))) {
+      navigate("../crew/mark-shuttleworth/laptop");
+    }
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/victor-glover/tablet" || window.location.pathname == "/crew/victor-glover/laptop")) {
+      navigate("../crew/victor-glover")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <=  990) && ((window.location.pathname == "/crew/victor-glover") || (window.location.pathname == "/crew/victor-glover/laptop"))) {
+      navigate("../crew/victor-glover/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/victor-glover/tablet") || (window.location.pathname == "/crew/victor-glover"))) {
+      navigate("../crew/victor-glover/laptop");
+    }
+
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/anousheh-ansari/tablet" || window.location.pathname == "/crew/anousheh-ansari/laptop")) {
+      navigate("../crew/anousheh-ansari")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <=  990) && ((window.location.pathname == "/crew/anousheh-ansari") || (window.location.pathname == "/crew/anousheh-ansari/laptop"))) {
+      navigate("../crew/anousheh-ansari/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/anousheh-ansari/tablet") || (window.location.pathname == "/crew/anousheh-ansari"))) {
+      navigate("../crew/anousheh-ansari/laptop");
+    }
+
 
     setRutaFondo(fondo[location.pathname]);
     setAlturaMain(minimoAltura[location.pathname]);
@@ -90,6 +127,15 @@ function App(props) {
     "/crew/douglas-hurley": "../../imagenes/backgroundCrew.png",
     "/crew/douglas-hurley/tablet": "../../imagenes/backgroundCrew.png",
     "/crew/douglas-hurley/laptop": "../../imagenes/backgroundCrew.png",
+    "/crew/mark-shuttleworth": "../../imagenes/backgroundCrew.png",
+    "/crew/mark-shuttleworth/tablet": "../../imagenes/backgroundCrew.png",
+    "/crew/mark-shuttleworth/laptop": "../../imagenes/backgroundCrew.png",
+    "/crew/victor-glover": "../../imagenes/backgroundCrew.png",
+    "/crew/victor-glover/tablet": "../../imagenes/backgroundCrew.png",
+    "/crew/victor-glover/laptop": "../../imagenes/backgroundCrew.png",
+    "/crew/anousheh-ansari": "../../imagenes/backgroundCrew.png",
+    "/crew/anousheh-ansari/tablet": "../../imagenes/backgroundCrew.png",
+    "/crew/anousheh-ansari/laptop": "../../imagenes/backgroundCrew.png",
   }
   let [rutaFondo, setRutaFondo] = useState();
 
@@ -159,9 +205,48 @@ function App(props) {
     }
 
 
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/mark-shuttleworth/tablet" || window.location.pathname == "/crew/mark-shuttleworth/laptop")) {
+      navigate("../crew/mark-shuttleworth")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <= 990) && ((window.location.pathname == "/crew/mark-shuttleworth") || (window.location.pathname == "/crew/mark-shuttleworth/laptop"))) {
+      navigate("../crew/mark-shuttleworth/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/mark-shuttleworth/tablet") || (window.location.pathname == "/crew/mark-shuttleworth"))) {
+      navigate("../crew/mark-shuttleworth/laptop");
+    }
+
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/victor-glover/tablet" || window.location.pathname == "/crew/victor-glover/laptop")) {
+      navigate("../crew/victor-glover")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <= 990) && ((window.location.pathname == "/crew/victor-glover") || (window.location.pathname == "/crew/victor-glover/laptop"))) {
+      navigate("../crew/victor-glover/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/victor-glover/tablet") || (window.location.pathname == "/crew/victor-glover"))) {
+      navigate("../crew/victor-glover/laptop");
+    }
+
+    if (window.innerWidth < 576 && (window.location.pathname == "/crew/anousheh-ansari/tablet" || window.location.pathname == "/crew/anousheh-ansari/laptop")) {
+      navigate("../crew/anousheh-ansari")
+    }
+
+    if ((window.innerWidth >= 576) && (window.innerWidth <= 990) && ((window.location.pathname == "/crew/anousheh-ansari") || (window.location.pathname == "/crew/anousheh-ansari/laptop"))) {
+      navigate("../crew/anousheh-ansari/tablet");
+    }
+
+    if ((window.innerWidth > 990) && ((window.location.pathname == "/crew/anousheh-ansari/tablet") || (window.location.pathname == "/crew/anousheh-ansari"))) {
+      navigate("../crew/anousheh-ansari/laptop");
+    }
+
+
     }
     )
-  }, [])
+  }, [])  
 
   let minimoAltura = {
     "/home": "820px",
@@ -173,12 +258,24 @@ function App(props) {
     "/destinos/europa": "1120px",
     "/destinos/europa/laptop": "1000px",
     "/destinos/titan": "1120px",
-    "/destinos/titan/laptop": "1000px"
+    "/destinos/titan/laptop": "1000px",
+    "/crew/douglas-hurley": "1005px",
+    "/crew/douglas-hurley/tablet": "985px",
+    "/crew/douglas-hurley/laptop": "1250px",
+    "/crew/mark-shuttleworth": "1005px",
+    "/crew/mark-shuttleworth/tablet": "985px",
+    "/crew/mark-shuttleworth/laptop": "1250px",
+    "/crew/victor-glover": "1005px",
+    "/crew/victor-glover/tablet": "985px",
+    "/crew/victor-glover/laptop": "1250px",
+    "/crew/anousheh-ansari": "1005px",
+    "/crew/anousheh-ansari/tablet": "985px",
+    "/crew/anousheh-ansari/laptop": "1250px"
   }
 
   return (
     <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover", minHeight: alturaMain }} className="text-center    ">
-      <Nav pagina={parametros.destinosId ? Object.keys(parametros)[0] : "home"}></Nav>
+      <Nav path={location.pathname}></Nav>
       <Outlet props={location.pathname} />
     </main>
 

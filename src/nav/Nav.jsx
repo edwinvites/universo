@@ -18,8 +18,7 @@ function Nav(props) {
 
 
 
-  let path = window.location.pathname;
-
+console.log("path nav", props.path);
 
 
 
@@ -27,7 +26,7 @@ function Nav(props) {
   let noSeleccionado = "";
   let home, destino, tripulacion, tecnologia;
 
-  switch (path) {
+  switch (props.path) {
     case ("/home"):
       home = seleccionado;
       destino = noSeleccionado;
@@ -98,7 +97,21 @@ function Nav(props) {
       tecnologia = noSeleccionado;
       break;
 
-    case "tripulacion":
+    case "/crew/douglas-hurley":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/douglas-hurley/tablet":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/douglas-hurley/laptop":
       home = noSeleccionado;
       destino = noSeleccionado;
       tripulacion = seleccionado;
@@ -120,7 +133,7 @@ function Nav(props) {
   let noSeleccionadoOffcanvas = "";
   let inicioOffcanvas, destinoOffcanvas, tripulacionOffcanvas, tecnologiaOffcanvas;
 
-  switch (path) {
+  switch (props.path) {
     case ("/home"):
       inicioOffcanvas = seleccionadoOffcanvas;
       destinoOffcanvas = noSeleccionadoOffcanvas;
@@ -193,7 +206,84 @@ function Nav(props) {
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
 
-    case "tripulacion":
+    case "/crew/douglas-hurley":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/douglas-hurley/tablet":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/douglas-hurley/laptop":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/mark-shuttleworth":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/mark-shuttleworth/tablet":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/mark-shuttleworth/laptop":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/victor-glover":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/victor-glover/tablet":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/victor-glover/laptop":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/anousheh-ansari":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/anousheh-ansari/tablet":
+      inicioOffcanvas = noSeleccionadoOffcanvas;
+      destinoOffcanvas = noSeleccionadoOffcanvas;
+      tripulacionOffcanvas = seleccionadoOffcanvas;
+      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
+      break;
+
+    case "/crew/anousheh-ansari/laptop":
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = noSeleccionadoOffcanvas;
       tripulacionOffcanvas = seleccionadoOffcanvas;
@@ -233,8 +323,8 @@ function Nav(props) {
           <hr size="4" className=" w-100 bg-body z-3 m-0 d-none d-lg-block" />
         </div>
 
-        <div className="d-none fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  d-sm-flex m-0 p-0 h-100 text-white justify-content-end  align-items-center  efectoEsmeril ">
-          <ul className="navbar-nav text-light h-100 w-lg-90 ps-4 pe-4 fs-11  justify-content-xl-around">
+        <div className="d-none fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  d-sm-flex m-0 p-0 h-100 text-white  justify-content-xl-end align-items-center  efectoEsmeril ">
+          <ul className="navbar-nav text-light h-100 w-100 w-lg-90 ps-4 pe-4 px-lg-2 fs-11 justify-content-around justify-content-xl-around">
 
             <li className="nav-item px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column">
               <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center d-block h-100 p-0 " aria-current="page" href="#">
@@ -323,7 +413,6 @@ function Nav(props) {
                     <Link to={"/"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close" >HOME</span></Link>
                     <div className={"w-3" + inicioOffcanvas}></div>
                   </div>
-
                 </div>
               </div>
               <div className="row pb-4 lh-1">
@@ -339,11 +428,11 @@ function Nav(props) {
               </div>
               <div className="row  pb-4 lh-1">
                 <div className="col-2">
-                  <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">02</span></Link>
+                  <Link to={"/crew/douglas-hurley"} className="text-decoration-none text-light fw-bold " ><span data-bs-dismiss="offcanvas" aria-label="Close">02</span></Link>
                 </div>
-                <div className={"col-10  pe-0 " + tripulacionOffcanvas}>
+                <div className={"col-10  pe-0 " }>
                   <div className="d-flex justify-content-between   ">
-                    <Link to={"/tripulacion/douglas"} className="text-decoration-none text-light text-start  "><span data-bs-dismiss="offcanvas" aria-label="Close">CREW</span></Link>
+                    <Link to={"/crew/douglas-hurley"} className="text-decoration-none text-light text-start  "><span data-bs-dismiss="offcanvas" aria-label="Close">CREW</span></Link>
                     <div className={"w-3 " + tripulacionOffcanvas}></div>
                   </div>
                 </div>

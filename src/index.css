@@ -823,6 +823,10 @@
   height: 100vh !important;
 }
 
+.vh-none {
+  height: "auto" !important;
+}
+
 .vh-7 {
   height: 7vh !important;
 }
@@ -2514,6 +2518,9 @@
   .vh-sm-100 {
     height: 100vh !important;
   }
+  .vh-sm-none {
+    height: "auto" !important;
+  }
   .vh-sm-7 {
     height: 7vh !important;
   }
@@ -3315,6 +3322,9 @@
   }
   .vh-md-100 {
     height: 100vh !important;
+  }
+  .vh-md-none {
+    height: "auto" !important;
   }
   .vh-md-7 {
     height: 7vh !important;
@@ -4118,6 +4128,9 @@
   .vh-lg-100 {
     height: 100vh !important;
   }
+  .vh-lg-none {
+    height: "auto" !important;
+  }
   .vh-lg-7 {
     height: 7vh !important;
   }
@@ -4920,6 +4933,9 @@
   .vh-xl-100 {
     height: 100vh !important;
   }
+  .vh-xl-none {
+    height: "auto" !important;
+  }
   .vh-xl-7 {
     height: 7vh !important;
   }
@@ -5721,6 +5737,9 @@
   }
   .vh-xxl-100 {
     height: 100vh !important;
+  }
+  .vh-xxl-none {
+    height: "auto" !important;
   }
   .vh-xxl-7 {
     height: 7vh !important;

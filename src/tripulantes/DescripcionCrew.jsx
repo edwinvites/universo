@@ -1,9 +1,9 @@
 import React from "react";
 
 function DescripcionCrew(props) {
-    let nombre = props.ruta.split("/");
+    let llave = props.path.split("/");
 
-    console.log(nombre);
+    console.log(llave);
     
 
     let info = {
@@ -11,23 +11,20 @@ function DescripcionCrew(props) {
             "descripcion": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
         },
 
-        "mars": {
-            "nombre": "MARS",
-            "descripcion": "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two times the height of Everest!"
+        "mark-shuttleworth": {
+            "descripcion": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist."
         },
-        "europa": {
-            "nombre": "EUROPA",
-            "descripcion": "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin."
+        "victor-glover": {
+            "descripcion": "Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer."
         },
-        "titan": {
-            "nombre": "TITAN",
-            "descripcion": "The only moon known to have a dense atmosphere and liquid surface lakes, Titan is a home away from home (just a few hundred degrees colder!)."
+        "anousheh-ansari": {
+            "descripcion": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
         }
     }
 
     return (
         <p className="text-lila text-lg-start fs-12 fs-sm-11 fs-lg-10 px-5  px-sm-4 ps-lg-0 pb-5 pb-sm-0 mb-0 lh-18">
-            {info[nombre[0]].descripcion}
+            {info[llave[0]].descripcion}
         </p>
 
     )
