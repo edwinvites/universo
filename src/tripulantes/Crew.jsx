@@ -13,10 +13,9 @@ import ImgPeople from "./ImgPeople";
 function Crew(props) {
 
     let dispositivo = props.path.split("/");
-    console.log("dispositivo", dispositivo[1]);
 
     let altura = {
-        "tablet": "940px",
+        "tablet": "980px",
         "undefined": "",
         "laptop": "",
     }

@@ -118,6 +118,69 @@ console.log("path nav", props.path);
       tecnologia = noSeleccionado;
       break;
 
+    case "/crew/mark-shuttleworth":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/mark-shuttleworth/tablet":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/mark-shuttleworth/laptop":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/victor-glover":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/victor-glover/tablet":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/victor-glover/laptop":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/anousheh-ansari":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/anousheh-ansari/tablet":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
+    case "/crew/anousheh-ansari/laptop":
+      home = noSeleccionado;
+      destino = noSeleccionado;
+      tripulacion = seleccionado;
+      tecnologia = noSeleccionado;
+      break;
+
     case "tecnologia":
       home = noSeleccionado;
       destino = noSeleccionado;
