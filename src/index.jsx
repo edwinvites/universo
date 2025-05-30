@@ -14,6 +14,7 @@ import Home from './home/Home';
 // import fondo from "./destinos/moon/fondoLuna.svg";
 import Destinos from './destinos/Destinos';
 import Crew from './tripulantes/Crew';
+import Tecnologia from './technology/tecnologia';
 
 // const imagenes = document.createElement("img")
 // imagenes.src= fondo;
@@ -138,6 +139,16 @@ const router = createBrowserRouter(
         path: "anousheh-ansari/laptop",
         element: <Crew path={"anousheh-ansari/laptop"} />
       },
+    ]
+  },
+  {
+    path: "/tecnologia",
+    element: <App/>,
+    children: [
+      {
+        path: "",
+        element: <Tecnologia section={"launch_vehicle"} />
+      }
     ]
   },
   ]

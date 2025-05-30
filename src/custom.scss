@@ -328,6 +328,10 @@ width: 10px;
 height: 10px;
 }
 
+#circulosSeccionTecnologia > div {
+  cursor: pointer;
+}
+
 @include media-breakpoint-up(sm) {
 
 

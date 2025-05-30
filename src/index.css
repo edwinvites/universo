@@ -8993,6 +8993,10 @@ button > img {
   height: 10px;
 }
 
+#circulosSeccionTecnologia > div {
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   nav {
     height: 15vh !important;

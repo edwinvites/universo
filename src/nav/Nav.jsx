@@ -181,7 +181,7 @@ console.log("path nav", props.path);
       tecnologia = noSeleccionado;
       break;
 
-    case "tecnologia":
+    case "/tecnologia":
       home = noSeleccionado;
       destino = noSeleccionado;
       tripulacion = noSeleccionado;
@@ -353,7 +353,7 @@ console.log("path nav", props.path);
       tecnologiaOffcanvas = noSeleccionadoOffcanvas;
       break;
 
-    case "tecnologia":
+    case "/tecnologia":
       inicioOffcanvas = noSeleccionadoOffcanvas;
       destinoOffcanvas = noSeleccionadoOffcanvas;
       tripulacionOffcanvas = noSeleccionadoOffcanvas;
@@ -424,7 +424,7 @@ console.log("path nav", props.path);
               </Link>
             </li>
             <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-              <Link to={"/tecnologia/nave"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
+              <Link to={"/tecnologia"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
                 <div className="d-flex justify-content-between flex-column h-100 estadoHover">
                   <div className="h-5"></div>
                   <div>
@@ -504,9 +504,9 @@ console.log("path nav", props.path);
                 <div className="col-2">
                   <Link to={"/tecnologia/nave"} className="text-decoration-none text-light  fw-bold"><span data-bs-dismiss="offcanvas" aria-label="Close">03</span></Link>
                 </div>
-                <div className={"col-10 pe-0 " + tecnologiaOffcanvas}>
+                <div className={"col-10 pe-0 " }>
                   <div className="d-flex justify-content-between  ">
-                    <Link to={"/tecnologia/nave"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close">TECHNOLOGY</span></Link>
+                    <Link to={"/tecnologia"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close">TECHNOLOGY</span></Link>
                     <div className={"w-3 " + tecnologiaOffcanvas}></div>
                   </div>
                 </div>

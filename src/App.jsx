@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./nav/Nav";
 import { Link, Navigate, Outlet, redirect, useLocation, useNavigate, useParams } from "react-router-dom";
+import Subtitulo from "./subtitulo/Subtitulo";
 
 
 function App(props) {
@@ -136,6 +137,9 @@ function App(props) {
     "/crew/anousheh-ansari": "../../imagenes/backgroundCrew.png",
     "/crew/anousheh-ansari/tablet": "../../imagenes/backgroundCrew.png",
     "/crew/anousheh-ansari/laptop": "../../imagenes/backgroundCrew.png",
+    "/tecnologia": "../../imagenes/technology.svg",
+    "/tecnologia/launch-vehicle/tablet": "../../imagenes/technology.svg",
+    "/tecnologia/launch-vehicle/laptop": "../../imagenes/technology.svg",
   }
   let [rutaFondo, setRutaFondo] = useState();
 
@@ -276,7 +280,8 @@ function App(props) {
   return (
     <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover", minHeight: alturaMain }} className="text-center    ">
       <Nav path={location.pathname}></Nav>
-      <Outlet props={location.pathname} />
+      <Subtitulo path={location.pathname} />
+      <Outlet  />
     </main>
 
 
