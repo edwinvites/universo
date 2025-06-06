@@ -255,13 +255,13 @@ function App(props) {
   let minimoAltura = {
     "/home": "820px",
     "/tamanioLaptop": "870px",
-    "/destinos/moon": "1120px",
+    "/destinos/moon": "1300px",
     "/destinos/moon/laptop": "1000px",
-    "/destinos/mars": "1120px",
+    "/destinos/mars": "1300px",
     "/destinos/mars/laptop": "1000px",
-    "/destinos/europa": "1120px",
+    "/destinos/europa": "1300px",
     "/destinos/europa/laptop": "1000px",
-    "/destinos/titan": "1120px",
+    "/destinos/titan": "1300px",
     "/destinos/titan/laptop": "1000px",
     "/crew/douglas-hurley": "1005px",
     "/crew/douglas-hurley/tablet": "985px",
@@ -276,6 +276,9 @@ function App(props) {
     "/crew/anousheh-ansari/tablet": "985px",
     "/crew/anousheh-ansari/laptop": "1250px"
   }
+
+  const [section, setSection] = useState("home");
+
 
   return (
     <main id="principal" style={{ backgroundImage: " url(" + rutaFondo + ")", backgroundSize: "cover", minHeight: alturaMain }} className="text-center    ">

@@ -38,7 +38,6 @@ function Home() {
 
         <div className="container-fluid px-4 pt-sm-5 mt-sm-5  pb-sm-5 px-lg-5 m-0   h-100  w-100 ">
             <div className="row m-0 p-0  h-100 m-0 px-lg-5">
-                <div className="col-12  "></div>
                 <div className="col-12  px-0  h-100">
 
                     <div className="row m-0 p-0 px-lg-5 h-100">

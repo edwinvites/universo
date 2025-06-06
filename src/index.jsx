@@ -30,7 +30,7 @@ const router = createBrowserRouter(
     ,
   {
     path: "*",
-    element: <div>No Found</div >
+    element: <div className="bg-white fs-1" >Sorry</div >
   }
     ,
   {
@@ -38,6 +38,7 @@ const router = createBrowserRouter(
     element: <App></App>,
     children: [
       {
+        
         path: "",
         element: <Home />
       },

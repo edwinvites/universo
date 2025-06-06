@@ -382,75 +382,8 @@ console.log("path nav", props.path);
           <img src={iconoToggler} className="img-fluid">
           </img>
         </button>
-        <div className=" d-none d-lg-flex w-md-34 w-xl-38 position-absolute start-16">
-          <hr size="4" className=" w-100 bg-body z-3 m-0 d-none d-lg-block" />
-        </div>
 
-        <div className="d-none fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  d-sm-flex m-0 p-0 h-100 text-white  justify-content-xl-end align-items-center  efectoEsmeril ">
-          <ul className="navbar-nav text-light h-100 w-100 w-lg-90 ps-4 pe-4 px-lg-2 fs-11 justify-content-around justify-content-xl-around">
-
-            <li className="nav-item px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column">
-              <Link to={"/"} className="   nav-link  text-light barlow-condensed  align-self-center d-block h-100 p-0 " aria-current="page" href="#">
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <span>HOME</span>
-                  <div className={home + " h-5"}></div>
-                </div>
-              </Link>
-            </li>
-            <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-              <Link to={"../destinos/moon"} className=" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0" href="#">
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <div>
-                    <span className="me-2 fw-bold">01</span>
-                    <span>DESTINATION</span>
-                  </div>
-                  <div className={destino + " h-5"}></div>
-                </div>
-
-              </Link>
-            </li>
-            <li className={"nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"}>
-              <Link to={"/crew/douglas-hurley"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <div>
-                    <span className="me-2 fw-bold">02</span>
-                    <span>CREW</span>
-                  </div>
-                  <div className={tripulacion + " h-5"}></div>
-                </div>
-              </Link>
-            </li>
-            <li className="nav-item px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-              <Link to={"/tecnologia"} className={" nav-link text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <div>
-                    <span className="me-2 fw-bold">03</span>
-                    <span>TECHNOLOGY</span>
-                  </div>
-                  <div className={tecnologia + " h-5"}></div>
-                </div>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        {/* <div className="row">
-            <div className="col-2">
-
-            </div>
-            <div className="col-10">
-
-            </div>
-          </div> */}
-
-
-
-
-
-        {/* --------------------------offcanvas----------------------- */}
+        {/* //////////////////////////////////7offcanvas//////////////////77777 */}
 
         <div className="offcanvas offcanvas-end offcanvas-vidrio-esmerilado  w-60 barlow-condensed d-sm-none pt-3" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"  >
           <div className="offcanvas-header px-4 pb-5">
@@ -516,6 +449,80 @@ console.log("path nav", props.path);
 
           </div>
         </div>
+
+
+
+        <div className=" d-none d-lg-flex w-md-34 w-xl-38 position-absolute start-16">
+          <hr size="4" className=" w-100 bg-body z-3 m-0 d-none d-lg-block" />
+        </div>
+
+        <div id="barra_links" className=" d-none d-sm-block fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  m-0 p-0 h-100 text-white  d-sm-flex justify-content-center justify-content-xl-end align-items-center  efectoEsmeril " >
+          <ul className=" text-light h-100 w-100 w-lg-90 ps-4 pe-4 pb-0 px-lg-2 fs-11 d-flex justify-content-around  align-items-center m-0 p-0 list-unstyled  ">                      
+
+            <li className=" h-100 px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column ">
+              <Link to={"/"} className="  text-decoration-none   text-light barlow-condensed  align-self-center d-block h-100 p-0 " >
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <span>HOME</span>
+                  <div className={home + " h-5"}></div>
+                </div>
+              </Link>
+            </li>
+            <li className="h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
+              <Link to={"../destinos/moon"} className="text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0" href="#">
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <div>
+                    <span className="me-2 fw-bold">01</span>
+                    <span>DESTINATION</span>
+                  </div>
+                  <div className={destino + " h-5"}></div>
+                </div>
+
+              </Link>
+            </li>
+            <li className={"h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"}>
+              <Link to={"/crew/douglas-hurley"} className={"text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <div>
+                    <span className="me-2 fw-bold">02</span>
+                    <span>CREW</span>
+                  </div>
+                  <div className={tripulacion + " h-5"}></div>
+                </div>
+              </Link>
+            </li>
+            <li className="h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
+              <Link to={"/tecnologia"} className={"text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"}>
+                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                  <div className="h-5"></div>
+                  <div>
+                    <span className="me-2 fw-bold">03</span>
+                    <span>TECHNOLOGY</span>
+                  </div>
+                  <div className={tecnologia + " h-5"}></div>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        
+        {/* <div className="row">
+            <div className="col-2">
+
+            </div>
+            <div className="col-10">
+
+            </div>
+          </div> */}
+
+
+
+
+
+
       </div>
     </nav>
 

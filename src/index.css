@@ -8997,9 +8997,13 @@ button > img {
   cursor: pointer;
 }
 
+#circulosSeccionTecnologiaLaptop > div {
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   nav {
-    height: 15vh !important;
+    height: 96px !important;
   }
   .navbar-brand > a > img {
     width: 7vh;
@@ -9028,7 +9032,7 @@ button > img {
 }
 @media (min-width: 992px) {
   nav {
-    height: 22vh !important;
+    height: 136px !important;
     align-items: end;
   }
   .navbar {
@@ -9039,6 +9043,9 @@ button > img {
   }
   .navbar-brand {
     width: 20vw;
+  }
+  #barra_links {
+    height: 96px !important;
   }
   .explorer-shadow:hover {
     -webkit-box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.099);

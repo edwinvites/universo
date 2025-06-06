@@ -332,11 +332,15 @@ height: 10px;
   cursor: pointer;
 }
 
+#circulosSeccionTecnologiaLaptop > div{
+  cursor: pointer;
+}
+
 @include media-breakpoint-up(sm) {
 
 
   nav {
-    height: 15vh !important;
+    height: 96px !important;
   }
 
   .navbar-brand>a>img {
@@ -391,7 +395,7 @@ height: 10px;
 @include media-breakpoint-up(lg) {
 
   nav {
-    height: 22vh !important;
+    height: 136px !important;
     align-items: end;
   }
 
@@ -405,6 +409,10 @@ height: 10px;
 
   .navbar-brand {
     width: 20vw;
+  }
+
+  #barra_links{
+    height: 96px !important;
   }
 
   // .fs-1 {
