@@ -39,13 +39,19 @@ function Tecnologia(props) {
     const [ubicacion, set_ubicacion] = useState("launch_vehicle");
     const [tamanio, set_tamanio] = useState(window.innerWidth > 550 ? (window.innerWidth > 990 ? "laptop" : "tablet") : "mobile");
 
-    console.log("tamanio", tamanio);
 
 
     const widthHightCircles = {
         "mobile": "40px",
         "tablet": "56px",
         "laptop": "80px"
+    }
+
+
+    const height_page_technology = {
+        "mobile": "750px",
+        "tablet": "800px",
+        "laptop": "750px"
     }
 
     function changeText(params) {
@@ -94,7 +100,7 @@ function Tecnologia(props) {
     }, [])
 
     return (
-        <div className='mt-4 mt-sm-5'>
+        <div style={{height: height_page_technology[tamanio]}} className='mt-4 mt-sm-5 mt-lg-1'>
             <div className="d-lg-none">
                 <ImagenTech abc={ubicacion} tamanio={tamanio} />
                 <div id='circulosSeccionTecnologia' className="d-flex justify-content-center justify-content-lg-start mt-2 pt-sm-1 mt-sm-2 fs-10 fs-sm-8">

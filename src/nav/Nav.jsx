@@ -22,349 +22,58 @@ console.log("path nav", props.path);
 
 
 
-  let seleccionado = "bg-white ";
+  let seleccionado = "  bg-white ";
   let noSeleccionado = "";
   let home, destino, tripulacion, tecnologia;
 
-  switch (props.path) {
-    case ("/home"):
-      home = seleccionado;
-      destino = noSeleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/tamanioLaptop"):
-      home = seleccionado;
-      destino = noSeleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/moon"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/moon/laptop"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/mars"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-      case ("/destinos/mars/laptop"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/europa"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/europa/laptop"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/titan"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case ("/destinos/titan/laptop"):
-      home = noSeleccionado;
-      destino = seleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/douglas-hurley":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/douglas-hurley/tablet":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/douglas-hurley/laptop":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/mark-shuttleworth":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/mark-shuttleworth/tablet":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/mark-shuttleworth/laptop":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/victor-glover":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/victor-glover/tablet":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/victor-glover/laptop":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/anousheh-ansari":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/anousheh-ansari/tablet":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/crew/anousheh-ansari/laptop":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = seleccionado;
-      tecnologia = noSeleccionado;
-      break;
-
-    case "/tecnologia":
-      home = noSeleccionado;
-      destino = noSeleccionado;
-      tripulacion = noSeleccionado;
-      tecnologia = seleccionado;
-      break;
-
-    default:
-      break;
+if (props.path === "/home" || props.path === "/tamanioLaptop") {
+    home = " bg-white ";
+    destino = tripulacion = tecnologia = "";      
   }
+  
+  
+  if (props.path === "/destinos/moon" || props.path === "/destinos/moon/laptop"
+    || props.path === "/destinos/mars" || props.path === "/destinos/mars/laptop"
+    || props.path === "/destinos/europa" || props.path === "/destinos/europa/laptop"
+    || props.path === "/destinos/titan" || props.path === "/destinos/titan/laptop"
+  ) {
+    destino = " bg-white ";
+    home = tripulacion = tecnologia = "";      
+}
+  
+  if (props.path === "/crew/douglas-hurley" || props.path === "/crew/douglas-hurley/tablet"
+    || props.path === "/crew/douglas-hurley/laptop"
+    || props.path === "/crew/mark-shuttleworth" || props.path === "/crew/mark-shuttleworth/tablet"
+    || props.path === "/crew/mark-shuttleworth/laptop"
+    || props.path === "/crew/victor-glover" || props.path === "/crew/victor-glover/tablet"
+    || props.path === "/crew/victor-glover/laptop"
+    || props.path === "/crew/anousheh-ansari" || props.path === "/crew/anousheh-ansari/tablet"
+    || props.path === "/crew/anousheh-ansari/laptop"
+  ) {
+    tripulacion = " bg-white ";
+    home = destino = tecnologia = "";      
+}
+  
+  if (props.path === "/tecnologia"   ) {
+    tecnologia = " bg-white ";
+    home = destino = tripulacion = "";      
+}
 
-  let seleccionadoOffcanvas = " bg-white";
-  let noSeleccionadoOffcanvas = "";
-  let inicioOffcanvas, destinoOffcanvas, tripulacionOffcanvas, tecnologiaOffcanvas;
+const [width_img, setWidth_img] = useState(()=>{
+  if (window.innerWidth < 576) {
+    return "40px";
+  } else if (window.innerWidth >= 576 ) {
+    return "48px";
+  } 
+})
 
-  switch (props.path) {
-    case ("/home"):
-      inicioOffcanvas = seleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/tamanioLaptop"):
-      inicioOffcanvas = seleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-
-    case ("/destinos/moon"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-
-    case ("/destinos/moon/laptop"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/destinos/mars"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/destinos/mars/laptop"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/destinos/europa"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/destinos/europa/laptop"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/destinos/titan"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case ("/destinos/titan/laptop"):
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = seleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/douglas-hurley":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/douglas-hurley/tablet":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/douglas-hurley/laptop":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/mark-shuttleworth":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/mark-shuttleworth/tablet":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/mark-shuttleworth/laptop":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/victor-glover":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/victor-glover/tablet":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/victor-glover/laptop":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/anousheh-ansari":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/anousheh-ansari/tablet":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/crew/anousheh-ansari/laptop":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = seleccionadoOffcanvas;
-      tecnologiaOffcanvas = noSeleccionadoOffcanvas;
-      break;
-
-    case "/tecnologia":
-      inicioOffcanvas = noSeleccionadoOffcanvas;
-      destinoOffcanvas = noSeleccionadoOffcanvas;
-      tripulacionOffcanvas = noSeleccionadoOffcanvas;
-      tecnologiaOffcanvas = seleccionadoOffcanvas;
-      break;
-
-    default:
-      break;
-  }
-
-
+window.addEventListener("resize", () => {
+    if (window.innerWidth < 576) {
+    return "40px";
+  } else if (window.innerWidth >= 576 ) {
+    return "48px";
+  } 
+})
 
 
   return (
@@ -374,7 +83,7 @@ console.log("path nav", props.path);
       <div className="container-fluid  px-4 py-0 px-sm-0 h-100 h-lg-70">
         <div className="navbar-brand h-100 align-content-center me-0 " >
           <Link to={"/"} className="p-0 m-0 h-100 align-content-center" >
-            <img src={logo_pagina} className="img-fluid">
+            <img style={{width: width_img}} src={logo_pagina} className="img-fluid">
             </img>
           </Link>
         </div>
@@ -407,7 +116,7 @@ console.log("path nav", props.path);
                 <div className={"col-10 pe-0"}>
                   <div className="d-flex justify-content-between   ">
                     <Link to={"/"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close" >HOME</span></Link>
-                    <div className={"w-3" + inicioOffcanvas}></div>
+                    <div className={"w-3" + home}></div>
                   </div>
                 </div>
               </div>
@@ -418,7 +127,7 @@ console.log("path nav", props.path);
                 <div className={"col-10 pe-0"}>
                   <div className="d-flex justify-content-between  ">
                     <Link to={"/destinos/moon"} className="text-decoration-none text-light text-start  " > <span data-bs-dismiss="offcanvas" aria-label="Close">DESTINOS</span></Link>
-                    <div className={"w-3 " + destinoOffcanvas}></div>
+                    <div className={"w-3 " + destino}></div>
                   </div>
                 </div>
               </div>
@@ -429,7 +138,7 @@ console.log("path nav", props.path);
                 <div className={"col-10  pe-0 " }>
                   <div className="d-flex justify-content-between   ">
                     <Link to={"/crew/douglas-hurley"} className="text-decoration-none text-light text-start  "><span data-bs-dismiss="offcanvas" aria-label="Close">CREW</span></Link>
-                    <div className={"w-3 " + tripulacionOffcanvas}></div>
+                    <div className={"w-3 " + tripulacion}></div>
                   </div>
                 </div>
               </div>
@@ -440,7 +149,7 @@ console.log("path nav", props.path);
                 <div className={"col-10 pe-0 " }>
                   <div className="d-flex justify-content-between  ">
                     <Link to={"/tecnologia"} className="text-decoration-none text-light text-start " ><span data-bs-dismiss="offcanvas" aria-label="Close">TECHNOLOGY</span></Link>
-                    <div className={"w-3 " + tecnologiaOffcanvas}></div>
+                    <div className={"w-3 " + tecnologia}></div>
                   </div>
                 </div>
               </div>
@@ -507,19 +216,6 @@ console.log("path nav", props.path);
             </li>
           </ul>
         </div>
-
-        
-        {/* <div className="row">
-            <div className="col-2">
-
-            </div>
-            <div className="col-10">
-
-            </div>
-          </div> */}
-
-
-
 
 
 

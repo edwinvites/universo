@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import moon from "./imagenes/lunaSvg.svg";
 import mars from "./imagenes/mars.svg";
 import europa from "./imagenes/europa.svg";
@@ -21,17 +21,46 @@ function ImagenAstro(props) {
         }
     }
 
+    const [width, setWidth] = useState(()=>{
+
+        if (window.innerWidth < 576) {
+            return "150px";
+        } else if (window.innerWidth >= 576 && window.innerWidth < 992) {
+            return "300px";
+        } else {
+            return "480px";
+        }
+
+
+    });
+    
+    function tamanio_imagen() {
+        let tamanio = "";
+        if (window.innerWidth < 576) {
+            tamanio = setWidth("150px");
+        } else if (window.innerWidth >= 576 && window.innerWidth < 992) {
+            tamanio = setWidth("300px");
+        } else {
+            tamanio =setWidth("480px");
+        }
+        
+        return tamanio;
+    }
+
+    // tamanio_imagen();
+
+    window.addEventListener("resize", () => {
+        tamanio_imagen();
+    })
+
     return (
-        <div className="w-lg-100 my-5 py-4 py-lg-0  my-lg-0 ">
-            <img className=" w-27 w-sm-45 w-lg-100 img-fluid " src={info[props.astro].img}>
+        <div className="w-lg-100 py-5 mb-4  py-lg-0  my-lg-0 ">
+            <img style={{ width: width }} className=" img-fluid " src={info[props.astro].img}>
             </img>
 
         </div>
     )
-    // return 
-    // (
-    //     // <img className="my-5 py-4 pt-lg-4 w-50 w-xl-75" src={info[props.astro].img}  >000000000000000000000000000000000000000000000</img>
-    // )
+
 }
 
 export default ImagenAstro;

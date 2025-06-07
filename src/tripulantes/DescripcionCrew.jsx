@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function DescripcionCrew(props) {
     let llave = props.path.split("/");
@@ -22,8 +22,22 @@ function DescripcionCrew(props) {
         }
     }
 
+    const [height_por_dispositivo, setHeight] = useState(() => {
+        if(window.innerWidth < 576) {
+            return "210px";
+        }
+
+        if(window.innerWidth >= 576 && window.innerWidth < 992) {
+            return "100px";
+        }
+
+        if(window.innerWidth >= 992) {
+            return "80px";
+        }
+    });
+
     return (
-        <p className="text-lila text-lg-start fs-12 fs-sm-11 fs-lg-10 px-5  px-sm-4 ps-lg-0 pb-5 pb-sm-0 mb-0 lh-18">
+        <p style={{height: height_por_dispositivo}} className="text-lila text-lg-start fs-12 fs-sm-11 fs-lg-10 px-5  px-sm-4 ps-lg-0  pb-sm-0 mb-0 lh-18">
             {info[llave[0]].descripcion}
         </p>
 

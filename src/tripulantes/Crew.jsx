@@ -14,15 +14,15 @@ function Crew(props) {
     let dispositivo = props.path.split("/");
 
     let altura = {
-        "tablet": "980px",
-        "undefined": "",
+        "tablet": "800px",
+        "undefined": "800px",
         "laptop": "",
     }
 
 
     return (
 
-        <section style={{ height: altura[dispositivo[1]] }} className="container-fluid mx-0 mt-5 p-0 h-90 px-lg-5  ">
+        <section style={{ height: altura[dispositivo[1]] }} className="container-fluid mx-0 mt-1 p-0 h-90 px-lg-5  ">
             <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-lg-5 h-100 d-lg-block d-none">
                 <div className="col-12 pt-lg-5 px-0">
                     <div className="row justify-content-between mx-0 px-4">
@@ -52,21 +52,15 @@ function Crew(props) {
 
                         <div className="d-flex flex-column justify-content-between ">
                             <NombreTripulante path={props.path} />
-                            <div className="vh-sm-15 vh-lg-none">
-                                <DescripcionCrew path={props.path} />
-
-                            </div>
+                            <DescripcionCrew path={props.path} />
                             <CirclesInline path={props.path} />
                         </div>
-                        {/* <ImgPeople path={props.path} /> */}
                     </div>
                     <div className="position-absolute bottom-0 w-100">
                         <ImgPeople path={props.path} />
                     </div>
                 </div>
-                {/* <div className="col-12 col-lg-6 p-0">
 
-                </div> */}
 
             </div>
 
@@ -77,8 +71,7 @@ function Crew(props) {
                     <DescripcionCrew path={props.path} />
                     <CirclesInline path={props.path} />
                     <ImgPeople path={props.path} />
-                    {/* <BarraDeDestinos astro={props.astro} /> */}
-                    {/* <DatosAstro astro={props.astro} /> */}
+
                 </div>
 
             </div>

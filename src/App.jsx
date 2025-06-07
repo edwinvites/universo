@@ -264,20 +264,21 @@ function App(props) {
     "/destinos/titan": "1300px",
     "/destinos/titan/laptop": "1000px",
     "/crew/douglas-hurley": "1005px",
-    "/crew/douglas-hurley/tablet": "985px",
+    "/crew/douglas-hurley/tablet": "950px",
     "/crew/douglas-hurley/laptop": "1250px",
     "/crew/mark-shuttleworth": "1005px",
-    "/crew/mark-shuttleworth/tablet": "985px",
+    "/crew/mark-shuttleworth/tablet": "950px",
     "/crew/mark-shuttleworth/laptop": "1250px",
     "/crew/victor-glover": "1005px",
-    "/crew/victor-glover/tablet": "985px",
+    "/crew/victor-glover/tablet": "950px",
     "/crew/victor-glover/laptop": "1250px",
     "/crew/anousheh-ansari": "1005px",
-    "/crew/anousheh-ansari/tablet": "985px",
-    "/crew/anousheh-ansari/laptop": "1250px"
+    "/crew/anousheh-ansari/tablet": "950px",
+    "/crew/anousheh-ansari/laptop": "1250px",
   }
 
   const [section, setSection] = useState("home");
+
 
 
   return (
