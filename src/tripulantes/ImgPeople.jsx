@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import douglasMobile from "./imagenes/douglasMobile.svg";
 import douglasTablet from "./imagenes/douglas-tablet.svg";
 import douglasLaptop from "./imagenes/douglasLaptop.svg";
@@ -34,8 +34,10 @@ function ImgPeople(props) {
     }
 console.log(props);
 
+
+
     return (
-        <div className="w-lg-100  pt-5 py-lg-0  my-lg-0 ">
+        <div  className="w-lg-100  pt-5 py-lg-0  my-lg-0 overflow-hidden ">
             <img className="  w-sm-50 w-lg-82 img-fluid " src={infoImg[props.path]} alt="img" />
 
         </div>

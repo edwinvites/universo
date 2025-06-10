@@ -15,7 +15,7 @@ function Crew(props) {
 
     let altura = {
         "tablet": "800px",
-        "undefined": "800px",
+        "undefined": "900px",
         "laptop": "",
     }
 

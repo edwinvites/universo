@@ -24,7 +24,7 @@ function DescripcionCrew(props) {
 
     const [height_por_dispositivo, setHeight] = useState(() => {
         if(window.innerWidth < 576) {
-            return "210px";
+            return "220px";
         }
 
         if(window.innerWidth >= 576 && window.innerWidth < 992) {
