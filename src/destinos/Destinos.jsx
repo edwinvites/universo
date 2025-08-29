@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ImagenAstro from "./ImagenAstro";
 import BarraDeDestinos from "./BarraDeDestinos";
 import NombreAstro from "./NombreAstro";
@@ -8,13 +8,19 @@ import DatosAstro from "./DatosAstro";
 function Destinos(props) {
 
 
-    
+    useEffect(()=>{
+
+        // window.addEventListener()
+        console.log(window.innerWidth);
+        
+
+    },[])
 
     return (
 
-        <section className="container-fluid mx-0 p-0 h-90 px-lg-5  ">
+        <section className="container-fluid mx-0 mt-4 p-0 h-90 px-lg-5  ">
 
-            <div className="row m-0 px-0 pb-0 px-lg-5 h-100 d-lg-none">
+            <div className="row m-0 px-0 pb-0 px-lg-5 d-lg-none">
 
                 <div className="col-12 col-lg-6 p-0  ">
                     <div className=" pt-lg-4 d-flex justify-content-center mb-sm-4 h-100">
@@ -24,11 +30,15 @@ function Destinos(props) {
                 </div>
                 <div className="col-12 col-lg-6 p-0">
                     <BarraDeDestinos astro={props.astro} />
+
+                    <div style={{height: "600px"}}>
                     <NombreAstro astro={props.astro} />
                     <Descripcion astro={props.astro} />
                     <hr size="4" className="mx-5 z-3 my-sm-5  bg-white " />
-
                     <DatosAstro astro={props.astro} />
+                    </div>
+
+
 
                 </div>
 
