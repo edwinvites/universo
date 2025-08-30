@@ -1,67 +1,38 @@
-import React, { useState } from "react";
-import moon from "./imagenes/lunaSvg.svg";
-import mars from "./imagenes/mars.svg";
-import europa from "./imagenes/europa.svg";
-import titan from "./imagenes/titan.svg";
-function ImagenAstro(props) {
+import React, { useEffect, useState } from "react";
 
-    let info =
-    {
-        "moon": {
-            "img": moon
-        },
-        "mars": {
-            "img": mars
-        },
-        "europa": {
-            "img": europa
-        },
-        "titan": {
-            "img": titan
-        }
-    }
+const moon = process.env.PUBLIC_URL + "/imagenes/astros/lunaSvg.svg";
+const mars = process.env.PUBLIC_URL + "/imagenes/astros/mars.svg";
+const europa = process.env.PUBLIC_URL + "/imagenes/astros/europa.svg";
+const titan = process.env.PUBLIC_URL + "/imagenes/astros/titan.svg";
 
-    const [width, setWidth] = useState(()=>{
+function ImagenAstro({ ancho_ventana, astro }) {
+  console.log({ ancho_ventana });
+  const imagenes_astro = {
+    moon: moon,
+    mars: mars,
+    europa: europa,
+    titan: titan,
+  };
 
-        if (window.innerWidth < 576) {
-            return "150px";
-        } else if (window.innerWidth >= 576 && window.innerWidth < 992) {
-            return "300px";
-        } else {
-            return "480px";
-        }
+  let tamanio = undefined;
 
+  if (ancho_ventana < 576) {
+    tamanio = "150px";
+  } else if (ancho_ventana >= 576 && ancho_ventana < 992) {
+    tamanio = "300px";
+  } else {
+    tamanio = "480px";
+  }
 
-    });
-    
-    function tamanio_imagen() {
-        let tamanio = "";
-        if (window.innerWidth < 576) {
-            tamanio = setWidth("150px");
-        } else if (window.innerWidth >= 576 && window.innerWidth < 992) {
-            tamanio = setWidth("300px");
-        } else {
-            tamanio =setWidth("480px");
-        }
-        
-        return tamanio;
-    }
-
-    // tamanio_imagen();
-
-    window.addEventListener("resize", () => {
-        tamanio_imagen();
-    })
-
-    return (
-        <div className="w-lg-100 py-5 mb-4  py-lg-0  my-lg-0 ">
-            <img style={{ width: width }} className=" img-fluid " src={info[props.astro].img}>
-            </img>
-
-        </div>
-    )
-
+  return (
+    <div className="w-lg-100 py-5 align-content-center  py-lg-0  my-lg-0 ">
+      <img
+        style={{ width: tamanio }}
+        className=" img-fluid "
+        src={imagenes_astro[astro]}
+      ></img>
+    </div>
+  );
 }
 
 export default ImagenAstro;
-

@@ -1734,7 +1734,7 @@
 
 .text-lila {
   --bs-text-opacity: 1;
-  color: #D0D6F9 !important;
+  color: #d0d6f9 !important;
 }
 
 .text-opacity-25 {
@@ -8984,6 +8984,14 @@ button > img {
   background: #6c757d;
 }
 
+.col-2.px-0:hover + .col-10.pe-0 > a > div > .w-3 {
+  background-color: #d0d6f9;
+}
+
+a.text-decoration-none.text-light.text-start:hover > div > .w-3 {
+  background-color: #d0d6f9;
+}
+
 #imagenExplorer {
   width: 144px !important;
 }
@@ -9029,6 +9037,14 @@ button > img {
   #imagenExplorer {
     width: 272px !important;
   }
+  .caja_boton_explorer {
+    padding: 130px 0 !important;
+  }
+  .explorer-shadow:hover {
+    -webkit-box-shadow: 0px 0px 0px 120px rgba(255, 255, 255, 0.099);
+    -moz-box-shadow: 0px 0px 0px 120px rgba(255, 255, 255, 0.099);
+    box-shadow: 0px 0px 0px 120px rgba(255, 255, 255, 0.099);
+  }
 }
 @media (min-width: 992px) {
   nav {
@@ -9046,11 +9062,6 @@ button > img {
   }
   #barra_links {
     height: 96px !important;
-  }
-  .explorer-shadow:hover {
-    -webkit-box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.099);
-    -moz-box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.099);
-    box-shadow: 0px 0px 0px 85px rgba(255, 255, 255, 0.099);
   }
   #circlesCrew > a > div {
     width: 15px;

@@ -34,17 +34,12 @@ const router = createBrowserRouter(
   }
     ,
   {
-    path: "/:idhome",
+    path: "/home",
     element: <App></App>,
     children: [
       {
-        
         path: "",
         element: <Home />
-      },
-      {
-        path: "tamanioLaptop",
-        element: <Home  />
       }
     ]
   }
