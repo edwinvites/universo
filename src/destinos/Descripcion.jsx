@@ -22,7 +22,7 @@ function Descripcion(props) {
     }
 
     return (
-        <p className="text-lila text-lg-start fs-12 fs-sm-11 fs-lg-10 px-5  px-sm-4 ps-lg-0 pb-4 pb-sm-0 mb-0 lh-18">
+        <p className="text-lila text-xl-start fs-12 fs-sm-11 fs-xl-10 px-5  px-sm-4 ps-xl-0 pb-4 pb-sm-0 mb-0 lh-18">
             {info[props.astro].descripcion}
         </p>
 

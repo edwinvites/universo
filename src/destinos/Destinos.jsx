@@ -4,38 +4,42 @@ import BarraDeDestinos from "./BarraDeDestinos";
 import NombreAstro from "./NombreAstro";
 import Descripcion from "./Descripcion";
 import DatosAstro from "./DatosAstro";
+import { useParams } from "react-router-dom";
 
 function Destinos(props) {
   const [ancho_ventana, set_ancho_ventana] = useState(window.innerWidth);
+  const params = useParams();
+  console.log({params});
 
+  function configurar_ancho_ventana() {
+    set_ancho_ventana(window.innerWidth);
+  }
+
+  
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      set_ancho_ventana(window.innerWidth);
-    });
+    const caja_destinos = document.getElementById("caja_destinos");
+    caja_destinos.addEventListener("resize", configurar_ancho_ventana);
 
     return () => {
-      window.removeEventListener("resize", () =>
-        set_ancho_ventana(window.innerWidth)
-      );
+      caja_destinos.removeEventListener("resize", configurar_ancho_ventana);
     };
-    console.log(window.innerWidth);
-  }, []);
+    }, []);
 
   return (
-    <section className="container-fluid mx-0 mt-4 pb-sm-4 p-0 h-90 px-lg-5  ">
+    <section id="caja_destinos" className="container-fluid mx-0 mt-4 pb-sm-4 p-0 h-90 px-xl-5  ">
       <div
-        className="row align-content-start m-0 px-0 pb-0 px-lg-5 d-lg-none"
+        className="row align-content-start m-0 px-0 pb-0 px-xl-5 d-xl-none"
         style={{ height: "1000px" }}
       >
-        <div className="col-12 col-lg-6 p-0  ">
+        <div className="col-12 col-xl-6 p-0  ">
           <div
             id="marco_astro"
-            className=" pt-lg-4 d-flex justify-content-center h-100 "
+            className=" pt-xl-4 d-flex justify-content-center h-100 "
           >
             <ImagenAstro astro={props.astro} ancho_ventana={ancho_ventana} />
           </div>
         </div>
-        <div className="col-12 col-lg-6 p-0">
+        <div className="col-12 col-xl-6 p-0">
           <BarraDeDestinos astro={props.astro} />
           <div className="d-flex  flex-column justify-content-between">
             <NombreAstro astro={props.astro} />
@@ -45,8 +49,8 @@ function Destinos(props) {
           </div>
         </div>
       </div>
-      <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-lg-5 h-100 d-lg-block d-none">
-        <div className="col-12 pt-lg-5 px-5">
+      <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-xl-5 h-100 d-xl-block d-none">
+        <div className="col-12 pt-xl-5 px-5">
           <div className="row justify-content-around">
             <div className="col-5">
               <ImagenAstro astro={props.astro} />

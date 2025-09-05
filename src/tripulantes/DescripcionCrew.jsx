@@ -22,22 +22,22 @@ function DescripcionCrew(props) {
         }
     }
 
-    const [height_por_dispositivo, setHeight] = useState(() => {
-        if(window.innerWidth < 576) {
-            return "220px";
-        }
+    // const [height_por_dispositivo, setHeight] = useState(() => {
+    //     if(window.innerWidth < 576) {
+    //         return "30px";
+    //     }
 
-        if(window.innerWidth >= 576 && window.innerWidth < 992) {
-            return "100px";
-        }
+    //     if(window.innerWidth >= 576 && window.innerWidth < 992) {
+    //         return "100px";
+    //     }
 
-        if(window.innerWidth >= 992) {
-            return "80px";
-        }
-    });
+    //     if(window.innerWidth >= 992) {
+    //         return "100px";
+    //     }
+    // });
 
     return (
-        <p style={{height: height_por_dispositivo}} className="text-lila text-lg-start fs-12 fs-sm-11 fs-lg-10 px-5  px-sm-4 ps-lg-0  pb-sm-0 mb-0 lh-18">
+        <p  className="text-lila text-xl-start fs-12 fs-sm-11 fs-xl-10 px-5  px-sm-4 ps-xl-0  pb-sm-0 mb-0 lh-18">
             {info[llave[0]].descripcion}
         </p>
 

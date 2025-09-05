@@ -50,7 +50,12 @@ class pestanias_activas {
   }
 }
 
-function Nav(props) {
+function Nav({ parentCallback }) {
+  const handleClick = (new_ubicacion) => {
+    const ubicacion = "destinos";
+    parentCallback(ubicacion);
+  };
+
   let path = useLocation().pathname.split("/")[1];
   let pestania_activada = new pestanias_activas(true, false, false, false);
   pestania_activada.asignarValores(path);
@@ -72,6 +77,7 @@ function Nav(props) {
               style={{ width: width_img }}
               src={logo_pagina}
               className="img-fluid"
+              alt=""
             ></img>
           </Link>
         </div>
@@ -82,102 +88,102 @@ function Nav(props) {
           data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar"
         >
-          <img src={iconoToggler} className="img-fluid"></img>
+          <img src={iconoToggler} className="img-fluid" alt="toggler"></img>
         </button>
 
-        <div className=" d-none d-lg-flex w-md-34 w-xl-38 position-absolute start-16">
+        <div
+          className=" d-none d-xl-flex w-xl-38 position-absolute start-16"
+          onClick={handleClick}
+        >
           <hr size="4" className=" w-100 bg-body z-3 m-0 d-none d-lg-block" />
         </div>
 
-        <div
-          id="barra_links"
-          className=" d-none d-sm-block fs-11 espacio-entre-letras-punto-15 w-100 vw-lg-50  m-0 p-0 h-100 text-white  d-sm-flex justify-content-center justify-content-xl-end align-items-center  efectoEsmeril "
-        >
-          <ul className=" text-light h-100 w-100 w-lg-90 ps-4 pe-4 pb-0 px-lg-2 fs-11 d-flex justify-content-around  align-items-center m-0 p-0 list-unstyled  ">
-            <li className=" h-100 px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column ">
-              <Link
-                to={"/"}
-                className="  text-decoration-none   text-light barlow-condensed  align-self-center d-block h-100 p-0 "
-              >
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <span>HOME</span>
-                  <div
-                    className={
-                      (pestania_activada.home ? "bg-white" : "") + " h-5"
-                    }
-                  ></div>
-                </div>
-              </Link>
-            </li>
-            <li className="h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-              <Link
-                to={"../destinos/moon"}
-                className="text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"
-                href="#"
-              >
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <div>
-                    <span className="me-2 fw-bold">01</span>
-                    <span>DESTINATION</span>
-                  </div>
-                  <div
-                    className={
-                      (pestania_activada.destinos ? "bg-white" : "") + " h-5"
-                    }
-                  ></div>
-                </div>
-              </Link>
-            </li>
-            <li
+        <ul className="navbar-nav d-none d-sm-flex text-light h-100 vw-80 vw-xl-60  ps-4 pe-4 pb-0 px-lg-2 fs-11 d-flex justify-content-around  align-items-center m-0 p-0 list-unstyled efectoEsmeril ">
+          <li className="nav-item h-100 px-1 px-sm-3 px-lg-3  d-flex justify-content-between flex-column ">
+            <Link
+              to={"/"}
+              className="nav-link  text-decoration-none   text-light barlow-condensed  align-self-center d-block h-100 p-0 "
+            >
+              <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                <div className="h-5"></div>
+                <span>HOME</span>
+                <div
+                  className={
+                    (pestania_activada.home ? "bg-white" : "") + " h-5"
+                  }
+                ></div>
+              </div>
+            </Link>
+          </li>
+          <li className="nav-item h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
+            <div className="d-flex justify-content-between flex-column h-100 estadoHover"
+              onClick={()=>handleClick("destinos")}
+            >
+              <div className="h-5"></div>
+              <div>
+                <span className="me-2 fw-bold">01</span>
+                <span>DESTINATION</span>
+              </div>
+              <div
+                className={
+                  (pestania_activada.destinos ? "bg-white" : "") + " h-5"
+                }
+              ></div>
+            </div>
+
+            <Link
+              to={"../destinos/moon"}
+              className="nav-link text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"
+              href="#"
+            ></Link>
+          </li>
+          <li
+            className={
+              "nav-item h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"
+            }
+          >
+            <Link
+              to={"/crew/douglas-hurley"}
               className={
-                "h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column"
+                "nav-link text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"
               }
             >
-              <Link
-                to={"/crew/douglas-hurley"}
-                className={
-                  "text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"
-                }
-              >
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <div>
-                    <span className="me-2 fw-bold">02</span>
-                    <span>CREW</span>
-                  </div>
-                  <div
-                    className={
-                      (pestania_activada.crew ? "bg-white" : "") + " h-5"
-                    }
-                  ></div>
+              <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                <div className="h-5"></div>
+                <div>
+                  <span className="me-2 fw-bold">02</span>
+                  <span>CREW</span>
                 </div>
-              </Link>
-            </li>
-            <li className="h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
-              <Link
-                to={"/tecnologia"}
-                className={
-                  "text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"
-                }
-              >
-                <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                  <div className="h-5"></div>
-                  <div>
-                    <span className="me-2 fw-bold">03</span>
-                    <span>TECHNOLOGY</span>
-                  </div>
-                  <div
-                    className={
-                      (pestania_activada.tecnologia ? "bg-white" : "") + " h-5"
-                    }
-                  ></div>
+                <div
+                  className={
+                    (pestania_activada.crew ? "bg-white" : "") + " h-5"
+                  }
+                ></div>
+              </div>
+            </Link>
+          </li>
+          <li className="nav-item h-100 px-1 px-sm-3 px-lg-3 d-flex justify-content-between flex-column">
+            <Link
+              to={"/tecnologia"}
+              className={
+                "nav-link text-decoration-none  text-light barlow-condensed  align-self-center d-block h-100 p-0"
+              }
+            >
+              <div className="d-flex justify-content-between flex-column h-100 estadoHover">
+                <div className="h-5"></div>
+                <div>
+                  <span className="me-2 fw-bold">03</span>
+                  <span>TECHNOLOGY</span>
                 </div>
-              </Link>
-            </li>
-          </ul>
-        </div>
+                <div
+                  className={
+                    (pestania_activada.tecnologia ? "bg-white" : "") + " h-5"
+                  }
+                ></div>
+              </div>
+            </Link>
+          </li>
+        </ul>
       </div>
 
       {/* //////////////////////////////////7offcanvas//////////////////77777 */}

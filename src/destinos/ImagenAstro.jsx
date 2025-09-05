@@ -18,14 +18,14 @@ function ImagenAstro({ ancho_ventana, astro }) {
 
   if (ancho_ventana < 576) {
     tamanio = "150px";
-  } else if (ancho_ventana >= 576 && ancho_ventana < 992) {
+  } else if (ancho_ventana >= 576 && ancho_ventana < 1200) {
     tamanio = "300px";
   } else {
     tamanio = "480px";
   }
 
   return (
-    <div className="w-lg-100 py-5 align-content-center  py-lg-0  my-lg-0 ">
+    <div className="w-xl-100 py-5 align-content-center  py-xl-0  my-xl-0 ">
       <img
         style={{ width: tamanio }}
         className=" img-fluid "

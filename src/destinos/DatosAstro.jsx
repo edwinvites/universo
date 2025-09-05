@@ -27,24 +27,24 @@ function DatosAstro(props) {
 
     return (
         <div className="container-fluid m-0 p-0 ">
-            <div className=" justify-content-start d-none d-lg-flex">
+            <div className=" justify-content-start d-none d-xl-flex">
                 <div className="text-lila ps-md-0 pe-md-5 ps-xxl-0 pe-xxl-5 me-xxl-5">
-                    <p className="fs-13 my-3  my-sm-0 pt-sm-0 text-lg-start barlow-condensed espacio-entre-letras-punto-1">AVG. DISTANCE</p>
-                    <p className="fs-7 my-2 letra-bellefair text-white text-lg-start mb-lg-0 lh-1">{data[props.astro].distance}</p>
+                    <p className="fs-13 my-3  my-sm-0 pt-sm-0 text-xl-start barlow-condensed espacio-entre-letras-punto-1">AVG. DISTANCE</p>
+                    <p className="fs-7 my-2 letra-bellefair text-white text-xl-start mb-xl-0 lh-1">{data[props.astro].distance}</p>
                 </div>
                 <div className="text-lila ps-xxl-0 ps-xxl-5">
                     <p className="fs-13 my-3 pt-sm-0 my-sm-0 text-lila barlow-condensed espacio-entre-letras-punto-1">EST. TRAVEL TIME</p>
-                    <p className="fs-7 my-2 letra-bellefair text-white text-lg-start mb-lg-0 lh-1">{data[props.astro].time}</p>
+                    <p className="fs-7 my-2 letra-bellefair text-white text-xl-start mb-xl-0 lh-1">{data[props.astro].time}</p>
                 </div>
             </div>
-            <div className="row m-0 pt-2 pt-sm-0 d-lg-none">
-                <div className="col-12 col-sm-6 col-lg-4 text-lila pt-1 pb-2 py-sm-0 ps-lg-0 ">
-                    <p className="fs-13 my-3  my-sm-0 pt-sm-0 text-lg-start barlow-condensed espacio-entre-letras-punto-1">AVG. DISTANCE</p>
-                    <p className="fs-7 my-2 letra-bellefair text-white text-lg-start mb-lg-0 lh-1">{data[props.astro].distance}</p>
+            <div className="row m-0 pt-2 pt-sm-0 d-xl-none">
+                <div className="col-12 col-sm-6 col-xl-4 text-lila pt-1 pb-2 py-sm-0 ps-xl-0 ">
+                    <p className="fs-13 my-3  my-sm-0 pt-sm-0 text-xl-start barlow-condensed espacio-entre-letras-punto-1">AVG. DISTANCE</p>
+                    <p className="fs-7 my-2 letra-bellefair text-white text-xl-start mb-xl-0 lh-1">{data[props.astro].distance}</p>
                 </div>
-                <div className="col-12 col-sm-6 col-lg-4 pt-2 pt-sm-0 mt-sm-0 pb-2 py-sm-0 ps-lg-0">
+                <div className="col-12 col-sm-6 col-xl-4 pt-2 pt-sm-0 mt-sm-0 pb-2 py-sm-0 ps-xl-0">
                     <p className="fs-13 my-3 pt-sm-0 my-sm-0 text-lila barlow-condensed espacio-entre-letras-punto-1">EST. TRAVEL TIME</p>
-                    <p className="fs-7 my-2 letra-bellefair text-white mb-lg-0 lh-1">{data[props.astro].time}</p>
+                    <p className="fs-7 my-2 letra-bellefair text-white mb-xl-0 lh-1">{data[props.astro].time}</p>
                 </div>
             </div>
 

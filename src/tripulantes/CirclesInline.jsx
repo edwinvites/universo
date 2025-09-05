@@ -6,6 +6,40 @@ import {
     Link
 } from "react-router-dom";
 
+class personas_visibles {
+  constructor(douglas, mark, victor, anousheh) {
+    this.douglas = douglas;
+    this.mark = mark;
+    this.victor = victor;
+    this.anousheh = anousheh;
+  }
+
+  cambiarValores(douglas, mark, victor, anousheh) {
+    this.douglas = douglas;
+    this.mark = mark;
+    this.victor = victor;
+    this.anousheh = anousheh;
+  }
+
+  asignarValores(path) {
+    switch (path) {
+      case "home":
+        this.cambiarValores(true, false, false, false);
+        break;
+      case "destinos":
+        this.cambiarValores(false, true, false, false);
+        break;
+      case "crew":
+        this.cambiarValores(false, false, true, false);
+        break;
+      case "tecnologia":
+        this.cambiarValores(false, false, false, true);
+        break;
+      default:
+        break;
+    }
+  }
+}
 
 
 function CirclesInline(props) {
@@ -47,11 +81,11 @@ function CirclesInline(props) {
 
     return (
 
-        <div className="d-flex justify-content-center justify-content-lg-start pt-4 pt-sm-5 mt-sm-2" id="circlesCrew">
-            <Link to={"/crew/douglas-hurley"} ><div className={douglas +" rounded-circle mx-2 ms-lg-0 me-lg-4    "} ></div></Link>
-            <Link to={"/crew/mark-shuttleworth"} ><div className={mark +" rounded-circle mx-2 mx-lg-4  "} ></div></Link>
-            <Link to={"/crew/victor-glover"} ><div className={victor + " rounded-circle mx-2 mx-lg-4     "} ></div></Link>
-            <Link to={"/crew/anousheh-ansari"} ><div className={anousheh + " rounded-circle mx-2 mx-lg-4     "} ></div></Link>
+        <div className="d-flex justify-content-center justify-content-xl-start pt-4 pt-sm-5 mt-sm-2" id="circlesCrew">
+            <Link to={"/crew/douglas-hurley"} ><div className={douglas +" rounded-circle mx-2 ms-xl-0 me-xl-4    "} ></div></Link>
+            <Link to={"/crew/mark-shuttleworth"} ><div className={mark +" rounded-circle mx-2 mx-xl-4  "} ></div></Link>
+            <Link to={"/crew/victor-glover"} ><div className={victor + " rounded-circle mx-2 mx-xl-4     "} ></div></Link>
+            <Link to={"/crew/anousheh-ansari"} ><div className={anousheh + " rounded-circle mx-2 mx-xl-4     "} ></div></Link>
         </div>
     )
 }

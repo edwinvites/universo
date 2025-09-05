@@ -37,8 +37,8 @@ console.log(props);
 
 
     return (
-        <div  className="w-lg-100  pt-5 py-lg-0  my-lg-0 overflow-hidden ">
-            <img className="  w-sm-50 w-lg-82 img-fluid " src={infoImg[props.path]} alt="img" />
+        <div  className="w-xl-100  pt-5 py-xl-0  my-xl-0  ">
+            <img className="  w-sm-50 w-xl-82 img-fluid " src={infoImg[props.path]} alt="img" />
 
         </div>
     )
