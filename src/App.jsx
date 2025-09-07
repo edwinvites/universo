@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./nav/Nav";
 import {
-  Link,
-  Navigate,
-  Outlet,
-  redirect,
-  useLocation,
-  useNavigate,
-  useParams,
   useSearchParams,
 } from "react-router-dom";
 import Subtitulo from "./subtitulo/Subtitulo";
