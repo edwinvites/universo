@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo_pagina from "./Logo.svg";
 import iconoToggler from "./menu.svg";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Offcanvas } from "bootstrap";
 
 
@@ -14,6 +14,8 @@ function Nav({ seccion_callback, ubicacion }) {
       return "48px";
     }
   });
+
+
 
   return (
     <nav className="navbar navbar-expand-sm w-100 px-0 py-4 py-sm-0  ">
