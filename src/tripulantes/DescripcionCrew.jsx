@@ -1,9 +1,6 @@
-import React, { useState } from "react";
 
-function DescripcionCrew(props) {
-    let llave = props.path.split("/");
+function DescripcionCrew({staff}) {
 
-    console.log(llave);
     
 
     let info = {
@@ -38,7 +35,7 @@ function DescripcionCrew(props) {
 
     return (
         <p  className="text-lila text-xl-start fs-12 fs-sm-11 fs-xl-10 px-5  px-sm-4 ps-xl-0  pb-sm-0 mb-0 lh-18">
-            {info[llave[0]].descripcion}
+            {info[staff].descripcion}
         </p>
 
     )

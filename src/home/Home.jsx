@@ -1,30 +1,9 @@
-import React, { useEffect, useState } from "react";
-import Nav from "../nav/Nav";
-
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  redirect,
-  useSearchParams,
-  useNavigate,
-} from "react-router-dom";
-import Destinos from "../destinos/Destinos";
 
 const btn_explorer = `${process.env.PUBLIC_URL}/imagenes/botonExplorer.svg`;
 
-function Home() {
-  const navigate = useNavigate();
-  // function pruebas() {
-  //     redirect("/tamanioLaptop");
+function Home({astro, establecer_astro, seccion_callback }) {
 
-  // }
 
-  let casa = 5;
-  let [searchParams, setSearchParams] = useSearchParams();
-
-  const [boton, setboton] = useState(false);
 
   return (
     <div className="container-fluid px-4 pt-sm-5 mt-sm-5  pb-sm-5 px-xl-5 m-0   h-100  w-100 ">
@@ -45,18 +24,16 @@ function Home() {
             </p>
           </div>
         </div>
-        <div className="col-12 col-xl-4 px-0 py-5 caja_boton_explorer" >
-          <div className=" bg-none  w-100  d-flex flex-column justify-content-center h-100 w-100   ">
-            <Link
-              className="text-decoration-none   align-content-center"
-              to={"/destinos/moon"}
-            >
-              <img
-                id="imagenExplorer"
-                src={btn_explorer}
-                className="img-fluid  w-40 w-xl-100 rounded-circle explorer-shadow"
-              ></img>
-            </Link>
+        <div className="col-12 col-xl-4 px-0 py-5 caja_boton_explorer">
+          <div className=" bg-none  w-100  d-flex  justify-content-center align-content-center h-100 w-100   ">
+            <img
+              id="imagenExplorer"
+              src={btn_explorer}
+              className="img-fluid  w-40 w-xl-100 rounded-circle explorer-shadow"
+              alt=""
+              onClick={()=>{seccion_callback("destinos")
+              }}
+            ></img>
           </div>
         </div>
       </div>

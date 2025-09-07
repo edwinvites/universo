@@ -1,6 +1,6 @@
 import React from "react";
 
-function Descripcion(props) {
+function Descripcion({astro}) {
 
     let info = {
         "moon": {
@@ -23,7 +23,7 @@ function Descripcion(props) {
 
     return (
         <p className="text-lila text-xl-start fs-12 fs-sm-11 fs-xl-10 px-5  px-sm-4 ps-xl-0 pb-4 pb-sm-0 mb-0 lh-18">
-            {info[props.astro].descripcion}
+            {info[astro].descripcion}
         </p>
 
     )

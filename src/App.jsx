@@ -13,13 +13,30 @@ import Subtitulo from "./subtitulo/Subtitulo";
 import { useMediaQuery } from "react-responsive";
 import Destinos from "./destinos/Destinos";
 import Crew from "./tripulantes/Crew";
+import Home from "./home/Home";
+import Tecnologia from "./technology/tecnologia";
 
-function App(props) {
+function App() {
 
   const [ubication, set_ubication] = useState("home");
 
-  const handler_son = (ubication) => {
+  const [astro, set_astro] = useState("moon");
+
+  const [staff, set_staff] = useState("douglas-hurley");
+
+  const [tecnologia, set_tecnologia] = useState("launch_vehicle");
+
+  const establecer_astro = (astro) =>{
+    set_astro(astro);
+  }
+  const establecer_ubicacion = (ubication) => {
     set_ubication(ubication);
+  }
+  const establecer_staff = (staff) => {
+    set_staff(staff);
+  }
+  const establecer_tecnologia = (staff) => {
+    set_tecnologia(staff);
   }
 
 
@@ -70,126 +87,32 @@ function App(props) {
     }
   };
 
-  // responsive en caso de redimensionamiento de la pantalla
 
-  // useEffect(() => {
-  //   document.getElementById("titulo")?.addEventListener("resize", () => {
-  //     if (window.innerWidth > 990 && window.location.pathname == "/home") {
-  //       navigate("../tamanioLaptop");
-  //     }
+  const  [type_width,set_type_width] = useState(window.innerWidth < 550 ? "small" : window.innerWidth < 1200 ? "medium" : "large"); 
+  // // responsive en caso de redimensionamiento de la pantalla
 
-  //     if (
-  //       window.innerWidth < 990 &&
-  //       window.location.pathname == "/tamanioLaptop"
-  //     ) {
-  //       navigate("../home");
-  //     }
+  const set_type_width_handler = (innerWidth) => {
+    let new_type_width = innerWidth < 550 ? "small" : innerWidth < 1200 ? "medium" : "large";
+    console.log("trabaja");
+    
+    // set_type_width(new_type_width);
+  }
 
-  //     if (
-  //       window.innerWidth < 576 &&
-  //       (window.location.pathname == "/crew/douglas-hurley/tablet" ||
-  //         window.location.pathname == "/crew/douglas-hurley/laptop")
-  //     ) {
-  //       navigate("../crew/douglas-hurley");
-  //     }
+  function handler_del_handler() {
+    
+  }
 
-  //     if (
-  //       window.innerWidth >= 576 &&
-  //       window.innerWidth <= 990 &&
-  //       (window.location.pathname == "/crew/douglas-hurley" ||
-  //         window.location.pathname == "/crew/douglas-hurley/laptop")
-  //     ) {
-  //       navigate("../crew/douglas-hurley/tablet");
-  //     }
+  useEffect(() => {
+    const main_html = document.getElementById("principal");
+    main_html.addEventListener("resize", set_type_width_handler);
 
-  //     if (
-  //       window.innerWidth > 990 &&
-  //       (window.location.pathname == "/crew/douglas-hurley/tablet" ||
-  //         window.location.pathname == "/crew/douglas-hurley")
-  //     ) {
-  //       navigate("../crew/douglas-hurley/laptop");
-  //     }
+    console.log("trabaja el use efect");
+    
 
-  //     if (
-  //       window.innerWidth < 576 &&
-  //       (window.location.pathname == "/crew/mark-shuttleworth/tablet" ||
-  //         window.location.pathname == "/crew/mark-shuttleworth/laptop")
-  //     ) {
-  //       navigate("../crew/mark-shuttleworth");
-  //     }
-
-  //     if (
-  //       window.innerWidth >= 576 &&
-  //       window.innerWidth <= 990 &&
-  //       (window.location.pathname == "/crew/mark-shuttleworth" ||
-  //         window.location.pathname == "/crew/mark-shuttleworth/laptop")
-  //     ) {
-  //       navigate("../crew/mark-shuttleworth/tablet");
-  //     }
-
-  //     if (
-  //       window.innerWidth > 990 &&
-  //       (window.location.pathname == "/crew/mark-shuttleworth/tablet" ||
-  //         window.location.pathname == "/crew/mark-shuttleworth")
-  //     ) {
-  //       navigate("../crew/mark-shuttleworth/laptop");
-  //     }
-
-  //     if (
-  //       window.innerWidth < 576 &&
-  //       (window.location.pathname == "/crew/victor-glover/tablet" ||
-  //         window.location.pathname == "/crew/victor-glover/laptop")
-  //     ) {
-  //       navigate("../crew/victor-glover");
-  //     }
-
-  //     if (
-  //       window.innerWidth >= 576 &&
-  //       window.innerWidth <= 990 &&
-  //       (window.location.pathname == "/crew/victor-glover" ||
-  //         window.location.pathname == "/crew/victor-glover/laptop")
-  //     ) {
-  //       navigate("../crew/victor-glover/tablet");
-  //     }
-
-  //     if (
-  //       window.innerWidth > 990 &&
-  //       (window.location.pathname == "/crew/victor-glover/tablet" ||
-  //         window.location.pathname == "/crew/victor-glover")
-  //     ) {
-  //       navigate("../crew/victor-glover/laptop");
-  //     }
-
-  //     if (
-  //       window.innerWidth < 576 &&
-  //       (window.location.pathname == "/crew/anousheh-ansari/tablet" ||
-  //         window.location.pathname == "/crew/anousheh-ansari/laptop")
-  //     ) {
-  //       navigate("../crew/anousheh-ansari");
-  //     }
-
-  //     if (
-  //       window.innerWidth >= 576 &&
-  //       window.innerWidth <= 990 &&
-  //       (window.location.pathname == "/crew/anousheh-ansari" ||
-  //         window.location.pathname == "/crew/anousheh-ansari/laptop")
-  //     ) {
-  //       navigate("../crew/anousheh-ansari/tablet");
-  //     }
-
-  //     if (
-  //       window.innerWidth > 990 &&
-  //       (window.location.pathname == "/crew/anousheh-ansari/tablet" ||
-  //         window.location.pathname == "/crew/anousheh-ansari")
-  //     ) {
-  //       navigate("../crew/anousheh-ansari/laptop");
-  //     }
-  //   });
-
-  //   return () => {
-  //     document.getElementById("titulo")?.addEventListener("resize", () => {});
-  //   };
-  // }, []);
+    return () => {
+      main_html.removeEventListener("resize", set_type_width_handler);
+    };
+  }, [ubication]);
 
   // let minimoAltura = {
   //   "/home": "820px",
@@ -224,14 +147,17 @@ function App(props) {
       id="principal"
       style={{
         minHeight: "100vh",
-        backgroundImage: `url(${process.env.PUBLIC_URL + fondo[ubication].small})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL + fondo[ubication][type_width]})`,
         backgroundSize: "cover",
       }}
       className="text-center "
     >
-      <h1>{ubication}</h1>
-      <Nav path={ubication} parentCallback={handler_son}></Nav>
-      {/* <Subtitulo path={location.pathname} /> */}
+      <Nav ubicacion={ubication} seccion_callback={establecer_ubicacion}></Nav>
+      <Subtitulo ubicacion={ubication} />
+      {ubication === "home" && <Home astro={astro} establecer_astro={establecer_astro} seccion_callback={establecer_ubicacion}/>}
+      {ubication === "destinos" && <Destinos astro={astro} establecer_astro={establecer_astro} />}
+      {ubication === "crew" && <Crew staff={staff} establecer_staff={establecer_staff} />}
+      {ubication === "tecnologia" && <Tecnologia tecnologia={tecnologia} establecer_tecnologia={establecer_tecnologia}/>}
       {/* <Outlet /> */}
     </main>
   );

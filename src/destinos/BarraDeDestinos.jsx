@@ -37,56 +37,54 @@ class destinos_activos {
   }
 }
 
-
-function BarraDeDestinos(props) {
-
-    let path = useLocation().pathname.split("/")[2];
-    console.log({path});
-    
-    let destino_activo = new destinos_activos(path);
-
-
-
-    return (
-        <div id="container_destinos" className="d-flex justify-content-around justify-content-xl-start px-5 ps-xl-0 fs-13 fs-sm-11 barlow-condensed espacio-entre-letras-punto-15 vh-7  ">
-            <div className="h-100  d-flex justify-content-between flex-column pe-xl-3">
-                <Link to={"/destinos/moon"} className={(destino_activo.moon ? "text-white" : "text-lila") + " " + "text-decoration-none d-block h-100"} >
-                    <div  className="d-flex justify-content-between flex-column h-100 estadoHover">
-                        <div className="h-5"></div>
-                        <span className={"m-0"}>MOOM</span>
-                        <div className={(destino_activo.moon ? "bg-white" : "") + " " + "h-5"}></div>
-                    </div>
-                </Link>
-            </div>
-            <div className="h-100  d-flex justify-content-between flex-column px-xl-3">
-                <Link to={"/destinos/mars"} className={(destino_activo.mars ? "text-white" : "text-lila") + " " + "text-decoration-none d-block h-100"} >
-                    <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                        <div className="h-5"></div>
-                        <span className={"m-0"}>MARS</span>
-                        <div className={(destino_activo.mars ? "bg-white" : "") + " " + "h-5"}></div>
-                    </div>
-                </Link>
-            </div>
-            <div className="h-100  d-flex justify-content-between flex-column px-xl-3">
-                <Link to={"/destinos/europa"} className={(destino_activo.europe ? "text-white" : "text-lila") + " " + "text-decoration-none d-block h-100"} >
-                    <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                        <div className="h-5"></div>
-                        <span className={"m-0"}>EUROPA</span>
-                        <div className={(destino_activo.europe ? "bg-white" : "") + " " + "h-5"}></div>
-                    </div>
-                </Link>
-            </div>
-            <div className="h-100  d-flex justify-content-between flex-column px-xl-3">
-                <Link to={"/destinos/titan"} className={(destino_activo.titan ? "text-white" : "text-lila") + " " + "text-decoration-none d-block h-100"} >
-                    <div className="d-flex justify-content-between flex-column h-100 estadoHover">
-                        <div className="h-5"></div>
-                        <span className={"m-0"}>TITAN</span>
-                        <div className={(destino_activo.titan ? "bg-white" : "") + " " + "h-5"}></div>
-                    </div>
-                </Link>
-            </div>
-        </div>
-    );
+function BarraDeDestinos({ astro, handlerAstro }) {
+  return (
+    <div
+      id="container_destinos"
+      className="d-flex justify-content-around justify-content-xl-start px-5 ps-xl-0 fs-13 fs-sm-11 barlow-condensed espacio-entre-letras-punto-15 vh-7  "
+    >
+      <div
+        className="h-100  d-flex justify-content-between flex-column pe-xl-3 estadoHover "
+        onClick={() => handlerAstro("moon")}
+      >
+        <div className="h-5"></div>
+        <span className={astro === "moon" ? "text-white" : "text-lila"}>
+          MOOM
+        </span>
+        <div className={(astro === "moon" && "bg-white") + "\t h-5"}></div>
+      </div>
+      <div
+        className="h-100  d-flex justify-content-between flex-column pe-xl-3 estadoHover"
+        onClick={() => handlerAstro("mars")}
+      >
+        <div className="h-5"></div>
+        <span className={astro === "mars" ? "text-white" : "text-lila"}>
+          MARS
+        </span>
+        <div className={(astro === "mars" && "bg-white") + "\t h-5"}></div>
+      </div>
+      <div
+        className="h-100  d-flex justify-content-between flex-column pe-xl-3 estadoHover"
+        onClick={() => handlerAstro("europa")}
+      >
+        <div className="h-5"></div>
+        <span className={astro === "europa" ? "text-white" : "text-lila"}>
+          EUROPA
+        </span>
+        <div className={(astro === "europa" && "bg-white") + "\t h-5"}></div>
+      </div>
+      <div
+        className="h-100  d-flex justify-content-between flex-column pe-xl-3 estadoHover"
+        onClick={() => handlerAstro("titan")}
+      >
+        <div className="h-5"></div>
+        <span className={astro === "titan" ? "text-white" : "text-lila"}>
+          TITAN
+        </span>
+        <div className={(astro === "titan" && "bg-white") + "\t h-5"}></div>
+      </div>
+    </div>
+  );
 }
 
 export default BarraDeDestinos;

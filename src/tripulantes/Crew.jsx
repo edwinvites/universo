@@ -9,51 +9,44 @@ import ImgPeople from "./ImgPeople";
 // import Descripcion from "./Descripcion";
 // import DatosAstro from "./DatosAstro";
 
-class tripulantes {}
 
-function Crew(props) {
-  let dispositivo = props.path.split("/");
 
-  let altura = {
-    tablet: "800px",
-    undefined: "900px",
-    laptop: "",
-  };
+function Crew({staff,establecer_staff}) {
 
   return (
-    <section className="container-fluid mx-0 mt-1 p-0 h-90 px-xl-5  ">
-      <div className="row m-0 px-0  pt-4 pb-3 pb-sm-0 px-xl-5 h-100 d-sm-none">
+    <section className="container-fluid mx-0 mt-1 p-0  px-xl-5  crew">
+      <div className="row m-0 px-0  pt-4 pb-3 pb-sm-0 px-xl-5 d-sm-none">
         <div className="col-12 col-xl-6 p-0">
-          <NombreTripulante path={props.path} />
-          <DescripcionCrew path={props.path} />
-          <CirclesInline path={props.path} />
-          <ImgPeople path={props.path} />
+          <NombreTripulante staff={staff} />
+          <DescripcionCrew staff={staff} />
+          <CirclesInline staff={staff} establecer_staff={establecer_staff} />
+          <ImgPeople staff={staff} />
         </div>
       </div>
 
-      <div className="row m-0 px-0  pt-4 pb-3 pb-sm-0 px-xl-5 h-100 d-sm-block d-xl-none d-none position-relative">
-        <div className="col-12 p-0 h-100">
+      <div className="row m-0 px-0  pt-4 pb-3 pb-sm-0 px-xl-5 d-sm-block d-xl-none d-none position-relative">
+        <div className="col-12 p-0 ">
           <div className="d-flex flex-column justify-content-between ">
-            <NombreTripulante path={props.path} />
-            <DescripcionCrew path={props.path} />
-            <CirclesInline path={props.path} />
-            <ImgPeople path={props.path} />
+            <NombreTripulante staff={staff} />
+            <DescripcionCrew staff={staff} />
+            <CirclesInline staff={staff} establecer_staff={establecer_staff} />
+            <ImgPeople staff={staff} />
           </div>
         </div>
       </div>
 
-      <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-xl-5 h-100 d-xl-flex d-none">
+      <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-xl-5  d-xl-flex d-none">
         <div className="col-6 px-0">
           <div className="d-flex flex-column justify-content-between h-100">
             <div>
-              <NombreTripulante path={props.path} />
-              <DescripcionCrew path={props.path} />
+              <NombreTripulante staff={staff} />
+              <DescripcionCrew staff={staff} />
             </div>
-            <CirclesInline path={props.path} />
+            <CirclesInline staff={staff} establecer_staff={establecer_staff} />
           </div>
         </div>
         <div className="col-6 px-0">
-          <ImgPeople path={props.path} />
+          <ImgPeople staff={staff} />
         </div>
       </div>
     </section>

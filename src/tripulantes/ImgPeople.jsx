@@ -15,7 +15,7 @@ import anoushehLaptop from "./imagenes/anoushehLaptop.svg";
 // import mars from "./imagenes/mars.svg";
 // import europa from "./imagenes/europa.svg";
 // import titan from "./imagenes/titan.svg";
-function ImgPeople(props) {
+function ImgPeople({staff}) {
 
     let infoImg =
     {
@@ -32,13 +32,11 @@ function ImgPeople(props) {
         "anousheh-ansari/tablet": anoushehTablet,
         "anousheh-ansari/laptop": anoushehLaptop
     }
-console.log(props);
-
 
 
     return (
         <div  className="w-xl-100  pt-5 py-xl-0  my-xl-0  ">
-            <img className="  w-sm-50 w-xl-82 img-fluid " src={infoImg[props.path]} alt="img" />
+            <img className="  w-sm-50 w-xl-82 img-fluid " src={infoImg[staff]} alt="staff" />
 
         </div>
     )

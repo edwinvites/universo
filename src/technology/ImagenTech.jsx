@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import mobile_launch_vehicle from "./imagenes/mobile_Launch_Vehicle.svg";
 import mobile_spaceport from "./imagenes/mobile_spaceport.png";
 import mobile_space_capsule from "./imagenes/mobil_space_capsule.svg";
@@ -11,23 +11,30 @@ import laptop_spacecapsule from "./imagenes/laptop_spacecapsule.png";
 // import mars from "./imagenes/mars.svg";
 // import europa from "./imagenes/europa.svg";
 // import titan from "./imagenes/titan.svg";
-function ImagenTech({id, tamanio}) {
+function ImagenTech({tecnologia}) {
 
+      const [tamanio, set_tamanio] = useState(
+    window.innerWidth < 550
+      ? "mobile"
+      : window.innerWidth < 990
+      ? "tablet"
+      : "laptop"
+  );
 
     let linksImagenes = {
-        "launch":
+        "launch_vehicle":
         {
             "mobile": mobile_launch_vehicle,
             "tablet": tablet_launch_vehicle,
             "laptop": laptop_launch_vehicle
         },
-        "port":
+        "spaceport":
         {
             "mobile": mobile_spaceport,
             "tablet": tablet_spaceport,
             "laptop": laptop_spaceport
         },
-        "capsule":
+        "space_capsule":
         {
             "mobile": mobile_space_capsule,
             "tablet": tablet_spacecapsule,
@@ -37,8 +44,8 @@ function ImagenTech({id, tamanio}) {
     }
 
     return (
-        <div className="w-lg-100  py-4 py-lg-0  my-lg-0 ">
-            <img className=" w-100  w-lg-100 img-fluid " src={linksImagenes[id][tamanio]} alt="Imagen de tecnologia" loading="lazy">
+        <div className="w-lg-100  py-4 py-lg-0  my-lg-0 position-relative imagen_tecnologias">
+            <img className=" w-100  w-lg-100 img-fluid  position-absolute top-50 start-50 translate-middle " src={linksImagenes[tecnologia][tamanio]} alt="Imagen de tecnologia" loading="lazy">
             </img>
         </div>
     )

@@ -9294,11 +9294,11 @@ button > img {
   background: #6c757d;
 }
 
-.col-2.px-0:hover + .col-10.pe-0 > a > div > .w-3 {
-  background-color: #d0d6f9;
+.row.pb-4.lh-1 {
+  cursor: pointer;
 }
 
-a.text-decoration-none.text-light.text-start:hover > div > .w-3 {
+.row.pb-4.lh-1:hover > .col-10.pe-0 > div > .w-3 {
   background-color: #d0d6f9;
 }
 
@@ -9306,9 +9306,10 @@ a.text-decoration-none.text-light.text-start:hover > div > .w-3 {
   width: 144px !important;
 }
 
-#circlesCrew > a > div {
+#circlesCrew > span {
   width: 10px;
   height: 10px;
+  cursor: pointer;
 }
 
 #circulosSeccionTecnologia > div {
@@ -9327,6 +9328,41 @@ a.text-decoration-none.text-light.text-start:hover > div > .w-3 {
 .seleccionador_tecnologia:hover {
   background-color: white;
   color: black !important;
+}
+
+.astro {
+  width: 150px;
+}
+
+.h-100.d-flex.justify-content-between.flex-column.pe-xl-3.estadoHover {
+  cursor: pointer !important;
+}
+
+.logo_pagina {
+  cursor: pointer;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.tecnologia {
+  height: 680px;
+}
+
+.imagen_tecnologias {
+  width: 100%;
+  height: 258px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.destinos {
+  height: 900px;
+}
+
+.crew {
+  height: 790px;
 }
 
 @media (min-width: 576px) {
@@ -9365,9 +9401,26 @@ a.text-decoration-none.text-light.text-start:hover > div > .w-3 {
     -moz-box-shadow: 0px 0px 0px 120px rgba(255, 255, 255, 0.099);
     box-shadow: 0px 0px 0px 120px rgba(255, 255, 255, 0.099);
   }
+  .astro {
+    width: 300px;
+  }
   .seleccionador_tecnologia {
     height: 56px;
     width: 56px;
+  }
+  .tecnologia {
+    height: 880px;
+  }
+  .imagen_tecnologias {
+    height: 357px;
+  }
+}
+@media (min-width: 760px) {
+  .imagen_tecnologias {
+    height: 500px;
+  }
+  .crew {
+    height: 870px;
   }
 }
 @media (min-width: 992px) {
@@ -9387,13 +9440,40 @@ a.text-decoration-none.text-light.text-start:hover > div > .w-3 {
   #barra_links {
     height: 96px !important;
   }
-  #circlesCrew > a > div {
+  #circlesCrew > span {
     width: 15px;
     height: 15px;
+    cursor: pointer;
   }
   .seleccionador_tecnologia {
     height: 80px;
     width: 80px;
+  }
+  .astro {
+    width: 480px;
+  }
+  .tecnologia {
+    height: 890px;
+  }
+  .destinos {
+    height: 1080px;
+  }
+  .crew {
+    height: 1020px;
+  }
+}
+@media (min-width: 1200px) {
+  .destinos {
+    height: 700px;
+  }
+  .tecnologia {
+    height: 720px;
+  }
+  .imagen_tecnologias {
+    height: 600px;
+  }
+  .crew {
+    height: 740px;
   }
 }
 .letra-bellefair {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ImagenTech from "./ImagenTech";
+import ChangeTech from "./ChangeTech";
 
 const tecnologias_base = {
   launch_vehicle: {
@@ -28,97 +29,34 @@ const tecnologias_base = {
   },
 };
 
-function Tecnologia() {
-  let [seleccion, set_seleccion] = useState("launch_vehicle");
+function Tecnologia({ tecnologia, establecer_tecnologia }) {
 
-  let [contador, setContador] = useState(1);
-
-  const [tamanio, set_tamanio] = useState(
-    window.innerWidth < 550
-      ? "mobile"
-      : window.innerWidth < 990
-      ? "tablet"
-      : "laptop"
-  );
-
-  const widthHightCircles = {
-    mobile: "40px",
-    tablet: "56px",
-    laptop: "80px",
-  };
-
-  const height_page_technology = {
-    mobile: "750px",
-    tablet: "800px",
-    laptop: "750px",
-  };
 
   return (
-    <div className="mt-4 mt-sm-5 mt-lg-1">
-      <div className="d-lg-none">
-        <ImagenTech id={tecnologias_base[seleccion].id} tamanio={tamanio} />
-        <div
-          id="circulosSeccionTecnologia"
-          className="d-flex justify-content-center justify-content-lg-start mt-2 pt-sm-1 mt-sm-2 fs-10 fs-sm-8"
-        >
-          <div
-            className={
-              (seleccion === "launch_vehicle"
-                ? "text-black bg-white"
-                : "text-white border border-dark-subtle") +
-              "\t  rounded-circle d-flex justify-content-center flex-column mx-2 seleccionador_tecnologia"
-            }
-            onClick={() => {
-              set_seleccion("launch_vehicle");
-            }}
-          >
-            <span className="">1</span>
-          </div>
-          <div
-            className={
-              (seleccion === "spaceport"
-                ? "text-black bg-white"
-                : "text-white border border-dark-subtle") +
-              "\t  rounded-circle d-flex justify-content-center flex-column mx-2 seleccionador_tecnologia"
-            }
-            onClick={() => {
-              set_seleccion("spaceport");
-              console.log("entra");
-            }}
-          >
-            <span className="">2 </span>
-          </div>
-          <div
-            className={
-              (seleccion === "space_capsule"
-                ? "text-black bg-white"
-                : "text-white border border-dark-subtle") +
-              "\t  rounded-circle d-flex justify-content-center flex-column mx-2 seleccionador_tecnologia"
-            }
-            onClick={() => {
-              set_seleccion("space_capsule");
-            }}
-          >
-            <span className="">3</span>
-          </div>
-        </div>
-        <p className="fs-10 fs-sm-8 mt-5  mb-2 text-white opacity-50  ">
-          {tecnologias_base[seleccion].subtitle}
+    <div className="mt-4 mt-sm-5 mt-lg-1 tecnologia">
+      <div className="d-xl-none">
+        <ImagenTech tecnologia={tecnologia} />
+        <ChangeTech
+          tecnologia={tecnologia}
+          establecer_tecnologia={establecer_tecnologia}
+        ></ChangeTech>
+        <p className="fs-10 fs-sm-8 mt-3  mb-2 text-white opacity-50  ">
+          {tecnologias_base[tecnologia].subtitle}
         </p>
         <p className="fs-8 fs-sm-5 text-white">
-          {tecnologias_base[seleccion].title}
+          {tecnologias_base[tecnologia].title}
         </p>
         <p className="fs-sm-11 text-blue-300-alt px-3 mb-0">
-          {tecnologias_base[seleccion].description}
+          {tecnologias_base[tecnologia].description}
         </p>
       </div>
+
       <div
         style={{
           paddingLeft: "165px",
-          paddingBottom: "150px"
           //  height: "734px"
         }}
-        className="d-none d-lg-block"
+        className="d-none d-xl-block"
       >
         <div className="d-flex flex-column justify-content-center h-100">
           <div className="container-fluid">
@@ -126,72 +64,29 @@ function Tecnologia() {
               <div className="col-6 px-0">
                 <div className="d-flex justify-content-center flex-column h-100">
                   <div
-                    // style={{ height: "350px" }}
+                    style={{ gap: "60px" }}
                     className="d-flex justify-content-between "
                   >
-                    <div
-                      id="circulosSeccionTecnologiaLaptop"
-                      className="d-flex justify-content-between flex-column fs-6 pe-5 me-3"
-                    >
-                      <div
-                        className={
-                          (seleccion === "launch_vehicle"
-                            ? "text-black bg-white"
-                            : "text-white border border-dark-subtle") +
-                          "\t  rounded-circle d-flex justify-content-center flex-column mx-2 seleccionador_tecnologia"
-                        }
-                        onClick={() => {
-                          set_seleccion("launch_vehicle");
-                        }}
-                      >
-                        <span className="">1</span>
-                      </div>
-                      <div
-                        className={
-                          (seleccion === "spaceport"
-                            ? "text-black bg-white"
-                            : "text-white border border-dark-subtle") +
-                          "\t  rounded-circle d-flex justify-content-center flex-column mx-2 seleccionador_tecnologia"
-                        }
-                        onClick={() => {
-                          set_seleccion("spaceport");
-                        }}
-                      >
-                        <span className="">2</span>
-                      </div>
-                      <div
-                        className={
-                          (seleccion === "space_capsule"
-                            ? "text-black bg-white"
-                            : "text-white border border-dark-subtle") +
-                          "\t  rounded-circle d-flex justify-content-center flex-column mx-2 seleccionador_tecnologia"
-                        }
-                        onClick={() => {
-                          set_seleccion("space_capsule");
-                        }}
-                      >
-                        <span className="">3</span>
-                      </div>
-                    </div>
-                    <div className="text-start">
+                    <ChangeTech
+                      tecnologia={tecnologia}
+                      establecer_tecnologia={establecer_tecnologia}
+                    ></ChangeTech>
+                    <div className="text-start align-content-center">
                       <p className="fs-6 mb-0 text-white opacity-50  ">
-                        {tecnologias_base[seleccion].subtitle}
+                        {tecnologias_base[tecnologia].subtitle}
                       </p>
                       <p className="fs-4 text-white">
-                        {tecnologias_base[seleccion].title}
+                        {tecnologias_base[tecnologia].title}
                       </p>
                       <p className="fs-10 text-blue-300-alt ">
-                        {tecnologias_base[seleccion].description}
+                        {tecnologias_base[tecnologia].description}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-6 ps-5 pe-0">
-                <ImagenTech
-                  id={tecnologias_base[seleccion].id}
-                  tamanio={tamanio}
-                />
+                <ImagenTech tecnologia={tecnologia} />
               </div>
             </div>
           </div>
