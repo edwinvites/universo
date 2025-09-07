@@ -9,10 +9,7 @@ import ImgPeople from "./ImgPeople";
 // import Descripcion from "./Descripcion";
 // import DatosAstro from "./DatosAstro";
 
-
-
-function Crew({staff,establecer_staff}) {
-
+function Crew({ staff, establecer_staff }) {
   return (
     <section className="container-fluid mx-0 mt-1 p-0  px-xl-5  crew">
       <div className="row m-0 px-0  pt-4 pb-3 pb-sm-0 px-xl-5 d-sm-none">
@@ -37,16 +34,19 @@ function Crew({staff,establecer_staff}) {
 
       <div className="row m-0 px-0 pb-0 pt-4 pb-3 px-xl-5  d-xl-flex d-none">
         <div className="col-6 px-0">
-          <div className="d-flex flex-column justify-content-between h-100">
-            <div>
-              <NombreTripulante staff={staff} />
-              <DescripcionCrew staff={staff} />
+          <div className="d-flex flex-column justify-content-center h-100 ">
+            <NombreTripulante staff={staff} />
+            <DescripcionCrew staff={staff} xl={true}/>
+            <div className="position-relative">
+              <CirclesInline
+                staff={staff}
+                establecer_staff={establecer_staff}
+              />
             </div>
-            <CirclesInline staff={staff} establecer_staff={establecer_staff} />
           </div>
         </div>
         <div className="col-6 px-0">
-          <ImgPeople staff={staff} />
+          <ImgPeople staff={staff} xl={true} />
         </div>
       </div>
     </section>

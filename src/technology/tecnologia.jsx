@@ -78,7 +78,7 @@ function Tecnologia({ tecnologia, establecer_tecnologia }) {
                       <p className="fs-4 text-white">
                         {tecnologias_base[tecnologia].title}
                       </p>
-                      <p className="fs-10 text-blue-300-alt ">
+                      <p className="fs-10 text-blue-300-alt " style={{height: "180px"}}>
                         {tecnologias_base[tecnologia].description}
                       </p>
                     </div>

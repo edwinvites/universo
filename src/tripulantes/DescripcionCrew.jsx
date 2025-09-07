@@ -1,5 +1,5 @@
 
-function DescripcionCrew({staff}) {
+function DescripcionCrew({staff,xl}) {
 
     
 
@@ -34,7 +34,7 @@ function DescripcionCrew({staff}) {
     // });
 
     return (
-        <p  className="text-lila text-xl-start fs-12 fs-sm-11 fs-xl-10 px-5  px-sm-4 ps-xl-0  pb-sm-0 mb-0 lh-18">
+        <p  className="text-lila text-xl-start fs-12 fs-sm-11 fs-xl-10 px-5  px-sm-4 ps-xl-0  pb-sm-0 mb-0 lh-18" style={{height: xl && "150px"}}>
             {info[staff].descripcion}
         </p>
 

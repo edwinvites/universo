@@ -15,7 +15,7 @@ import anoushehLaptop from "./imagenes/anoushehLaptop.svg";
 // import mars from "./imagenes/mars.svg";
 // import europa from "./imagenes/europa.svg";
 // import titan from "./imagenes/titan.svg";
-function ImgPeople({staff}) {
+function ImgPeople({staff, xl}) {
 
     let infoImg =
     {
@@ -35,7 +35,7 @@ function ImgPeople({staff}) {
 
 
     return (
-        <div  className="w-xl-100  pt-5 py-xl-0  my-xl-0  ">
+        <div  className="w-xl-100  pt-5 py-xl-0  my-xl-0  " style={{height: xl && "700px"}}>
             <img className="  w-sm-50 w-xl-82 img-fluid " src={infoImg[staff]} alt="staff" />
 
         </div>
